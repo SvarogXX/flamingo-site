@@ -19,7 +19,7 @@ export default function Home() {
       <FeaturedIcons />
       <Features />
       <Benefits />
-      <Partners />
+      {/* <Partners /> */}
       <Pricing />
       <Testimonials />
       <About />

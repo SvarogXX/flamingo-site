@@ -19,8 +19,8 @@ export default function Contact() {
           </h2>
           <p className="text-gray-400 text-center mb-10">
             Маєте питання про CRM? Напишіть нам – відповімо за 24 години.
-            Email: <a href="mailto:support@crmsystem.com" className="text-purple-400 hover:text-purple-300">support@crmsystem.com</a>.
-            Або зареєструйтеся на пробний період прямо зараз!
+            Email: <a href="mailto:suport@flamingo-crm.com" className="text-purple-400 hover:text-purple-300">suport@flamingo-crm.com</a>.
+            Або зареєструйтеся на пробний період прямо зараз! <a href="https://flamingo-crm-xi.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Розпочати</a>.
           </p>
 
           <form className="space-y-6">

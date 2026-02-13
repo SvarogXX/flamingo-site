@@ -7,8 +7,8 @@ import Link from "next/link";
 const plans = [
   {
     name: "Starter",
-    price: "9",
-    currency: "$",
+    price: "450",
+    currency: "грн ",
     period: "міс",
     description: "Ідеально для малого бізнесу та фрілансерів",
     popular: false,
@@ -22,9 +22,9 @@ const plans = [
     ],
   },
   {
-    name: "Growth",
-    price: "29",
-    currency: "$",
+    name: "Business",
+    price: "1 200",
+    currency: "грн ",
     period: "міс",
     description: "Для зростаючого бізнесу",
     popular: true,
@@ -39,8 +39,8 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: "99",
-    currency: "$",
+    price: "4 100",
+    currency: "грн ",
     period: "міс",
     description: "Для великих команд без обмежень",
     popular: false,
@@ -86,8 +86,8 @@ export default function Pricing() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className={`relative rounded-2xl p-8 ${plan.popular
-                  ? "bg-gradient-to-b from-purple-600/20 to-purple-900/10 border-2 border-purple-500/50 shadow-lg shadow-purple-500/20"
-                  : "bg-white/5 border border-white/5 hover:border-purple-500/30"
+                ? "bg-gradient-to-b from-purple-600/20 to-purple-900/10 border-2 border-purple-500/50 shadow-lg shadow-purple-500/20"
+                : "bg-white/5 border border-white/5 hover:border-purple-500/30"
                 }`}
             >
               {plan.popular && (
@@ -119,8 +119,8 @@ export default function Pricing() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full py-4 rounded-xl font-semibold text-center transition-all ${plan.popular
-                    ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:shadow-purple-500/30"
-                    : "bg-white/10 text-white hover:bg-white/15 border border-white/10"
+                  ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:shadow-purple-500/30"
+                  : "bg-white/10 text-white hover:bg-white/15 border border-white/10"
                   }`}
               >
                 Обрати тариф

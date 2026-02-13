@@ -35,12 +35,12 @@ export default function Footer() {
               <span className="text-white font-semibold">Flamingo CRM</span>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-xs">
-              Потужна платформа для управління бізнесом. Перетворіть свій підхід до роботи з клієнтами.
+              Платформа для управління бізнесом. Перетворіть свій підхід до роботи з клієнтами.
             </p>
             <div className="space-y-3 text-sm">
               <a href="mailto:info@crm-system.com" className="flex items-center gap-2 text-gray-500 hover:text-purple-400 transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>info@crm-system.com</span>
+                <span>suport@flamingo-crm.com</span>
               </a>
               <a href="tel:+380501234567" className="flex items-center gap-2 text-gray-500 hover:text-purple-400 transition-colors">
                 <Phone className="w-4 h-4" />
@@ -48,7 +48,7 @@ export default function Footer() {
               </a>
               <div className="flex items-center gap-2 text-gray-500">
                 <MapPin className="w-4 h-4" />
-                <span>Київ, Україна</span>
+                <span>Вінниця, Україна</span>
               </div>
             </div>
           </div>

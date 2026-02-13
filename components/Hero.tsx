@@ -49,8 +49,8 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-gray-400 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl mx-auto"
           >
-            Уявіть: ваш бізнес росте, клієнти множаться, а ви завжди на крок попереду.
-            Наша CRM – базовий зручний інструмент для роботи з клієнтами, ведення бази даних
+            Уявіть: ваш бізнес росте, клієнти множаться, а ви завжди на крок попереду. <br />
+            <span className="gradient-text">Flamingo</span> CRM – базовий зручний інструмент для роботи з клієнтами, ведення бази даних
             та автоматизації. Невисока ціна, широкий діапазон: від малого магазину до великої компанії.
           </motion.p>
 
@@ -87,7 +87,7 @@ export default function Hero() {
             transition={{ delay: 0.7, duration: 0.6 }}
             className="mt-16 text-left max-w-2xl mx-auto"
           >
-            <h2 className="text-lg font-semibold text-white mb-4 text-center">Чому наша CRM?</h2>
+            <h2 className="text-lg font-semibold text-white mb-4 text-center">Чому Flamingo CRM?</h2>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
