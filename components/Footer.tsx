@@ -5,21 +5,21 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const footerLinks = {
   product: [
-    { name: "Можливості", href: "#features" },
-    { name: "Ціни", href: "#pricing" },
-    { name: "Інтеграції", href: "#" },
-    { name: "API", href: "#" },
+    { name: "Можливості", href: "/features" },
+    { name: "Тарифи", href: "/pricing" },
+    { name: "Інтеграції", href: "https://flamingo-crm-xi.vercel.app/" },
+    { name: "API", href: "https://flamingo-crm-xi.vercel.app/" },
   ],
   company: [
-    { name: "Про нас", href: "#" },
+    { name: "Про нас", href: "/about" },
     { name: "Блог", href: "/blog" },
-    { name: "Кар'єра", href: "#" },
-    { name: "Контакти", href: "#" },
+    { name: "Кар'єра", href: "https://flamingo-crm-xi.vercel.app/" },
+    { name: "Контакти", href: "/contact" },
   ],
   resources: [
-    { name: "Документація", href: "#" },
-    { name: "Підтримка", href: "#" },
-    { name: "FAQ", href: "#" },
+    { name: "Документація", href: "https://flamingo-crm-xi.vercel.app/" },
+    { name: "Підтримка", href: "mailto:support@crmsystem.com" },
+    { name: "FAQ", href: "/blog" },
   ],
 };
 
@@ -59,9 +59,15 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-500 hover:text-purple-400 transition-colors text-sm">
-                    {link.name}
-                  </Link>
+                  {link.href.startsWith("http") ? (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-purple-400 transition-colors text-sm">
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="text-gray-500 hover:text-purple-400 transition-colors text-sm">
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -73,9 +79,15 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-500 hover:text-purple-400 transition-colors text-sm">
-                    {link.name}
-                  </Link>
+                  {link.href.startsWith("http") ? (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-purple-400 transition-colors text-sm">
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="text-gray-500 hover:text-purple-400 transition-colors text-sm">
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -87,9 +99,15 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-500 hover:text-purple-400 transition-colors text-sm">
-                    {link.name}
-                  </Link>
+                  {link.href.startsWith("http") || link.href.startsWith("mailto:") ? (
+                    <a href={link.href} target={link.href.startsWith("mailto:") ? undefined : "_blank"} rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"} className="text-gray-500 hover:text-purple-400 transition-colors text-sm">
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="text-gray-500 hover:text-purple-400 transition-colors text-sm">
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

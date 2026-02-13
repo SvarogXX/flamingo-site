@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Flamingo CRM - Управління бізнесом нового рівня",
-  description: "Професійна CRM система для управління клієнтами, завданнями та продажами. Збільште ефективність вашого бізнесу з нашою інтуїтивною платформою.",
-  keywords: "CRM, управління клієнтами, CRM система, управління продажами, бізнес автоматизація, CRM Україна, CRM система Україна, управління бізнесом",
+  title: "Flamingo CRM - CRM система для бізнесу, управління клієнтами, база даних клієнтів",
+  description: "Онлайн CRM система для ефективного управління клієнтами та базою даних. Безкоштовний пробний період CRM 14 днів. Тарифи CRM від 9$/міс.",
+  keywords: "CRM система для бізнесу, управління клієнтами, база даних клієнтів, онлайн CRM, безкоштовний пробний період CRM, тарифи CRM",
   authors: [{ name: "CRM Team" }],
   creator: "CRM System",
   publisher: "CRM System",
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Flamingo CRM - Управління бізнесом нового рівня",
-    description: "Професійна CRM система для управління клієнтами, завданнями та продажами. Збільште ефективність вашого бізнесу.",
+    title: "Flamingo CRM - CRM система для бізнесу, управління клієнтами",
+    description: "Онлайн CRM з безкоштовним пробним періодом. Управління клієнтами, база даних, звіти. Тарифи від 9$/міс.",
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://crm-system.com',
     siteName: "Flamingo CRM",
     images: [
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flamingo CRM - Управління бізнесом нового рівня",
-    description: "Професійна CRM система для управління клієнтами, завданнями та продажами",
+    title: "Flamingo CRM - CRM система для бізнесу, управління клієнтами",
+    description: "Онлайн CRM з безкоштовним пробним періодом. База даних клієнтів, тарифи від 9$/міс.",
     images: ['/og-image.jpg'],
   },
   robots: {

@@ -7,7 +7,7 @@ const features = [
   { icon: Users, label: "Управління Клієнтами" },
   { icon: BarChart3, label: "Аналітика Продажів" },
   { icon: Shield, label: "Безпека Даних" },
-  { icon: Zap, label: "Швидка Автоматизація" },
+  { icon: Zap, label: "Управління завданнями" },
 ];
 
 export default function FeaturedIcons() {

@@ -19,7 +19,7 @@ export default function Benefits() {
         >
           <p className="text-purple-400/80 text-sm tracking-wider mb-4">РЕЗУЛЬТАТИ</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            Що Очікувати Від Нашої <span className="gradient-text">CRM...</span>
+            Що Очікувати Від Flamingo <span className="gradient-text">CRM...</span>
           </h2>
         </motion.div>
 

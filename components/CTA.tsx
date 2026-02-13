@@ -76,9 +76,9 @@ export default function CTA() {
                 <span>Почати Безкоштовно</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-lg hover:bg-white/10 transition-all">
+              {/* <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-lg hover:bg-white/10 transition-all">
                 Замовити Демо
-              </button>
+              </button> */}
             </div>
           </motion.div>
         </div>

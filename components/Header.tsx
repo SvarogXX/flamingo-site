@@ -6,11 +6,12 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const navLinks = [
-  { name: "Можливості", href: "#features" },
-  { name: "Переваги", href: "#benefits" },
-  { name: "Ціни", href: "#pricing" },
+  { name: "Можливості", href: "/features" },
+  { name: "Тарифи", href: "/pricing" },
+  { name: "Про нас", href: "/about" },
   { name: "Відгуки", href: "#testimonials" },
   { name: "Блог", href: "/blog" },
+  { name: "Контакти", href: "/contact" },
 ];
 
 export default function Header() {
@@ -58,18 +59,22 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link
-              href="#signup"
+            <a
+              href="https://flamingo-crm-xi.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
             >
               Увійти
-            </Link>
-            <Link
-              href="#signup"
+            </a>
+            <a
+              href="https://flamingo-crm-xi.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white text-sm font-medium rounded-lg transition-all"
             >
               Почати
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -102,20 +107,24 @@ export default function Header() {
                   </Link>
                 ))}
                 <div className="flex gap-3 mt-4 pt-4 border-t border-white/5">
-                  <Link
-                    href="#signup"
+                  <a
+                    href="https://flamingo-crm-xi.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex-1 text-center py-2.5 text-gray-400 text-sm font-medium"
                   >
                     Увійти
-                  </Link>
-                  <Link
-                    href="#signup"
+                  </a>
+                  <a
+                    href="https://flamingo-crm-xi.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex-1 text-center py-2.5 bg-purple-600 text-white text-sm font-medium rounded-lg"
                   >
                     Почати
-                  </Link>
+                  </a>
                 </div>
               </div>
             </motion.div>

@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { url } from "inspector";
 
 const partners = [
-  { name: "TechCorp", logo: "💎" },
+  { name: "ITLab", logo: "💎" },
   { name: "DataFlow", logo: "🔷" },
   { name: "CloudSync", logo: "☁️" },
   { name: "NetPro", logo: "🌐" },
