@@ -8,17 +8,17 @@ const footerLinks = {
     { name: "Можливості", href: "/features" },
     { name: "Тарифи", href: "/pricing" },
     { name: "Інтеграції", href: "https://flamingo-crm-xi.vercel.app/" },
-    { name: "API", href: "https://flamingo-crm-xi.vercel.app/" },
+    // { name: "API", href: "https://flamingo-crm-xi.vercel.app/" },
   ],
   company: [
     { name: "Про нас", href: "/about" },
     { name: "Блог", href: "/blog" },
-    { name: "Кар'єра", href: "https://flamingo-crm-xi.vercel.app/" },
+    // { name: "Кар'єра", href: "https://flamingo-crm-xi.vercel.app/" },
     { name: "Контакти", href: "/contact" },
   ],
   resources: [
     { name: "Документація", href: "https://flamingo-crm-xi.vercel.app/" },
-    { name: "Підтримка", href: "mailto:support@crmsystem.com" },
+    { name: "Підтримка", href: "mailto:support@flamingo-crm.com.ua" },
     { name: "FAQ", href: "/blog" },
   ],
 };
@@ -40,7 +40,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <a href="mailto:info@crm-system.com" className="flex items-center gap-2 text-gray-500 hover:text-purple-400 transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>suport@flamingo-crm.com</span>
+                <span>support@flamingo-crm.com.ua</span>
               </a>
               <a href="tel:+380501234567" className="flex items-center gap-2 text-gray-500 hover:text-purple-400 transition-colors">
                 <Phone className="w-4 h-4" />
