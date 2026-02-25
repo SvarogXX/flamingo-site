@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SideNav from "@/components/SideNav";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -77,6 +78,7 @@ export default function RootLayout({
     <html lang="uk" className="dark">
       <body className={`${inter.variable} font-sans antialiased bg-[#0a0a0f] text-white`}>
         {children}
+        <SideNav />
       </body>
     </html>
   );

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Sparkles } from "lucide-react";
-import Link from "next/link";
 
 const plans = [
   {
@@ -119,8 +118,8 @@ export default function Pricing() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full py-4 rounded-xl font-semibold text-center transition-all ${plan.popular
-                  ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:shadow-purple-500/30"
-                  : "bg-white/10 text-white hover:bg-white/15 border border-white/10"
+                  ? "bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-lg shadow-purple-500/40 hover:from-purple-500 hover:to-pink-400 hover:shadow-purple-500/50 hover:shadow-xl"
+                  : "text-white border border-white/10 hover:border-white/20"
                   }`}
               >
                 Обрати тариф
@@ -143,7 +142,7 @@ export default function Pricing() {
             href="https://flamingo-crm-xi.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/40 transition-all hover:bg-purple-500 hover:shadow-purple-500/50 hover:shadow-xl"
           >
             <span>Обрати тариф і почати</span>
             <ArrowRight className="w-5 h-5" />

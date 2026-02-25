@@ -41,9 +41,38 @@ export default function Features() {
             Функціонал CRM: <span className="gradient-text">базовий, але потужний</span> для вашого бізнесу
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Flamingo CRM система фокусується на тому, що дійсно важливо: робота з клієнтами та ведення бази даних.
-            Забудьте про складні інструменти – отримайте зручний функціонал за невисокою ціною.
+            Flamingo CRM система фокусується на тому, що дійсно важливо: робота з клієнтами та ведення бази даних. Створення угод та контрроль виконання завдань.
+            Забудьте про складні інструменти – отримайте зручний та ефективний функціонал, який змінити ваш бізнес.
           </p>
+        </motion.div>
+
+        {/* Скріншот можливостей CRM — з віньєткою та м'яким свіченням */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 relative rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_30px_60px_-12px_rgba(0,0,0,0.5),0_0_100px_-15px_rgba(147,51,234,0.4),0_20px_40px_-10px_rgba(147,51,234,0.15)]"
+        >
+          <div className="relative bg-[#0c0c12]">
+            <img
+              src="/images/task.png"
+              alt="Завдання та можливості Flamingo CRM — дашборд, списки задач, управління клієнтами та угодами"
+              width={1200}
+              height={600}
+              loading="lazy"
+              decoding="async"
+              className="relative z-0 w-full h-auto object-contain"
+            />
+            {/* Віньєтка — затемнення від країв до центру */}
+            <div
+              className="absolute inset-0 z-10 pointer-events-none rounded-2xl"
+              style={{
+                background: "radial-gradient(ellipse 88% 82% at 50% 50%, transparent 50%, rgba(0,0,0,0.12) 75%, rgba(0,0,0,0.28) 100%)",
+              }}
+            />
+            {/* Тонка світла лінія зверху — глибина */}
+            <div className="absolute top-0 left-0 right-0 h-px z-10 bg-gradient-to-r from-transparent via-white/15 to-transparent pointer-events-none rounded-t-2xl" />
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

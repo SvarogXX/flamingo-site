@@ -67,8 +67,12 @@ export default function Contact() {
 
     setStatus("loading");
 
+    const apiUrl =
+      (typeof process !== "undefined" && process.env.NEXT_PUBLIC_LEADS_API_URL) ||
+      "/api/leads";
+
     try {
-      const response = await fetch("https://flamingo-crm-xi.vercel.app/api/leads", {
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -84,7 +88,7 @@ export default function Contact() {
 
       if (!response.ok) {
         const data = await response.json().catch(() => ({}));
-        throw new Error(data.message || `Помилка ${response.status}`);
+        throw new Error(data.error || data.message || `Помилка ${response.status}`);
       }
 
       setStatus("success");
@@ -105,7 +109,7 @@ export default function Contact() {
   const inputNormal = "border-white/10 focus:border-purple-500/50";
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32 bg-[#0a0a0f]">
+    <section id="contact" className="relative py-8 lg:py-12 bg-[#0a0a0f]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
 
       <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -239,7 +243,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 disabled:opacity-70 disabled:cursor-not-allowed text-white font-semibold rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all"
+              className="flex items-center justify-center gap-2 w-full py-4 bg-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/40 transition-all hover:bg-purple-500 hover:shadow-purple-500/50 hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:bg-purple-600 disabled:hover:shadow-purple-500/40"
             >
               {status === "loading" ? (
                 <>

@@ -112,8 +112,8 @@ export default function BlogPage() {
                 <button
                   key={category}
                   className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all ${index === 0
-                    ? "bg-purple-600 text-white"
-                    : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white"
+                    ? "text-white"
+                    : "text-gray-400 hover:text-white"
                     }`}
                 >
                   {category}
@@ -185,7 +185,7 @@ export default function BlogPage() {
 
             {/* Load more */}
             <div className="text-center mt-16">
-              <button className="px-8 py-4 glass-card text-white font-semibold rounded-xl hover:border-purple-500/30 transition-all">
+              <button className="px-8 py-4 text-white font-semibold rounded-xl transition-all hover:text-purple-300">
                 Завантажити більше
               </button>
             </div>

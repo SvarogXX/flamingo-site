@@ -10,13 +10,13 @@ export default function NotFound() {
       <div className="flex flex-col sm:flex-row gap-4">
         <Link
           href="/"
-          className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-purple-500/30 transition-all text-center"
+          className="px-8 py-4 text-white font-semibold rounded-xl transition-all text-center hover:text-purple-300"
         >
           На головну
         </Link>
         <Link
           href="/blog"
-          className="px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-center"
+          className="px-8 py-4 border border-white/10 text-white font-semibold rounded-xl transition-all text-center hover:border-white/20"
         >
           До блогу
         </Link>

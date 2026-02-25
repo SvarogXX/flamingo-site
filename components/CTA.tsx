@@ -6,48 +6,23 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section id="signup" className="relative py-24 lg:py-32 bg-[#080810] overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[150px]" />
+    <section id="about" className="relative py-24 lg:py-32 overflow-hidden">
+      {/* Фон блоку — зображення на весь екран секції */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url(/images/business.png)" }}
+        aria-hidden
+      />
+      {/* Затемнення для читабельності тексту */}
+      <div className="absolute inset-0 bg-[#080810]/75" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 rounded-full blur-[120px]" />
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Illustration */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative order-2 lg:order-1"
-          >
-            <div className="relative aspect-square max-w-md mx-auto">
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/40 to-pink-600/30 rounded-full blur-3xl animate-pulse" />
+          {/* Ліва частина — пуста, фон видно */}
+          <div className="relative order-2 lg:order-1 min-h-[200px] lg:min-h-0" aria-hidden />
 
-              {/* Main illustration */}
-              <div className="relative z-10 w-full h-full flex items-center justify-center">
-                <div className="relative">
-                  {/* Character/illustration placeholder */}
-                  <div className="w-48 h-48 bg-gradient-to-br from-purple-500/30 to-pink-500/20 rounded-3xl flex items-center justify-center border border-purple-500/30 shadow-2xl shadow-purple-500/20">
-                    <span className="text-8xl">💡</span>
-                  </div>
-
-                  {/* Floating elements */}
-                  <div className="absolute -top-6 -right-6 w-16 h-16 bg-purple-500/30 rounded-2xl flex items-center justify-center border border-purple-500/40 animate-bounce">
-                    <span className="text-3xl">🚀</span>
-                  </div>
-                  <div className="absolute -bottom-4 -left-4 w-14 h-14 bg-pink-500/30 rounded-xl flex items-center justify-center border border-pink-500/40 animate-pulse">
-                    <span className="text-2xl">⭐</span>
-                  </div>
-                  <div className="absolute top-1/2 -right-10 w-12 h-12 bg-blue-500/30 rounded-lg flex items-center justify-center border border-blue-500/40">
-                    <span className="text-xl">📊</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Right - Text */}
+          {/* Текст і CTA */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,20 +33,23 @@ export default function CTA() {
             <p className="text-purple-400/80 text-sm tracking-wider mb-4">ПРИЄДНУЙТЕСЬ</p>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
-              Спільнота Бізнесу{" "}
-              <span className="gradient-text">Вітає Вас</span>{" "}
-              З Відкритими Руками
+              Про Flamingo CRM: створена для{" "}
+              <span className="gradient-text">реального бізнесу</span>
             </h2>
 
+            <p className="text-gray-400 text-lg leading-relaxed mb-4">
+              Ми – команда, що розуміє виклики бізнесу. Flamingo CRM акцентує на базовому зручному функціоналі: робота з клієнтами, ведення бази даних без зайвого. Невисока ціна робить її доступною для стартапів, а гнучкість – для корпорацій. <br />
+            </p>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              Приєднуйтесь до тисяч успішних підприємців та компаній,
-              які вже трансформували свій бізнес за допомогою нашої CRM системи.
+              Широкий діапазон використання: від онлайн-магазинів до сервісних компаній. <br /> Приєднуйтеся до тисяч користувачів, які вже оптимізували свій бізнес!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="#pricing"
-                className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 flex items-center justify-center gap-2"
+                href="https://flamingo-crm-xi.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/40 transition-all duration-300 hover:from-purple-500 hover:to-pink-400 hover:shadow-purple-500/50 hover:shadow-xl"
               >
                 <span>Почати Безкоштовно</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

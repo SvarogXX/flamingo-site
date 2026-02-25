@@ -39,7 +39,7 @@ export default function FeaturesPage() {
       <Header />
       <main className="min-h-screen bg-[#0a0a0f] pt-24">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <Link href="/#features" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 mb-8">
+          <Link href="/" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 mb-8">
             ← Назад
           </Link>
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -75,7 +75,7 @@ export default function FeaturesPage() {
               href="https://flamingo-crm-xi.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl"
+              className="inline-flex items-center gap-2 px-8 py-4 text-white font-semibold rounded-xl hover:text-purple-300"
             >
               <span>Дізнатися більше про функції</span>
               <ArrowRight className="w-5 h-5" />

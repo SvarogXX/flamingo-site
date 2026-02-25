@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { url } from "inspector";
 
 const partners = [
   { name: "ITLab", logo: "💎" },

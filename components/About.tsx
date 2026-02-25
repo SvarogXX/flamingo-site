@@ -13,7 +13,7 @@ export default function About() {
           className="max-w-3xl"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white">
-            Про нашу CRM: створена для <span className="gradient-text">реального бізнесу</span>
+            Про Flamingo CRM: створена для <span className="gradient-text">реального бізнесу</span>
           </h2>
           <p className="text-gray-400 text-lg leading-relaxed">
             Ми – команда, що розуміє виклики бізнесу. Flamingo CRM акцентує на базовому зручному функціоналі:

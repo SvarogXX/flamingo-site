@@ -4,19 +4,28 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Можливості", href: "/features" },
   { name: "Тарифи", href: "/pricing" },
   { name: "Про нас", href: "/about" },
-  { name: "Відгуки", href: "#testimonials" },
+  { name: "Результати", href: "#testimonials" },
   { name: "Блог", href: "/blog" },
   { name: "Контакти", href: "/contact" },
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +48,7 @@ export default function Header() {
       <nav className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2" onClick={handleLogoClick}>
             <span className="text-3xl" aria-hidden>🦩</span>
             <span className="text-white font-semibold hidden sm:block">Flamingo CRM</span>
           </Link>
@@ -71,7 +80,7 @@ export default function Header() {
               href="https://flamingo-crm-xi.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-white text-sm font-medium rounded-lg transition-all"
+              className="px-5 py-2.5 bg-purple-600 text-white text-sm font-medium rounded-xl shadow-lg shadow-purple-500/40 transition-all hover:bg-purple-500 hover:shadow-purple-500/50 hover:shadow-xl"
             >
               Почати
             </a>
@@ -121,7 +130,7 @@ export default function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex-1 text-center py-2.5 bg-purple-600 text-white text-sm font-medium rounded-lg"
+                    className="flex-1 text-center py-2.5 bg-purple-600 text-white text-sm font-medium rounded-xl shadow-lg shadow-purple-500/40 transition-all hover:bg-purple-500 hover:shadow-purple-500/50"
                   >
                     Почати
                   </a>

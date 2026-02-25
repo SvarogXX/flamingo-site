@@ -16,7 +16,7 @@ export default function PricingPage() {
       <Header />
       <main className="min-h-screen bg-[#0a0a0f] pt-24">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <Link href="/#pricing" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 mb-8">
+          <Link href="/" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 mb-8">
             ← Назад
           </Link>
         </div>
