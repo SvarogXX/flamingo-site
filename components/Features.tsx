@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Database, BarChart3, Plug, ArrowRight } from "lucide-react";
+import { Users, Database, BarChart3, Plug, ArrowRight, Target, Mail, Calendar, Share2 } from "lucide-react";
 import Link from "next/link";
 
 const features = [
@@ -12,22 +12,46 @@ const features = [
     color: "from-blue-600 to-cyan-500",
   },
   {
+    icon: Target,
+    title: "Управління угодами",
+    description: "Відслідковуйте кожну угоду на кожному етапі воронки. Автоматичні нагадування та пріоритизація для максимальних продаж.",
+    color: "from-purple-600 to-violet-500",
+  },
+  {
     icon: Database,
     title: "База даних клієнтів",
     description: "Безпечне зберігання даних з пошуком, фільтрами та експортом. До 1000 клієнтів на старті – масштабуйте з тарифом.",
     color: "from-green-600 to-emerald-500",
   },
   {
+    icon: Mail,
+    title: "Електронна пошта та SMS",
+    description: "Розсилайте кампанії, відслідковуйте відкриття. Інтеграція з Gmail, Outlook. Автоматичні відповіді та поважні шаблони.",
+    color: "from-indigo-600 to-blue-500",
+  },
+  {
+    icon: Calendar,
+    title: "Календар та планування",
+    description: "Синхронізація з Google Calendar та Outlook. Планування дзвінків, зустрічей, автоматичні нагадування для команди.",
+    color: "from-teal-600 to-cyan-500",
+  },
+  {
     icon: BarChart3,
     title: "Звіти та аналітика",
-    description: "Автоматичні звіти про продажі, конверсії. Дізнайтеся, що працює, і оптимізуйте бізнес.",
+    description: "Автоматичні звіти про продажи, конверсії. Дізнайтеся, що працює, і оптимізуйте бізнес з деталізованої статистики.",
     color: "from-orange-600 to-yellow-500",
   },
   {
     icon: Plug,
     title: "Інтеграції",
-    description: "З email, календарем, месенджерами – все для автоматизації рутини.",
+    description: "З email, календарем, месенджерами, платіжними системами – все для автоматизації рутини без програмування.",
     color: "from-pink-600 to-rose-500",
+  },
+  {
+    icon: Share2,
+    title: "Командна робота",
+    description: "Видимість для всієї команди, розподіл завдань, коментарі та активність. Синхронізація в реальному часі для всіх користувачів.",
+    color: "from-cyan-600 to-blue-500",
   },
 ];
 
@@ -75,7 +99,7 @@ export default function Features() {
             variants={itemVariants}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight"
           >
-            Функціонал CRM: <span className="gradient-text">базовий, але потужний</span> для вашого бізнесу
+            Відкрийте наші <span className="gradient-text">ключові можливості</span> для розвитку бізнесу
           </motion.h2>
           <motion.p 
             variants={itemVariants}
@@ -124,7 +148,7 @@ export default function Features() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
           {features.map((feature, index) => {
             const Icon = feature.icon;
