@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Database, BarChart3, Plug, ArrowRight, Target, Mail, Calendar, Share2 } from "lucide-react";
+import { Users, Database, BarChart3, Plug, ArrowRight, Target, Mail, Calendar, Share2, Lock } from "lucide-react";
 import Link from "next/link";
 
 const features = [
@@ -13,6 +13,7 @@ const features = [
   { icon: BarChart3, title: "Звіти та аналітика", description: "Автоматичні звіти про продажі та конверсії.", bgColor: "from-orange-600 to-yellow-500" },
   { icon: Plug, title: "Інтеграції", description: "Підключення месенджерів, платежів та інших сервісів.", bgColor: "from-pink-600 to-rose-500" },
   { icon: Share2, title: "Командна робота", description: "Розподіл задач, коментарі та спільна робота в реальному часі.", bgColor: "from-cyan-600 to-blue-500" },
+  { icon: Lock, title: "Ролі та доступи", description: "Гнучкий контроль прав доступу для кожного члена команди.", bgColor: "from-violet-600 to-purple-500" },
 ];
 
 export default function Features() {
@@ -25,17 +26,28 @@ export default function Features() {
           <p className="text-gray-400 text-sm max-w-2xl mx-auto">Простий і чистий набір функцій, спеціально розроблених для вашого успіху.</p>
         </motion.div>
 
-        {/* Clean grid layout */}
+        {/* Clean grid layout with premium card style */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {features.map((f, idx) => {
             const Icon = f.icon;
             return (
-              <motion.div key={idx} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.04 }} className="group flex flex-col p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/2 border border-white/7 hover:border-white/15 transition-all duration-300">
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br ${f.bgColor} mb-4 group-hover:scale-110 transition-transform`}>
-                  <Icon className="w-6 h-6 text-white" />
+              <motion.div key={idx} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.04 }} className="group relative rounded-2xl overflow-hidden">
+                {/* Premium Gradient Border */}
+                <div className={`absolute inset-0 rounded-2xl p-px bg-gradient-to-r ${f.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
+                  <div className="absolute inset-px rounded-2xl bg-[#0a0a0f]" />
                 </div>
-                <h3 className="text-base font-semibold text-white mb-2">{f.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed flex-1">{f.description}</p>
+
+                {/* Background Animated Glow */}
+                <motion.div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${f.bgColor} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500`} />
+
+                {/* Content Container */}
+                <div className="relative z-10 p-6 backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 h-full flex flex-col">
+                  <motion.div className={`w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br ${f.bgColor} mb-4 shadow-lg group-hover:scale-110 transition-transform`} whileHover={{ scale: 1.15, rotate: 10 }} transition={{ type: "spring", stiffness: 400 }}>
+                    <Icon className="w-6 h-6 text-white" />
+                  </motion.div>
+                  <h3 className="text-base font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all">{f.title}</h3>
+                  <p className="text-sm text-gray-300 leading-relaxed flex-1">{f.description}</p>
+                </div>
               </motion.div>
             );
           })}
