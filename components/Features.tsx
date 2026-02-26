@@ -16,65 +16,29 @@ const features = [
 ];
 
 export default function Features() {
-  // Positions for nodes around the center (angles in degrees)
-  const count = features.length;
   return (
     <section id="features" className="relative py-16 lg:py-24 bg-[#0a0a0f] overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }} className="text-center mb-8">
+        <motion.div initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }} className="text-center mb-12">
           <p className="text-purple-400/80 text-sm tracking-widest mb-2 uppercase font-semibold">Потужні функції</p>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-2 text-white">Інфографіка: що ми вміємо</h2>
-          <p className="text-gray-400 text-sm max-w-2xl mx-auto">Креативна інфографіка показує основні можливості системи — наочніше та компактніше.</p>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-2 text-white">Що ми можемо <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">зробити для вас</span></h2>
+          <p className="text-gray-400 text-sm max-w-2xl mx-auto">Простий і чистий набір функцій, спеціально розроблених для вашого успіху.</p>
         </motion.div>
 
-        {/* Infographic: center screenshot with circular nodes */}
-        <div className="relative mx-auto w-full max-w-4xl h-[420px] lg:h-[520px]">
-          {/* center card */}
-          <motion.div initial={{ scale: 0.98, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-40 lg:w-80 lg:h-52 rounded-2xl overflow-hidden shadow-2xl border border-white/6">
-            <img src="/images/task.png" alt="screenshot" className="w-full h-full object-cover block" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          </motion.div>
-
-          {/* nodes around center on desktop; on mobile show stacked grid below */}
-          <div className="hidden lg:block">
-            {features.map((f, i) => {
-              const angle = (360 / count) * i;
-              const radius = 220; // px distance from center
-              const transform = `translate(-50%, -50%) rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`;
-              const Icon = f.icon;
-              return (
-                <motion.div key={i} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} style={{ transform }} className="absolute left-1/2 top-1/2 w-44">
-                  <div className="flex items-center gap-3 bg-[#0b0b10]/95 border border-white/6 rounded-xl p-3 shadow-lg">
-                    <div className={`w-10 h-10 rounded-md flex items-center justify-center bg-gradient-to-br ${f.bgColor} flex-shrink-0`}>
-                      <Icon className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold text-white">{f.title}</div>
-                      <div className="text-xs text-gray-300 mt-0.5">{f.description.split('.').slice(0,1).join('.') + '.'}</div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Mobile: simple compact grid under center */}
-          <div className="lg:hidden mt-6 grid grid-cols-2 gap-3">
-            {features.map((f, idx) => {
-              const Icon = f.icon;
-              return (
-                <motion.div key={idx} initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.03 }} className="flex items-start gap-3 p-3 rounded-lg bg-[#0b0b10] border border-white/6">
-                  <div className={`w-9 h-9 rounded-md flex items-center justify-center bg-gradient-to-br ${f.bgColor} flex-shrink-0`}>
-                    <Icon className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-white">{f.title}</div>
-                    <div className="text-xs text-gray-300 mt-1">{f.description}</div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+        {/* Clean grid layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {features.map((f, idx) => {
+            const Icon = f.icon;
+            return (
+              <motion.div key={idx} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.04 }} className="group flex flex-col p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/2 border border-white/7 hover:border-white/15 transition-all duration-300">
+                <div className={`w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br ${f.bgColor} mb-4 group-hover:scale-110 transition-transform`}>
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-base font-semibold text-white mb-2">{f.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed flex-1">{f.description}</p>
+              </motion.div>
+            );
+          })}
         </div>
 
         <div className="mt-6 text-center">
