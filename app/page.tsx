@@ -3,7 +3,8 @@ import Hero from "@/components/Hero";
 import FeaturedIcons from "@/components/FeaturedIcons";
 import Features from "@/components/Features";
 import Benefits from "@/components/Benefits";
-import Pricing from "@/components/Pricing";
+// import Pricing from "@/components/Pricing";
+import UkraineSupport from "@/components/UkraineSupport";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
@@ -18,7 +19,8 @@ export default function Home() {
       <Features />
       <Benefits />
       {/* <Partners /> */}
-      <Pricing />
+      {/* <Pricing /> */}
+      <UkraineSupport />
       <Testimonials />
       <CTA />
       <Contact />

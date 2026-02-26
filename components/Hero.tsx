@@ -1,14 +1,45 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { useReducedMotion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, useReducedMotion, useTransform, useMotionValue } from "framer-motion";
 import { ArrowRight, Sparkles, Wallet, Layers } from "lucide-react";
+
+type BlockableEvent = {
+  preventDefault: () => void;
+  stopPropagation: () => void;
+};
 
 export default function Hero() {
   const [heroImageError, setHeroImageError] = useState(false);
   const reducedMotion = useReducedMotion();
   const [decorationsReady, setDecorationsReady] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const isHeroActiveRef = useRef(false);
+  const [isHeroActive, setIsHeroActive] = useState(false);
+  const imageScrollProgress = useMotionValue(0);
+  const imageScrollY = useTransform(imageScrollProgress, [0, 1], ["0%", "-65%"]);
+
+  const applyInnerScroll = (deltaY: number, e: BlockableEvent) => {
+    const current = imageScrollProgress.get();
+    const goingDown = deltaY > 0;
+    const goingUp = deltaY < 0;
+    const atStart = current <= 0;
+    const atEnd = current >= 1;
+
+    if ((goingDown && !atEnd) || (goingUp && !atStart)) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const sensitivity = 0.0018;
+      let next = current + deltaY * sensitivity;
+      if (next < 0) next = 0;
+      if (next > 1) next = 1;
+      imageScrollProgress.set(next);
+      return true;
+    }
+
+    return false;
+  };
 
   // Запускаємо декоративні анімації після завантаження — не блокуємо LCP
   useEffect(() => {
@@ -21,6 +52,89 @@ export default function Hero() {
       clearTimeout(t);
     };
   }, []);
+
+  // Визначаємо, коли блок hero знаходиться в центрі екрана
+  useEffect(() => {
+    const handleScrollPosition = () => {
+      if (!scrollContainerRef.current) return;
+      const rect = scrollContainerRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || 0;
+      const viewportCenter = viewportHeight / 2;
+      const active = rect.top < viewportCenter && rect.bottom > viewportCenter;
+      isHeroActiveRef.current = active;
+      setIsHeroActive(active);
+    };
+
+    handleScrollPosition();
+    window.addEventListener("scroll", handleScrollPosition);
+    window.addEventListener("resize", handleScrollPosition);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollPosition);
+      window.removeEventListener("resize", handleScrollPosition);
+    };
+  }, []);
+
+  // Нативні wheel / touch події з passive: false — щоб можна було блокувати скрол сторінки
+  useEffect(() => {
+    if (reducedMotion) return;
+
+    let lastTouchY: number | null = null;
+
+    const handleWheel = (e: WheelEvent) => {
+      if (!isHeroActiveRef.current) return;
+
+      const deltaY = e.deltaY;
+      if (!deltaY) return;
+
+      applyInnerScroll(deltaY, e as unknown as BlockableEvent);
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      if (!isHeroActiveRef.current) return;
+      if (e.touches.length === 0) return;
+      lastTouchY = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isHeroActiveRef.current) return;
+      if (e.touches.length === 0) return;
+
+      const currentY = e.touches[0].clientY;
+      if (lastTouchY == null) {
+        lastTouchY = currentY;
+        return;
+      }
+
+      const deltaY = lastTouchY - currentY; // свайп вгору = скрол вниз
+      if (!deltaY) return;
+
+      const consumed = applyInnerScroll(deltaY, e as unknown as BlockableEvent);
+      lastTouchY = currentY;
+
+      if (consumed) {
+        // якщо ми прокручуємо тільки картинку — сторінка не повинна скролитися
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+
+    const handleTouchEnd = () => {
+      lastTouchY = null;
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("touchstart", handleTouchStart, { passive: false });
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
+    window.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [reducedMotion]);
 
   return (
     <section
@@ -93,7 +207,7 @@ export default function Hero() {
               transition={{ delay: 0.35, duration: 0.5 }}
               className="text-purple-300/90 text-sm sm:text-base font-medium mb-6 max-w-2xl mx-auto"
             >
-              Нова сучасна CRM 2026 року — спеціально створена для малого та середнього бізнесу
+              Сучасна CRM-платформа 2026 року, адаптована до різних бізнес-моделей — від сервісного бізнесу до e‑commerce
             </motion.p>
 
             <motion.p
@@ -102,7 +216,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-gray-400 text-base sm:text-lg mb-8 leading-relaxed max-w-3xl mx-auto"
             >
-              Не переплачуйте за зайві функції. Проста, швидка та доступна CRM для управління клієнтами та базою даних — від маленького магазину до компанії на 50+ людей.
+              Не переплачуйте за зайві функції. Зручна, швидка та доступна CRM для управління клієнтами та базою даних — від маленького магазину до компанії на 50+ людей.
             </motion.p>
 
             <motion.div
@@ -142,7 +256,8 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="text-purple-400 text-sm"
             >
-              Безкоштовний пробний період 14 днів
+              {/* Безкоштовний пробний період 14 днів */}
+              Не плати за користування, підтримай ЗСУ донатом!
             </motion.p>
           </motion.div>
 
@@ -161,8 +276,10 @@ export default function Hero() {
               className={`absolute -right-2 -bottom-6 sm:right-4 sm:bottom-4 lg:right-8 lg:bottom-6 z-20 w-32 sm:w-36 rounded-2xl border border-white/10 bg-gradient-to-br from-purple-950/80 to-[#0c0c10] p-4 shadow-xl shadow-black/40 backdrop-blur-md ${!reducedMotion ? "hero-card-float" : ""}`}
             >
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-white mb-0.5">14</div>
-                <div className="text-xs text-purple-400/90 font-medium">днів безкоштовно</div>
+                {/* <div className="text-2xl sm:text-3xl font-bold text-white mb-0.5">14</div> */}
+                <div className="text-2xl sm:text-3xl font-bold text-green-500 mb-0.5">Free</div>
+                {/* <div className="text-xs text-purple-400/90 font-medium">днів безкоштовно</div> */}
+                <div className="text-xs text-purple-400/90 font-medium">за донат для ЗСУ</div>
               </div>
             </motion.div>
             <div
@@ -188,8 +305,11 @@ export default function Hero() {
                 </div>
                 <div className="flex-1 max-w-[60%] mx-auto h-6 rounded-full bg-white/[0.05] border border-white/[0.06]" />
               </div>
-              {/* Зображення знизу: контейнер фіксованої висоти + анімація «прокрутки» CRM */}
-              <div className="relative h-[53vh] min-h-[312px] max-h-[432px] sm:h-[48vh] sm:max-h-[408px] lg:h-[456px] overflow-hidden rounded-b-xl bg-white/[0.02]">
+              {/* Зображення знизу: контейнер фіксованої висоти, прокрутка синхронна з рухом коліщатка */}
+              <div
+                ref={scrollContainerRef}
+                className="relative h-[53vh] min-h-[312px] max-h-[432px] sm:h-[48vh] sm:max-h-[408px] lg:h-[456px] overflow-hidden rounded-b-xl bg-white/[0.02]"
+              >
                 {heroImageError ? (
                   <div className="w-full h-full flex items-center justify-center text-gray-500">Додайте hero.png у public/images/</div>
                 ) : reducedMotion ? (
@@ -204,7 +324,10 @@ export default function Hero() {
                     onError={() => setHeroImageError(true)}
                   />
                 ) : (
-                  <div className="w-full hero-scroll-inner">
+                  <motion.div
+                    className="w-full will-change-transform"
+                    style={{ y: imageScrollY }}
+                  >
                     <img
                       src="/images/hero.png"
                       alt="Інтерфейс Flamingo CRM — головний екран системи управління клієнтами та базою даних"
@@ -215,7 +338,7 @@ export default function Hero() {
                       className="w-full h-auto block"
                       onError={() => setHeroImageError(true)}
                     />
-                  </div>
+                  </motion.div>
                 )}
               </div>
             </div>
@@ -252,7 +375,7 @@ export default function Hero() {
                   Чому <span className="gradient-text">Flamingo CRM</span>?
                 </h2>
                 <p className="text-gray-500 text-sm text-center max-w-xl mx-auto mb-8">
-                  Простий старт. Зрозуміла ціна. Один інструмент для всього.
+                  Простий старт. Інтуїтивний та ергономічний інтерфейс. Один інструмент для всього.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
