@@ -5,208 +5,85 @@ import { Users, Database, BarChart3, Plug, ArrowRight, Target, Mail, Calendar, S
 import Link from "next/link";
 
 const features = [
-  {
-    icon: Users,
-    title: "Управління клієнтами",
-    description: "Додавайте контакти, відстежуйте взаємодії та персоналізуйте пропозиції",
-    bgColor: "from-purple-600 to-purple-700",
-    accentColor: "#9333ea",
-    side: "left",
-  },
-  {
-    icon: Target,
-    title: "Управління угодами",
-    description: "Відслідковуйте угоди на кожному етапі воронки з автоматичними нагадуваннями",
-    bgColor: "from-pink-600 to-rose-600",
-    accentColor: "#ec4899",
-    side: "right",
-  },
-  {
-    icon: Database,
-    title: "База даних клієнтів",
-    description: "Безпечне зберігання з пошуком, фільтрами та експортом до 1000 клієнтів",
-    bgColor: "from-purple-700 to-purple-600",
-    accentColor: "#a855f7",
-    side: "left",
-  },
-  {
-    icon: Mail,
-    title: "Електронна пошта та SMS",
-    description: "Розсилайте кампанії з інтеграцією Gmail, Outlook та автоматичними відповідями",
-    bgColor: "from-pink-600 to-pink-700",
-    accentColor: "#f43f5e",
-    side: "right",
-  },
-  {
-    icon: Calendar,
-    title: "Календар та планування",
-    description: "Синхронізація з Google Calendar, планування дзвінків та зустрічей",
-    bgColor: "from-purple-600 to-violet-600",
-    accentColor: "#a855f7",
-    side: "left",
-  },
-  {
-    icon: BarChart3,
-    title: "Звіти та аналітика",
-    description: "Автоматичні звіти про продажи та конверсії з деталізованою статистикою",
-    bgColor: "from-pink-700 to-rose-600",
-    accentColor: "#f43f5e",
-    side: "right",
-  },
-  {
-    icon: Plug,
-    title: "Інтеграції",
-    description: "Підключайте email, календарі, месенджери та платіжні системи без коду",
-    bgColor: "from-purple-700 to-purple-600",
-    accentColor: "#9333ea",
-    side: "left",
-  },
-  {
-    icon: Share2,
-    title: "Командна робота",
-    description: "Видимість для команди, розподіл завдань і коментарі в реальному часі",
-    bgColor: "from-pink-600 to-rose-700",
-    accentColor: "#ec4899",
-    side: "right",
-  },
+  { icon: Users, title: "Управління клієнтами", description: "Додавайте контакти, відстежуйте взаємодії та персоналізуйте пропозиції.", bgColor: "from-blue-600 to-cyan-500" },
+  { icon: Target, title: "Управління угодами", description: "Відслідковуйте угоди на кожному етапі воронки.", bgColor: "from-purple-600 to-violet-500" },
+  { icon: Database, title: "База даних клієнтів", description: "Пошук, фільтри та експорт даних — безпечно і надійно.", bgColor: "from-green-600 to-emerald-500" },
+  { icon: Mail, title: "Електронна пошта та SMS", description: "Розсилки з шаблонами та відстеженням відкриттів.", bgColor: "from-indigo-600 to-blue-500" },
+  { icon: Calendar, title: "Календар та планування", description: "Синхронізація з Google Calendar та Outlook.", bgColor: "from-teal-600 to-cyan-500" },
+  { icon: BarChart3, title: "Звіти та аналітика", description: "Автоматичні звіти про продажі та конверсії.", bgColor: "from-orange-600 to-yellow-500" },
+  { icon: Plug, title: "Інтеграції", description: "Підключення месенджерів, платежів та інших сервісів.", bgColor: "from-pink-600 to-rose-500" },
+  { icon: Share2, title: "Командна робота", description: "Розподіл задач, коментарі та спільна робота в реальному часі.", bgColor: "from-cyan-600 to-blue-500" },
 ];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-};
 
 export default function Features() {
   return (
-    <section id="features" className="relative py-32 lg:py-48 bg-[#0a0a0f] overflow-hidden">
+    <section id="features" className="relative py-16 lg:py-24 bg-[#0a0a0f] overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-24"
+          transition={{ duration: 0.45 }}
+          className="text-center mb-10"
         >
-          <p className="text-purple-400/80 text-sm tracking-widest mb-4 uppercase font-semibold">
-            Потужні функції
-          </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 text-white leading-tight">
-            Відкрийте наші <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">ключові можливості</span>
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Спеціально розроблені для вашого бізнесу функції, які допоможуть вам керувати клієнтами та зростати швидше
-          </p>
+          <p className="text-purple-400/80 text-sm tracking-widest mb-2 uppercase font-semibold">Потужні функції</p>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-2 text-white">Відкрийте наші <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">ключові можливості</span></h2>
+          <p className="text-gray-400 text-sm max-w-2xl mx-auto">Компактний та функціональний набір інструментів для ефективної роботи з клієнтами.</p>
         </motion.div>
 
-        {/* Features Grid */}
-        <div className="space-y-16">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            const isLeft = feature.side === "left";
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left: screenshot with floating mini-cards */}
+          <div className="lg:col-span-6 flex justify-center">
+            <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="relative w-full max-w-xl rounded-2xl overflow-hidden shadow-lg">
+              <img src="/images/task.png" alt="Flamingo CRM screenshot" className="w-full h-auto object-cover block" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
 
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`flex ${isLeft ? "flex-row" : "flex-row-reverse"} items-center gap-8 lg:gap-16`}
-              >
-                {/* Large Background Shape */}
-                <div className="flex-1 relative">
-                  <motion.div
-                    className={`bg-gradient-to-br ${feature.bgColor} rounded-[3rem] p-12 lg:p-16 min-h-96 flex flex-col justify-between relative overflow-hidden`}
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {/* Decorative Circle */}
-                    <motion.div
-                      className="absolute -top-20 -right-20 w-56 h-56 rounded-full opacity-20 bg-white blur-3xl"
-                      animate={{ x: [0, 20, 0], y: [0, 20, 0] }}
-                      transition={{ duration: 6, repeat: Infinity }}
-                    />
+              <div className="absolute top-6 right-6 space-y-3">
+                {features.slice(0, 3).map((f, i) => {
+                  const Icon = f.icon;
+                  return (
+                    <motion.div key={i} whileHover={{ y: -6 }} transition={{ type: 'spring' }} className="w-44 bg-[#0b0b10]/80 backdrop-blur rounded-lg p-3 border border-white/7 flex items-start gap-3">
+                      <div className={`w-9 h-9 rounded-lg flex items-center justify-center bg-gradient-to-br ${f.bgColor} flex-shrink-0`}>
+                        <Icon className="w-4 h-4 text-white" />
+                      </div>
+                      <div>
+                        <div className="text-sm font-semibold text-white">{f.title}</div>
+                        <div className="text-xs text-gray-300 mt-1">{f.description.split('.').slice(0,1).join('.') + '.'}</div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </motion.div>
+          </div>
 
-                    {/* Content */}
-                    <div className="relative z-10">
-                      <motion.div
-                        className="w-24 h-24 rounded-3xl bg-white/15 backdrop-blur-xl flex items-center justify-center mb-8"
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                      >
-                        <Icon className="w-12 h-12 text-white" />
-                      </motion.div>
-
-                      <h3 className="text-3xl lg:text-4xl font-black text-white mb-4 leading-tight">
-                        {feature.title}
-                      </h3>
-                      <p className="text-white/85 text-lg leading-relaxed max-w-sm">
-                        {feature.description}
-                      </p>
+          {/* Right: compact tiles */}
+          <div className="lg:col-span-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {features.map((f, idx) => {
+                const Icon = f.icon;
+                return (
+                  <motion.div key={idx} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.03 }} className="flex items-start gap-3 p-3 rounded-lg bg-[#0b0b10] border border-white/6 hover:scale-[1.01] transition-transform">
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br ${f.bgColor} flex-shrink-0`}>
+                      <Icon className="w-4 h-4 text-white" />
                     </div>
-
-                    {/* Bottom accent circle */}
-                    <motion.div
-                      className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full opacity-15 bg-white blur-3xl"
-                      animate={{ x: [0, -20, 0], y: [0, 20, 0] }}
-                      transition={{ duration: 8, repeat: Infinity }}
-                    />
+                    <div>
+                      <div className="text-sm font-semibold text-white">{f.title}</div>
+                      <div className="text-xs text-gray-300 mt-1">{f.description}</div>
+                    </div>
                   </motion.div>
-                </div>
+                );
+              })}
+            </div>
 
-                {/* Icon decoration on side */}
-                <motion.div
-                  className="hidden lg:flex flex-col gap-6 flex-1"
-                  initial={{ opacity: 0, x: isLeft ? 40 : -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
-                >
-                  <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.bgColor} flex items-center justify-center shadow-2xl`}>
-                    <Icon className="w-10 h-10 text-white" />
-                  </div>
-                  <div className="space-y-3">
-                    <div className="h-2 w-16 rounded-full bg-purple-400/30" />
-                    <div className="h-2 w-12 rounded-full bg-purple-400/20" />
-                  </div>
-                </motion.div>
-              </motion.div>
-            );
-          })}
+            <div className="mt-5 text-center lg:text-left">
+              <Link href="/features" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-sm">
+                Всі можливості
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
         </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-24"
-        >
-          <Link
-            href="/features"
-            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all"
-          >
-            Дізнатися все про функції
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-          </Link>
-        </motion.div>
       </div>
     </section>
   );
