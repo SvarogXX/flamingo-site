@@ -109,46 +109,12 @@ export default function Features() {
           </motion.p>
         </motion.div>
 
-        {/* Скріншот можливостей CRM — з віньєткою та м'яким свіченням */}
-        <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 relative rounded-2xl overflow-hidden border border-purple-500/20 bg-white/[0.02] backdrop-blur-xl shadow-[0_0_0_1px_rgba(147,51,234,0.2),0_30px_60px_-12px_rgba(0,0,0,0.5),0_0_100px_-15px_rgba(147,51,234,0.3),0_20px_40px_-10px_rgba(147,51,234,0.1)]"
-        >
-          <div className="relative bg-[#0c0c12]">
-            <img
-              src="/images/task.png"
-              alt="Завдання та можливості Flamingo CRM — дашборд, списки задач, управління клієнтами та угодами"
-              width={1200}
-              height={600}
-              loading="lazy"
-              decoding="async"
-              className="relative z-0 w-full h-auto object-contain"
-            />
-            {/* Віньєтка — затемнення від країв до центру */}
-            <div
-              className="absolute inset-0 z-10 pointer-events-none rounded-2xl"
-              style={{
-                background: "radial-gradient(ellipse 88% 82% at 50% 50%, transparent 50%, rgba(0,0,0,0.12) 75%, rgba(0,0,0,0.28) 100%)",
-              }}
-            />
-            {/* Тонка світла лінія зверху — глибина */}
-            <motion.div 
-              className="absolute top-0 left-0 right-0 h-px z-10 bg-gradient-to-r from-transparent via-purple-400 to-transparent pointer-events-none rounded-t-2xl"
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 3, repeat: Infinity }}
-            />
-          </div>
-        </motion.div>
-
         <motion.div 
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
         >
           {features.map((feature, index) => {
             const Icon = feature.icon;
@@ -156,7 +122,7 @@ export default function Features() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group relative rounded-2xl overflow-hidden"
+                className="group relative rounded-2xl overflow-hidden h-full"
               >
                 {/* Gradient Border */}
                 <div
@@ -171,19 +137,21 @@ export default function Features() {
                 />
 
                 {/* Content */}
-                <div className="relative z-10 flex gap-6 p-8 backdrop-blur-xl">
+                <div className="relative z-10 flex flex-col gap-6 p-8 h-full backdrop-blur-xl">
                   <motion.div 
-                    className={`flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-lg`}
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-xl`}
                     whileHover={{ scale: 1.15, rotate: 10 }}
                     transition={{ type: "spring", stiffness: 400 }}
                   >
-                    <Icon className="w-7 h-7 text-white" />
+                    <Icon className="w-8 h-8 text-white" />
                   </motion.div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all">
+                  <div className="flex-1 flex flex-col gap-3">
+                    <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{feature.description}</p>
+                    <p className="text-gray-400 text-base leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
