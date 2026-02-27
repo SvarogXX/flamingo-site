@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Можливості", href: "/#features", sectionId: "features" },
-  { name: "Тарифи", href: "/#pricing", sectionId: "pricing" },
+  { name: "Допомога Україні", href: "/#ukraine-support", sectionId: "ukraine-support" },
   { name: "Про нас", href: "/#about", sectionId: "about" },
   { name: "Результати", href: "/#testimonials", sectionId: "testimonials" },
   { name: "Блог", href: "/blog", sectionId: null },
