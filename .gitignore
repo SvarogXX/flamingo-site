@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Prevent accidentally adding the Windows reserved device name 'nul'
+# See: https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
+nul
