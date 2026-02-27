@@ -109,7 +109,7 @@ export default function Contact() {
   const inputNormal = "border-white/10 focus:border-purple-500/50";
 
   return (
-    <section id="contact" className="relative py-8 lg:py-12 bg-[#0a0a0f]">
+    <section id="contact" className="relative py-16 lg:py-20 bg-[#0a0a0f]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
 
       <div className="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">

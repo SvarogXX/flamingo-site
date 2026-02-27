@@ -18,7 +18,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="relative py-16 lg:py-24 bg-[#0a0a0f] overflow-hidden">
+    <section id="features" className="relative py-20 lg:py-28 bg-[#0a0a0f] overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45 }} className="text-center mb-12">
           <p className="text-purple-400/80 text-sm tracking-widest mb-2 uppercase font-semibold">Потужні функції</p>

@@ -18,7 +18,7 @@ const footerLinks = {
   resources: [
     { name: "Документація", href: "https://flamingo-crm-xi.vercel.app/" },
     { name: "Підтримка", href: "mailto:support@flamingo-crm.com.ua" },
-    { name: "FAQ", href: "/blog" },
+    { name: "FAQ", href: "/faq" },
   ],
 };
 

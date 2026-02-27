@@ -29,7 +29,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative py-20 bg-[#080810]">
+    <section id="testimonials" className="relative py-24 bg-[#080810]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div ... >

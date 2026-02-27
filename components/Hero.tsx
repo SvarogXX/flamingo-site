@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useReducedMotion, useTransform, useMotionValue } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Layers } from "lucide-react";
+import Audience from "./Audience";
 
 type BlockableEvent = {
   preventDefault: () => void;
@@ -171,6 +172,8 @@ export default function Hero() {
       delay: 1,
     },
   ];
+
+  // Audience section moved to standalone component `Audience`
 
   return (
     <section
@@ -491,6 +494,8 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0a0a0f] to-transparent" />
+      {/* Audience section (standalone component) */}
+      <Audience />
     </section>
   );
 }
