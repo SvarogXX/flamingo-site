@@ -163,7 +163,7 @@ export default function Hero() {
       </div>
 
       {/* Контент: текст і CTA зверху, одне широке зображення знизу (як Workly) */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-36 lg:pt-40 pb-16">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-36 lg:pt-40 pb-0">
         <div className="w-full">
           {/* Текст і CTA */}
           <motion.div
@@ -250,15 +250,65 @@ export default function Hero() {
               )}
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="text-purple-400 text-sm"
+            <motion.div
+              className="relative inline-block mt-8 group"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.65, duration: 0.5 }}
             >
-              {/* Безкоштовний пробний період 14 днів */}
-              Не плати за користування, підтримай ЗСУ донатом!
-            </motion.p>
+              {/* Gradient border effect */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
+              
+              {/* Main button container */}
+              <motion.a
+                href="#ukraine-support"
+                onClick={(e: React.MouseEvent) => {
+                  e.preventDefault();
+                  const element = document.getElementById('ukraine-support');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="relative inline-block backdrop-blur-xl bg-gradient-to-br from-purple-900/40 to-pink-900/30 text-white rounded-2xl
+                  px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold
+                  border border-white/20 hover:border-white/40
+                  transition-all duration-300 group/btn
+                  hover:from-purple-800/50 hover:to-pink-800/40
+                  shadow-lg hover:shadow-xl shadow-purple-500/10 hover:shadow-purple-500/20"
+                whileHover={{
+                  scale: 1.05,
+                  y: -2
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <span className="relative flex items-center justify-center gap-2 sm:gap-3">
+                  {/* Ukrainian flag SVG - small and elegant */}
+                  <motion.svg
+                    width="20"
+                    height="14"
+                    viewBox="0 0 36 24"
+                    animate={{
+                      rotate: [0, 3, -3, 0]
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity
+                    }}
+                    className="opacity-90"
+                  >
+                    <rect width="36" height="12" fill="#0066CC" />
+                    <rect y="12" width="36" height="12" fill="#FFD700" />
+                  </motion.svg>
+                  
+                  <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent font-bold tracking-wide">
+                    Замість щомісячної плати, зроби донат на ЗСУ!
+                  </span>
+                </span>
+                
+                {/* Premium glow on hover */}
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover/btn:opacity-40 transition-opacity duration-300 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20 pointer-events-none" />
+              </motion.a>
+            </motion.div>
           </motion.div>
 
           {/* Одне широке зображення знизу: ширше, з поступовою прозорістю від середини донизу */}
@@ -266,27 +316,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-10 sm:mt-14 w-full max-w-[95%] sm:max-w-[92%] lg:max-w-7xl mx-auto px-0 relative"
+            className="mt-10 sm:mt-14 w-screen relative left-1/2 -translate-x-1/2"
           >
-            {/* Плаваюча картка «14 днів» — анімація в CSS, запуск після завантаження */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1, duration: 0.5 }}
-              className={`absolute -right-2 -bottom-6 sm:right-4 sm:bottom-4 lg:right-8 lg:bottom-6 z-20 w-32 sm:w-36 rounded-2xl border border-white/10 bg-gradient-to-br from-purple-950/80 to-[#0c0c10] p-4 shadow-xl shadow-black/40 backdrop-blur-md ${!reducedMotion ? "hero-card-float" : ""}`}
-            >
-              <div className="text-center">
-                {/* <div className="text-2xl sm:text-3xl font-bold text-white mb-0.5">14</div> */}
-                <div className="text-2xl sm:text-3xl font-bold text-green-500 mb-0.5">Free</div>
-                {/* <div className="text-xs text-purple-400/90 font-medium">днів безкоштовно</div> */}
-                <div className="text-xs text-purple-400/90 font-medium">за донат для ЗСУ</div>
-              </div>
-            </motion.div>
             <div
-              className="relative rounded-2xl border border-white/[0.1] bg-[#0c0c10] p-1.5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4),0_0_0_1px_rgba(255,255,255,0.06)] overflow-hidden"
+              className="w-full relative rounded-2xl border border-white/[0.1] bg-[#0c0c10] p-1.5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4),0_0_0_1px_rgba(255,255,255,0.06)] overflow-hidden"
               style={{
-                WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 60%, rgba(0,0,0,0.6) 85%, transparent 100%)",
-                maskImage: "linear-gradient(to bottom, black 0%, black 60%, rgba(0,0,0,0.6) 85%, transparent 100%)",
+                WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 45%, rgba(0,0,0,0.6) 65%, transparent 85%)",
+                maskImage: "linear-gradient(to bottom, black 0%, black 45%, rgba(0,0,0,0.6) 65%, transparent 85%)",
               }}
             >
               <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(147,51,234,0.12),transparent)] pointer-events-none z-[1]" />
@@ -294,7 +330,7 @@ export default function Hero() {
               <div
                 className="absolute inset-0 rounded-2xl pointer-events-none z-[5]"
                 style={{
-                  background: "linear-gradient(to top, #0a0a0f 0%, #0a0a0f 25%, rgba(10,10,15,0.85) 45%, rgba(10,10,15,0.4) 65%, transparent 100%)",
+                  background: "linear-gradient(to top, #0a0a0f 0%, #0a0a0f 15%, rgba(10,10,15,0.85) 35%, rgba(10,10,15,0.4) 50%, transparent 65%)",
                 }}
               />
               <div className="flex items-center gap-2.5 px-3 py-2 rounded-t-xl bg-white/[0.03] border-b border-white/[0.06] relative z-[2]">
@@ -308,7 +344,7 @@ export default function Hero() {
               {/* Зображення знизу: контейнер фіксованої висоти, прокрутка синхронна з рухом коліщатка */}
               <div
                 ref={scrollContainerRef}
-                className="relative h-[53vh] min-h-[312px] max-h-[432px] sm:h-[48vh] sm:max-h-[408px] lg:h-[456px] overflow-hidden rounded-b-xl bg-white/[0.02]"
+                className="relative h-[85vh] min-h-[500px] max-h-[800px] sm:h-[80vh] sm:max-h-[750px] lg:h-[200px] overflow-hidden rounded-b-xl bg-white/[0.02]"
               >
                 {heroImageError ? (
                   <div className="w-full h-full flex items-center justify-center text-gray-500">Додайте hero.png у public/images/</div>
@@ -347,7 +383,7 @@ export default function Hero() {
       </div>
 
       {/* Блок «Чому Flamingo CRM» — окремо під сіткою */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -359,7 +395,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            className="mt-20 max-w-5xl mx-auto"
+            className="mt-10 max-w-5xl mx-auto"
           >
             <div className="relative rounded-2xl border border-white/10 bg-gradient-to-b from-purple-950/30 via-[#0a0a0f] to-[#0a0a0f] p-6 sm:p-8 shadow-[0_0_60px_-20px_rgba(147,51,234,0.15)] overflow-hidden">
               {/* Верхня градієнтна лінія */}
