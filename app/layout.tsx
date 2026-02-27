@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SideNav from "@/components/SideNav";
+import FloatingDonateButton from "@/components/FloatingDonateButton";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -79,6 +80,7 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased bg-[#0a0a0f] text-white`}>
         {children}
         <SideNav />
+        <FloatingDonateButton />
       </body>
     </html>
   );

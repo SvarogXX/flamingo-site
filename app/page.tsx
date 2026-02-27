@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import FeaturedIcons from "@/components/FeaturedIcons";
+// import FeaturedIcons from "@/components/FeaturedIcons";
 import Features from "@/components/Features";
 import Benefits from "@/components/Benefits";
 // import Pricing from "@/components/Pricing";
@@ -15,7 +15,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#0a0a0f]">
       <Header />
       <Hero />
-      <FeaturedIcons />
+      {/* <FeaturedIcons /> */}
       <Features />
       <Benefits />
       {/* <Partners /> */}

@@ -80,61 +80,141 @@ const results = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative py-20 bg-[#080810]">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
+    <section id="testimonials" className="relative py-24 lg:py-32 bg-[#080810] overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(147,51,234,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(147,51,234,0.01)_1px,transparent_1px)] bg-[size:80px_80px] pointer-events-none" />
 
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Animated Background Glow */}
+      <motion.div
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-purple-600/15 rounded-full blur-3xl"
+        animate={{
+          y: [0, 50, 0],
+          opacity: [0.5, 1, 0.5],
+        }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+
+      <motion.div
+        className="absolute -top-1/2 right-0 w-96 h-96 bg-pink-600/10 rounded-full blur-3xl"
+        animate={{
+          y: [0, -50, 0],
+          opacity: [0.3, 0.7, 0.3],
+        }}
+        transition={{ duration: 10, repeat: Infinity, delay: 2 }}
+      />
+
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2,
+              },
+            },
+          }}
+          className="text-center mb-16"
+        >
+          <motion.p 
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+            className="text-purple-400/80 text-sm tracking-wider mb-4 font-semibold"
+          >
+            РЕАЛЬНІ РЕЗУЛЬТАТИ
+          </motion.p>
+          <motion.h2 
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
+          >
+            Результати, яких ви досягнете{" "}
+            <span className="gradient-text">вже в перший місяць</span>
+          </motion.h2>
+          <motion.p 
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+            className="text-gray-400 text-lg max-w-2xl mx-auto"
+          >
+            Реальні результати від користувачів Flamingo CRM
+          </motion.p>
+        </motion.div>
+
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2,
+              },
+            },
+          }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+        >
+          {results.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+                }}
+                className="group relative rounded-2xl overflow-hidden"
+              >
+                {/* Gradient Border */}
+                <div className="absolute inset-0 rounded-2xl p-px bg-gradient-to-br from-purple-600 to-pink-500 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <div className="absolute inset-px rounded-2xl bg-[#080810]" />
+                </div>
+
+                {/* Glow Effect */}
+                <motion.div
+                  className="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-500 opacity-0 group-hover:opacity-5 blur-2xl transition-opacity duration-500"
+                />
+
+                {/* Content */}
+                <div className="relative z-10 p-6 lg:p-8 backdrop-blur-xl">
+                  <motion.div 
+                    className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center mb-4 shadow-lg"
+                    whileHover={{ scale: 1.1, rotate: 10 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                  >
+                    <Icon className="w-7 h-7 text-white" />
+                  </motion.div>
+                  <h3 className="text-white font-bold text-lg mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center p-8 rounded-2xl bg-gradient-to-r from-purple-600/10 to-pink-600/10 border border-purple-500/20 backdrop-blur-xl"
         >
-          <p className="text-purple-400/80 text-sm tracking-wider mb-4">
-            РЕЗУЛЬТАТИ, ЯКИХ ВИ ДОСЯГНЕТЕ З FLAMINGO CRM
+          <p className="text-gray-300 text-base max-w-2xl mx-auto">
+            <span className="text-white font-semibold">Це не обіцянки —</span> це чинні результати, досягнуті середніми користувачами Flamingo CRM у 2025–2026 роках. Результати залежать від якості даних та послідовності в роботі з системою.
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            Результати, яких ви досягнете{" "}
-            <span className="gradient-text">вже в перший місяць</span>
-          </h2>
         </motion.div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {results.map((item, index) => {
-            const Icon = item.icon;
-            return (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white/5 rounded-2xl border border-white/5 p-6 hover:border-purple-500/20 transition-colors"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-6 h-6 text-purple-400" />
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
-                </div>
-              </div>
-            </motion.div>
-            );
-          })}
-        </div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center text-gray-500 text-sm mt-8 max-w-2xl mx-auto"
-        >
-          Це не обіцянки — це середні результати, які отримують користувачі простих
-          CRM-систем 2025–2026 року
-        </motion.p>
       </div>
+
+      {/* Top Border with Glow */}
+      <motion.div 
+        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent shadow-lg shadow-purple-500/50"
+        animate={{ opacity: [0.5, 1, 0.5] }}
+        transition={{ duration: 3, repeat: Infinity }}
+      />
     </section>
   );
 }

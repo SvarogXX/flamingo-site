@@ -8,9 +8,9 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Можливості", href: "/features" },
-  { name: "Допомога ЗСУ", href: "#ukraine-support" },
+  { name: "Допомога ЗСУ", href: "/ukrainesupport" },
   { name: "Про нас", href: "/about" },
-  { name: "Результати", href: "#testimonials" },
+  { name: "Результати", href: "/testimonials" },
   { name: "Блог", href: "/blog" },
   { name: "Контакти", href: "/contact" },
 ];
