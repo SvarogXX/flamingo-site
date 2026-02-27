@@ -216,7 +216,7 @@ export default function UkraineSupport() {
             </motion.p>
 
             <motion.p variants={itemVariants} className="text-gray-300 text-base leading-relaxed mb-4">
-              Ці хлопці і дівчата полюють у небі, щоб повернути свободу на землю. Вони роблять рекордні ураження техніки та живої сили ворога, проводять розвідку, збивають гелікоптери FPV-дронами.
+              Ці хлопці і дівчата полюють у небі, щоб повернути свободу на нашу землю. Вони роблять рекордні ураження техніки та живої сили ворога, проводять розвідку, збивають гелікоптери FPV-дронами.
             </motion.p>
 
             <motion.p variants={itemVariants} className="text-gray-300 text-base leading-relaxed">
@@ -240,7 +240,7 @@ export default function UkraineSupport() {
               
               <motion.li variants={itemVariants} className="flex gap-4">
                 <span className="font-bold text-purple-400 flex-shrink-0">3.</span>
-                <span><span className="font-semibold">Кошти йдуть виключно на потреби «Хижаків висот»</span>. Розслідує, прозоро, з звітністю.</span>
+                <span><span className="font-semibold">Кошти йдуть виключно на потреби «Хижаків висот»</span>. Цільові донати, прозоро, зі звітністю.</span>
               </motion.li>
               
               <motion.li variants={itemVariants} className="flex gap-4">
@@ -251,14 +251,13 @@ export default function UkraineSupport() {
           </motion.section>
 
           <motion.section variants={itemVariants} className="p-8 rounded-2xl bg-gradient-to-br from-yellow-900/10 to-orange-900/5 border border-yellow-500/20 backdrop-blur-lg">
-            <motion.h3 variants={itemVariants} className="text-2xl font-bold text-white mb-6">Дякуємо</motion.h3>
             
             <motion.p variants={itemVariants} className="text-gray-300 text-base leading-relaxed mb-4">
-              <span className="text-xl font-bold text-white">Дякую, що ви з нами.</span>
+              <span className="text-xl font-bold text-white">Дякуємо, що ви з нами.</span>
             </motion.p>
 
             <motion.p variants={itemVariants} className="text-gray-300 text-base leading-relaxed mb-4">
-              <span className="text-lg font-bold text-white">Дякую всім, хто тримає стрій.</span>
+              <span className="text-lg font-bold text-white">Дякуємо всім, хто тримає стрій.</span>
             </motion.p>
 
             <motion.p variants={itemVariants} className="text-gray-300 text-base leading-relaxed font-semibold text-pink-300">
