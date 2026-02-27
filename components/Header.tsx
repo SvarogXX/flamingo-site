@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "Можливості", href: "/features" },
-  { name: "Тарифи", href: "/pricing" },
+  { name: "Допомога ЗСУ", href: "#ukraine-support" },
   { name: "Про нас", href: "/about" },
   { name: "Результати", href: "#testimonials" },
   { name: "Блог", href: "/blog" },
@@ -41,49 +41,68 @@ export default function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? "bg-[#0a0a0f]/95 backdrop-blur-md border-b border-white/5"
+        ? "bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-purple-500/20 shadow-lg shadow-purple-500/10"
         : "bg-transparent"
         }`}
     >
       <nav className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2" onClick={handleLogoClick}>
-            <span className="text-3xl" aria-hidden>🦩</span>
-            <span className="text-white font-semibold hidden sm:block">Flamingo CRM</span>
+          <Link href="/" className="flex items-center gap-2 group" onClick={handleLogoClick}>
+            <motion.span 
+              className="text-3xl transition-transform"
+              whileHover={{ scale: 1.1, rotate: 15 }}
+              aria-hidden
+            >
+              🦩
+            </motion.span>
+            <span className="text-white font-bold hidden sm:block text-lg transition-colors group-hover:text-purple-400">
+              Flamingo CRM
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
-              >
-                {link.name}
-              </Link>
+              <motion.div key={link.name} whileHover={{ scale: 1.05 }}>
+                <Link
+                  href={link.href}
+                  className="text-gray-400 hover:text-white px-4 py-2 rounded-lg transition-colors text-sm font-medium relative group"
+                >
+                  {link.name}
+                  <motion.span
+                    className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+                    initial={{ width: 0 }}
+                    whileHover={{ width: "auto" }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </Link>
+              </motion.div>
             ))}
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
+            <motion.a
               href="https://flamingo-crm-xi.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
             >
               Увійти
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="https://flamingo-crm-xi.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 bg-purple-600 text-white text-sm font-medium rounded-xl shadow-lg shadow-purple-500/40 transition-all hover:bg-purple-500 hover:shadow-purple-500/50 hover:shadow-xl"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-purple-500/40 hover:shadow-purple-500/50 hover:shadow-xl transition-all"
             >
               Почати
-            </a>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -104,24 +123,30 @@ export default function Header() {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden overflow-hidden"
             >
-              <div className="py-4 border-t border-white/5">
-                {navLinks.map((link) => (
-                  <Link
+              <div className="py-4 border-t border-purple-500/20">
+                {navLinks.map((link, index) => (
+                  <motion.div
                     key={link.name}
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block py-3 text-gray-400 hover:text-white transition-colors text-sm font-medium"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
                   >
-                    {link.name}
-                  </Link>
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="block py-3 px-4 text-gray-400 hover:text-white hover:bg-purple-500/10 transition-all text-sm font-medium rounded-lg"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.div>
                 ))}
-                <div className="flex gap-3 mt-4 pt-4 border-t border-white/5">
+                <div className="flex gap-3 mt-4 pt-4 border-t border-purple-500/20">
                   <a
                     href="https://flamingo-crm-xi.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex-1 text-center py-2.5 text-gray-400 text-sm font-medium"
+                    className="flex-1 text-center py-2.5 text-gray-400 text-sm font-medium hover:text-white hover:bg-white/5 rounded-lg transition-all"
                   >
                     Увійти
                   </a>
@@ -130,7 +155,7 @@ export default function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex-1 text-center py-2.5 bg-purple-600 text-white text-sm font-medium rounded-xl shadow-lg shadow-purple-500/40 transition-all hover:bg-purple-500 hover:shadow-purple-500/50"
+                    className="flex-1 text-center py-2.5 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-purple-500/40 transition-all hover:shadow-purple-500/50"
                   >
                     Почати
                   </a>
