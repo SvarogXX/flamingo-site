@@ -66,11 +66,6 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  /* Internationalization i18n */
-  i18n: {
-    locales: ['uk', 'en'],
-    defaultLocale: 'uk',
-  },
 };
 
 export default nextConfig;

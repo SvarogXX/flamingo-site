@@ -5,18 +5,6 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Про нас | Flamingo CRM - CRM для реального бізнесу",
-  description: "Історія та місія Flamingo CRM. Команда, що створює зручну CRM систему для управління клієнтами за доступною ціною.",
-  keywords: ["про CRM", "Flamingo CRM", "CRM система для бізнесу"],
-};
-
-import { Metadata } from "next";
-import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import CTA from "@/components/CTA";
-
-export const metadata: Metadata = {
   title: "Про нас | Flamingo CRM - Історія та місія",
   description: "Дізнайтесь про Flamingo CRM: нашу історію, місію та команду, нерухомість створює найкращу CRM для українського бізнесу.",
   keywords: ["про Flamingo CRM", "історія CRM", "команда Flamingo", "CRM для України"],
