@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Flamingo CRM',
+        alt: 'Flamingo CRM - Безкоштовна CRM система для управління клієнтами',
       },
     ],
     locale: "uk_UA",
@@ -50,6 +50,7 @@ export const metadata: Metadata = {
     title: "Flamingo CRM - CRM система для бізнесу, управління клієнтами",
     description: "Онлайн CRM з безкоштовним пробним періодом. База даних клієнтів, тарифи від 9$/міс.",
     images: ['/og-image.jpg'],
+    creator: "@FlamingoCRM",
   },
   robots: {
     index: true,
@@ -61,6 +62,20 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+    bingbot: {
+      index: true,
+      follow: true,
+    },
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Flamingo CRM",
+  },
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -75,8 +90,35 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Flamingo CRM",
+    "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://crm-system.com',
+    "logo": process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/logo.png` : 'https://crm-system.com/logo.png',
+    "description": "Безкоштовна CRM система для управління клієнтами, контактами та угодами для бізнесу",
+    "foundingDate": "2024",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "support@flamingo-crm.com.ua"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "UAH",
+      "price": "0",
+      "description": "Безкоштовна CRM система"
+    }
+  };
+
   return (
     <html lang="uk" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased bg-[#0a0a0f] text-white`}>
         {children}
         <SideNav />

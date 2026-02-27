@@ -19,6 +19,16 @@ export default function ContactPage() {
           <Link href="/" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 mb-8">
             ← Назад
           </Link>
+          
+          {/* Page H1 */}
+          <section className="py-8 text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+              Зв'яжіться з <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">нами</span>
+            </h1>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              Маєте питання про Flamingo CRM? Ми готові допомогти!
+            </p>
+          </section>
         </div>
         <Contact />
       </main>

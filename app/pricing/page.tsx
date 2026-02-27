@@ -19,6 +19,16 @@ export default function PricingPage() {
           <Link href="/" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 mb-8">
             ← Назад
           </Link>
+          
+          {/* Page H1 */}
+          <section className="py-12 text-center mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+              Тарифи <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Flamingo CRM</span>
+            </h1>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              Оберіть план, який підходить вашому бізнесу. Перший місяць повністю безкоштовно!
+            </p>
+          </section>
         </div>
         <Pricing />
       </main>

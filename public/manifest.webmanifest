@@ -1,0 +1,29 @@
+{
+  "name": "Flamingo CRM",
+  "short_name": "Flamingo CRM",
+  "description": "Безкоштовна CRM система для управління клієнтами та базою даних",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0a0f",
+  "theme_color": "#a855f7",
+  "screenshots": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

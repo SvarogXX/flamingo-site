@@ -1,38 +1,30 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import FAQContent from "@/components/FAQContent";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Часті питання | Flamingo CRM - Питання та відповіді",
-  description: "Відповіді на часті питання про Flamingo CRM. Реєстрація, функціонал, інтеграції, донати на підтримку ЗСУ.",
-  keywords: ["FAQ CRM", "питання про CRM", "Flamingo CRM", "підтримка CRM"],
-  openGraph: {
-    title: "Часті питання | Flamingo CRM",
-    description: "Онлайн Q&A про CRM систему для управління клієнтами",
-    type: "website",
-  },
-};
+import { useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, Search, HelpCircle, ArrowLeft } from "lucide-react";
 
-export default function FAQPage() {
-  return (
-    <>
-      <Header />
-      <main className="min-h-screen bg-[#0a0a0f]">
-        <FAQContent />
-      </main>
-      <Footer />
-    </>
-  );
+interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
 }
+
+const faqData: FAQ[] = [
+  // Реєстрація та доступ
+  {
+    id: "1",
+    category: "Реєстрація та доступ",
+    question: "Чи справді Flamingo CRM повністю безкоштовна?",
     answer: "Так, абсолютно. Flamingo CRM на 100% безкоштовна без прихованих платежів, обмежень функцій або триальних періодів. Ми будемо вдячні, якщо ви вирішите підтримати ЗСУ донатом, але це цілком добровільно. Система була створена ветеранами, які розуміють потреби українського бізнесу в важкі часи.",
   },
   {
     id: "2",
     category: "Реєстрація та доступ",
     question: "Скільки користувачів можна додати безкоштовно?",
-    answer: "Ви можете додаватися стільки користувачів, стільки вам потрібно для роботи вашого бізнесу. Немає обмежень на кількість працівників, які матимуть доступ до системи. Кожен користувач отримує повний доступ до всіх функцій без обмежень.",
+    answer: "Ви можете додавати стільки користувачів, стільки вам потрібно для роботи вашого бізнесу. Немає обмежень на кількість працівників, які матимуть доступ до системи. Кожен користувач отримує повний доступ до всіх функцій без обмежень.",
   },
   {
     id: "3",
@@ -160,7 +152,7 @@ const categories = [
   "Інше",
 ];
 
-export default function FAQPage() {
+export default function FAQContent() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
@@ -206,7 +198,7 @@ export default function FAQPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
+    <>
       {/* Header Section */}
       <section className="relative py-16 lg:py-24 bg-gradient-to-b from-purple-900/20 to-[#0a0a0f] border-b border-white/10">
         <motion.button
@@ -403,10 +395,20 @@ export default function FAQPage() {
             >
               support@flamingo-crm.com
             </motion.a>
-            {" "}— ми з радістю допоможемо!
+            {" — "}відповімо за 24 години
           </p>
+          <motion.a
+            href="https://flamingo-crm-xi.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:shadow-lg hover:shadow-purple-600/50 transition-shadow"
+          >
+            Спробувати CRM безкоштовно
+            <ArrowLeft className="w-4 h-4 rotate-180" />
+          </motion.a>
         </motion.div>
       </section>
-    </main>
+    </>
   );
 }

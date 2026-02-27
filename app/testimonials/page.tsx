@@ -5,12 +5,17 @@ import Footer from "@/components/Footer";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Тарифи CRM | Flamingo CRM - Ціни та безкоштовний пробний період",
-  description: "Оберіть тариф CRM: Starter 9$/міс, Growth 29$/міс, Enterprise 99$/міс. Безкоштовний пробний період 14 днів. Тарифи CRM для бізнесу.",
-  keywords: ["тарифи CRM", "безкоштовний пробний період CRM", "ціни CRM", "CRM для бізнесу"],
+  title: "Відгуки про CRM | Flamingo CRM - Що говорять користувачі",
+  description: "Реальні відгуки користувачів про Flamingo CRM. Успіхи бізнесу з нашою системою управління клієнтами.",
+  keywords: ["відгуки CRM", "рейтинги CRM", "Flamingo CRM відгуки", "користувачі CRM"],
+  openGraph: {
+    title: "Відгуки про CRM | Flamingo CRM",
+    description: "Що думають користувачі про Flamingo CRM",
+    type: "website",
+  },
 };
 
-export default function PricingPage() {
+export default function TestimonialsPage() {
   return (
     <>
       <Header />
@@ -19,6 +24,16 @@ export default function PricingPage() {
           <Link href="/" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 mb-8">
             ← Назад
           </Link>
+          
+          {/* Page H1 */}
+          <section className="py-8 text-center mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+              Що Кажуть <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Користувачі</span>
+            </h1>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              Реальні результати та досвід бізнесу з Flamingo CRM
+            </p>
+          </section>
         </div>
        <Testimonials/>
       </main>
