@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useReducedMotion, useTransform, useMotionValue } from "framer-motion";
-import { ArrowRight, Sparkles, Wallet, Layers } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Layers } from "lucide-react";
 
 type BlockableEvent = {
   preventDefault: () => void;
@@ -39,6 +39,12 @@ export default function Hero() {
     }
 
     return false;
+  };
+
+  const handleIconAction = (title: string) => {
+    // Placeholder action for icon interaction — non-destructive and safe.
+    // Can be replaced with modal open / navigation to detailed docs / analytics event.
+    if (typeof window !== "undefined") console.info("Feature icon clicked:", title);
   };
 
   // Запускаємо декоративні анімації після завантаження — не блокуємо LCP
@@ -135,6 +141,36 @@ export default function Hero() {
       window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [reducedMotion]);
+
+  type FeatureItem = {
+    icon: any;
+    title: string;
+    desc: string;
+    delay: number;
+    badge?: string;
+  };
+
+  const features: FeatureItem[] = [
+    {
+      icon: Sparkles,
+      title: "Зручність на першому місці",
+      desc: "Інтуїтивний інтерфейс — від клієнтів до звітів без підручників.",
+      delay: 0.8,
+    },
+    {
+      icon: Zap,
+      title: "Автоматизація продажів",
+      desc: "Автоматизація лідів і процесів — швидші угоди та менше помилок. Контроль над продажами.",
+      // badge: "Автоматизація",
+      delay: 0.9,
+    },
+    {
+      icon: Layers,
+      title: "Універсальність",
+      desc: "Торгівля, послуги, IT — масштабуйте разом з бізнесом.",
+      delay: 1,
+    },
+  ];
 
   return (
     <section
@@ -415,27 +451,7 @@ export default function Hero() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                  {[
-                    {
-                      icon: Sparkles,
-                      title: "Зручність на першому місці",
-                      desc: "Інтуїтивний інтерфейс — від клієнтів до звітів без підручників.",
-                      delay: 0.8,
-                    },
-                    {
-                      icon: Wallet,
-                      title: "Доступна ціна",
-                      desc: "Від 450 грн/міс. Без прихованих платежів та зобов'язань.",
-                      badge: "від 450 грн",
-                      delay: 0.9,
-                    },
-                    {
-                      icon: Layers,
-                      title: "Універсальність",
-                      desc: "Торгівля, послуги, IT — масштабуйте разом з бізнесом.",
-                      delay: 1,
-                    },
-                  ].map((item, i) => {
+                  {features.map((item, i) => {
                     const Icon = item.icon;
                     return (
                       <motion.div
@@ -445,9 +461,14 @@ export default function Hero() {
                         transition={{ delay: item.delay, duration: 0.45 }}
                         className="group relative flex flex-col items-center text-center rounded-xl border border-white/10 bg-white/[0.03] p-5 sm:p-6 transition-all duration-300 hover:border-purple-500/25 hover:bg-white/[0.06] hover:shadow-[0_0_30px_-10px_rgba(147,51,234,0.2)]"
                       >
-                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/15 to-pink-500/10 border border-purple-500/20 flex items-center justify-center mb-4 transition-all duration-300 group-hover:border-purple-500/30 group-hover:from-purple-500/20 group-hover:to-pink-500/15">
+                        <button
+                          type="button"
+                          onClick={() => handleIconAction(item.title)}
+                          aria-label={`${item.title} — деталі`}
+                          className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/15 to-pink-500/10 border border-purple-500/20 flex items-center justify-center mb-4 transition-all duration-300 group-hover:border-purple-500/30 group-hover:from-purple-500/20 group-hover:to-pink-500/15"
+                        >
                           <Icon className="w-7 h-7 text-purple-400" />
-                        </div>
+                        </button>
                         {item.badge && (
                           <span className="absolute top-2 right-2 text-[10px] font-semibold uppercase tracking-wider text-purple-400/90 bg-purple-500/15 px-2.5 py-1 rounded-md">
                             {item.badge}
