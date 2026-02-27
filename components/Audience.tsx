@@ -115,7 +115,7 @@ export default function Audience() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.04, duration: 0.36 }}
-                  className="bg-white/[0.02] rounded-2xl p-5 border border-white/6 hover:shadow-[0_22px_80px_-30px_rgba(147,51,234,0.18)] hover:bg-white/[0.035] transition-all h-full"
+                  className="group bg-white/[0.02] rounded-2xl p-5 border border-white/6 hover:shadow-[0_22px_80px_-30px_rgba(147,51,234,0.18)] hover:bg-white/[0.035] transition-all h-full cursor-pointer"
                 >
                   <div
                     role="button"
@@ -139,10 +139,18 @@ export default function Audience() {
                       <p className="text-gray-400 text-xs mb-4">{a.detail}</p>
                     </div>
 
-                    <div className="flex items-center justify-between mt-2 opacity-0 transform translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
-                      <span className="text-purple-300 text-sm font-medium">Деталі</span>
-                      <ArrowRight className="w-4 h-4 text-purple-300" />
-                    </div>
+                    <motion.div 
+                      className="flex items-center justify-between mt-4 pt-4 border-t border-white/10"
+                      whileHover={{ x: 4 }}
+                    >
+                      <span className="text-purple-300 text-sm font-medium">Детальніше</span>
+                      <motion.div
+                        animate={{ x: [0, 4, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        <ArrowRight className="w-4 h-4 text-purple-300 group-hover:text-pink-300 transition-colors" />
+                      </motion.div>
+                    </motion.div>
                   </div>
                 </motion.div>
               );
