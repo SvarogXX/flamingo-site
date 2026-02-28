@@ -115,15 +115,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
         
-        {/* Google Analytics 4 - GA4 Script for G-F5KV6EP19T */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}></script>
+        {/* Google Analytics 4 - GA4 Script for G-GZG106BQDD */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZG106BQDD"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+              gtag('config', 'G-GZG106BQDD');
             `,
           }}
         />
