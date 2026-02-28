@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Flamingo CRM - CRM система для бізнесу, управління клієнтами, база даних клієнтів",
-  description: "Онлайн CRM система для ефективного управління клієнтами та базою даних. Безкоштовний пробний період CRM 14 днів. Тарифи CRM від 9$/міс.",
+  description: "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
   keywords: "CRM система для бізнесу, управління клієнтами, база даних клієнтів, онлайн CRM, безкоштовний пробний період CRM, тарифи CRM",
   authors: [{ name: "CRM Team" }],
   creator: "CRM System",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Flamingo CRM - CRM система для бізнесу, управління клієнтами",
-    description: "Онлайн CRM з безкоштовним пробним періодом. Управління клієнтами, база даних, звіти. Тарифи від 9$/міс.",
+    description: "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://flamingo-crm.com.ua',
     siteName: "Flamingo CRM",
     images: [
