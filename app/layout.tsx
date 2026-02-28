@@ -90,8 +90,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Flamingo CRM",
-    "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://crm-system.com',
-    "logo": process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/logo.png` : 'https://crm-system.com/logo.png',
+    "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://flamingo-crm.com.ua',
+    "logo": process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/logo.png` : 'https://flamingo-crm.com.ua/logo.png',
     "description": "Безкоштовна CRM система для управління клієнтами, контактами та угодами для бізнесу",
     "foundingDate": "2024",
     "contactPoint": {
