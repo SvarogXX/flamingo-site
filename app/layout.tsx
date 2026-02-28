@@ -92,7 +92,7 @@ export default function RootLayout({
     "name": "Flamingo CRM",
     "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://flamingo-crm.com.ua',
     "logo": process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/logo.png` : 'https://flamingo-crm.com.ua/logo.png',
-    "description": "Безкоштовна CRM система для управління клієнтами, контактами та угодами для бізнесу",
+    "description": "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
     "foundingDate": "2024",
     "contactPoint": {
       "@type": "ContactPoint",
