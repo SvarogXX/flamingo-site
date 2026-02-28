@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
 
 export const metadata: Metadata = {
-  title: "Тарифи CRM | Flamingo CRM - Ціни та безкоштовний пробний період",
+  title: "Тарифи CRM | Flamingo CRM - Від 9$/міс",
   description: "Оберіть тариф CRM: Starter 9$/міс, Growth 29$/міс, Enterprise 99$/міс. Безкоштовний пробний період 14 днів. Тарифи CRM для бізнесу.",
   keywords: ["тарифи CRM", "безкоштовний пробний період CRM", "ціни CRM", "CRM для бізнесу"],
 };
