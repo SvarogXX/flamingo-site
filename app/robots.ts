@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://crm-system.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://flamingo-crm.com.ua";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -23,7 +23,7 @@ export default function robots(): MetadataRoute.Robots {
 
 // import { MetadataRoute } from "next";
 
-// const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://crm-system.com";
+// const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://flamingo-crm.com.ua";
 
 // export default function robots(): MetadataRoute.Robots {
 //   return {

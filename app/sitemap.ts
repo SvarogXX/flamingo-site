@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://crm-system.com";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://flamingo-crm.com.ua";
 
 // Blog posts - in production this would come from a CMS
 const blogPosts = [

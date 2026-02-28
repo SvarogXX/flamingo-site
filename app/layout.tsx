@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://crm-system.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://flamingo-crm.com.ua'),
   alternates: {
     canonical: '/',
     languages: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Flamingo CRM - CRM система для бізнесу, управління клієнтами",
     description: "Онлайн CRM з безкоштовним пробним періодом. Управління клієнтами, база даних, звіти. Тарифи від 9$/міс.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://crm-system.com',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://flamingo-crm.com.ua',
     siteName: "Flamingo CRM",
     images: [
       {
