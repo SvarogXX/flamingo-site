@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-const CRM_API_URL = "https://flamingo-crm-xi.vercel.app/api/leads";
+const CRM_API_URL = "https://crm.flamingo-crm.com.ua/api/leads";
 
 export async function POST(request: NextRequest) {
   try {

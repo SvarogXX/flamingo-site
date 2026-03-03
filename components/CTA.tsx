@@ -267,7 +267,7 @@ export default function CTA() {
                 className="group w-full"
               >
                 <Link
-                  href="https://flamingo-crm-xi.vercel.app/"
+                  href="https://crm.flamingo-crm.com.ua/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 text-white font-bold rounded-xl shadow-xl shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-all duration-300"

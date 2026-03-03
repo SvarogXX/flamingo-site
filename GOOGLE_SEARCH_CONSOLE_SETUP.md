@@ -85,7 +85,7 @@
 ```bash
 # SEO & Site Configuration
 NEXT_PUBLIC_SITE_URL=https://flamingo-crm.com
-NEXT_PUBLIC_LEADS_API_URL=https://flamingo-crm-xi.vercel.app/api/leads
+NEXT_PUBLIC_LEADS_API_URL=https://crm.flamingo-crm.com.ua/api/leads
 
 # Analytics
 NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX

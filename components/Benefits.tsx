@@ -200,7 +200,7 @@ export default function Benefits() {
 
                 {/* CTA */}
                 <motion.a
-                  href="https://flamingo-crm-xi.vercel.app/"
+                  href="https://crm.flamingo-crm.com.ua/"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.03, y: -2 }}

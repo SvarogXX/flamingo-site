@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Flamingo CRM - Безкоштовна CRM для управління бізнесом",
+  title: "Flamingo CRM - Безкоштовна українська CRM-система для бізнесу | Донат на ЗСУ замість підписки",
   description: "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
-  keywords: "CRM система для бізнесу, управління клієнтами, база даних клієнтів, онлайн CRM, безкоштовний пробний період CRM, тарифи CRM",
+  keywords: "CRM система для бізнесу, управління клієнтами, база даних клієнтів, автоматизація, онлайн CRM, донат на ЗСУ, тарифи CRM",
   authors: [{ name: "CRM Team" }],
   creator: "CRM System",
   publisher: "CRM System",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Flamingo CRM - CRM система для бізнесу, управління клієнтами",
-    description: "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
+    title: "Flamingo CRM - Безкоштовна українська CRM-система для бізнесу | Донат на ЗСУ замість підписки",
+    description: "Flamingo CRM — безкоштовна українська CRM для малого та середнього бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://flamingo-crm.com.ua',
     siteName: "Flamingo CRM",
     images: [
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flamingo CRM - CRM система для бізнесу, управління клієнтами",
-    description: "Онлайн CRM з безкоштовним пробним періодом. База даних клієнтів, тарифи від 9$/міс.",
+    title: "Flamingo CRM - Безкоштовна українська CRM-система для бізнесу| Донат на ЗСУ замість підписки",
+    description: "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
     images: ['/og-image.jpg'],
     creator: "@FlamingoCRM",
   },
@@ -92,7 +92,7 @@ export default function RootLayout({
     "name": "Flamingo CRM",
     "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://flamingo-crm.com.ua',
     "logo": process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/logo.png` : 'https://flamingo-crm.com.ua/logo.png',
-    "description": "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
+    "description": "Flamingo CRM — безкоштовна українська CRM для малого та середнього бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
     "foundingDate": "2024",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -108,7 +108,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="uk" className="dark">
+    <html lang="uk" className="dark" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

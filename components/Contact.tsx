@@ -129,7 +129,7 @@ export default function Contact() {
             </a>
             . Або зареєструйтеся на пробний період прямо зараз!{" "}
             <a
-              href="https://flamingo-crm-xi.vercel.app/"
+              href="https://crm.flamingo-crm.com.ua/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-purple-400 hover:text-purple-300"

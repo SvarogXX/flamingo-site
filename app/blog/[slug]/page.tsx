@@ -315,7 +315,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                       Зареєструйтеся безкоштовно та оцініть всі можливості нашої CRM системи.
                     </p>
                     <Link
-                      href="https://flamingo-crm-xi.vercel.app/"
+                      href="https://crm.flamingo-crm.com.ua/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block text-center py-3 px-6 text-white font-semibold rounded-xl transition-all hover:text-purple-300"

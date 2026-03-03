@@ -398,7 +398,7 @@ export default function FAQContent() {
             {" — "}відповімо за 24 години
           </p>
           <motion.a
-            href="https://flamingo-crm-xi.vercel.app/"
+            href="https://crm.flamingo-crm.com.ua/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

@@ -85,7 +85,7 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <motion.a
-              href="https://flamingo-crm-xi.vercel.app/"
+              href="https://crm.flamingo-crm.com.ua/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -95,7 +95,7 @@ export default function Header() {
               Увійти
             </motion.a>
             <motion.a
-              href="https://flamingo-crm-xi.vercel.app/"
+              href="https://crm.flamingo-crm.com.ua/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}
@@ -143,7 +143,7 @@ export default function Header() {
                 ))}
                 <div className="flex gap-3 mt-4 pt-4 border-t border-purple-500/20">
                   <a
-                    href="https://flamingo-crm-xi.vercel.app/"
+                    href="https://crm.flamingo-crm.com.ua/"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -152,7 +152,7 @@ export default function Header() {
                     Увійти
                   </a>
                   <a
-                    href="https://flamingo-crm-xi.vercel.app/"
+                    href="https://crm.flamingo-crm.com.ua/"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}

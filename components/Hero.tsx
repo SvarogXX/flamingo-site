@@ -266,7 +266,7 @@ export default function Hero() {
             >
               {reducedMotion ? (
                 <a
-                  href="https://flamingo-crm-xi.vercel.app/"
+                  href="https://crm.flamingo-crm.com.ua/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 px-10 py-4 bg-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/40 transition-colors hover:bg-purple-500"
@@ -276,7 +276,7 @@ export default function Hero() {
                 </a>
               ) : (
                 <motion.a
-                  href="https://flamingo-crm-xi.vercel.app/"
+                  href="https://crm.flamingo-crm.com.ua/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 px-10 py-4 bg-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/40 transition-all duration-300 hover:bg-purple-500 hover:shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/40"

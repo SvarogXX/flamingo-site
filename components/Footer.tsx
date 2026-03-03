@@ -8,7 +8,7 @@ const footerLinks = {
   product: [
     { name: "Можливості", href: "/features" },
     { name: "Про допомогу", href: "#ukraine-support" },
-    { name: "Інтеграції", href: "https://flamingo-crm-xi.vercel.app/" },
+    { name: "Інтеграції", href: "https://crm.flamingo-crm.com.ua/" },
   ],
   company: [
     { name: "Про нас", href: "/about" },
@@ -16,7 +16,7 @@ const footerLinks = {
     { name: "Контакти", href: "/contact" },
   ],
   resources: [
-    { name: "Документація", href: "https://flamingo-crm-xi.vercel.app/" },
+    { name: "Документація", href: "https://crm.flamingo-crm.com.ua/" },
     { name: "Підтримка", href: "mailto:support@flamingo-crm.com.ua" },
     { name: "FAQ", href: "/faq" },
   ],

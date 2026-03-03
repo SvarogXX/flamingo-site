@@ -114,7 +114,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <a
-                href="https://flamingo-crm-xi.vercel.app/"
+                href="https://crm.flamingo-crm.com.ua/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block w-full py-4 rounded-xl font-semibold text-center transition-all ${plan.popular
@@ -139,7 +139,7 @@ export default function Pricing() {
 
         <div className="text-center mt-12">
           <a
-            href="https://flamingo-crm-xi.vercel.app/"
+            href="https://crm.flamingo-crm.com.ua/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/40 transition-all hover:bg-purple-500 hover:shadow-purple-500/50 hover:shadow-xl"
