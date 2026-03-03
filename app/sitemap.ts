@@ -4,7 +4,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://flamingo-crm.com.ua
 
 // Blog posts - in production this would come from a CMS
 const blogPosts = [
-  { slug: "yak-obrati-crm-systemu", date: "2026-02-10" },
+  { slug: "yak-obrati-crm-systemu", date: "2026-03-03" },
   { slug: "avtomatyzatsiya-prodazhiv", date: "2026-02-08" },
   { slug: "analityka-v-crm", date: "2026-02-05" },
   { slug: "integratsiya-crm-z-inshymy-servisamy", date: "2026-02-01" },

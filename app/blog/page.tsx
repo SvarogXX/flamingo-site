@@ -1,80 +1,100 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Блог | Flamingo CRM - Статті про управління бізнесом",
-  description: "Корисні статті про CRM системи, управління клієнтами, автоматизацію бізнес-процесів та збільшення продажів.",
-  keywords: ["CRM", "блог", "управління клієнтами", "автоматизація бізнесу", "продажі"],
+  title: "Блог Flamingo CRM — практичні розбори про CRM, продажі та автоматизацію",
+  description:
+    "Експертні статті про CRM для малого бізнесу: автоматизація продажів, аналітика, інтеграції та управління командою без хаосу.",
+  keywords: [
+    "блог CRM",
+    "CRM для малого бізнесу",
+    "автоматизація продажів",
+    "аналітика в CRM",
+    "інтеграції CRM",
+    "управління продажами",
+    "воронка продажів",
+    "Flamingo CRM",
+  ],
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Блог Flamingo CRM — практичні розбори про CRM, продажі та автоматизацію",
+    description:
+      "Читайте практичні статті про CRM, автоматизацію продажів, аналітику, інтеграції та менеджмент команди.",
+    type: "website",
+    url: "/blog",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Блог Flamingo CRM — практичні розбори про CRM, продажі та автоматизацію",
+    description:
+      "Практичні статті для малого бізнесу: CRM, продажі, аналітика, інтеграції, керування командою.",
+  },
 };
 
 // This would typically come from a CMS or database
 const blogPosts = [
   {
     slug: "yak-obrati-crm-systemu",
-    title: "Як обрати CRM систему для вашого бізнесу",
-    excerpt: "Детальний гайд з вибору CRM системи. Розглядаємо ключові критерії, порівнюємо популярні рішення та даємо практичні поради.",
-    category: "Гайди",
-    author: "Олександр Петренко",
-    date: "2026-02-10",
-    readTime: "8 хв",
-    image: "📊",
+    title: "Як обрати CRM для малого бізнесу у 2026: чекліст із 15 критеріїв",
+    excerpt: "Практичний гайд для власників малого бізнесу: як вибрати CRM без переплат, швидко запустити процеси та не втрачати ліди.",
+    category: "CRM для малого бізнесу",
+    author: "Олександр Яремчук",
+    date: "2026-03-03",
+    image: "/images/crm_2026.png",
   },
   {
     slug: "avtomatyzatsiya-prodazhiv",
     title: "10 способів автоматизувати продажі з CRM",
     excerpt: "Дізнайтеся, як автоматизація може збільшити ефективність вашого відділу продажів та скоротити час на рутинні задачі.",
     category: "Продажі",
-    author: "Марія Коваленко",
-    date: "2026-02-08",
-    readTime: "6 хв",
-    image: "🚀",
+    author: "Олександр Яремчук",
+    date: "2026-02-08",    image: "/images/automatozation.png",
   },
   {
     slug: "analityka-v-crm",
     title: "Аналітика в CRM: як приймати рішення на основі даних",
-    excerpt: "Розбираємо ключові метрики та звіти, які допоможуть вам краще розуміти своїх клієнтів та оптимізувати бізнес-процеси.",
+    excerpt: "Практичний розбір метрик CRM: які показники реально допомагають керувати продажами і збільшувати прибуток.",
     category: "Аналітика",
-    author: "Дмитро Сидоренко",
+    author: "Олександр Яремчук",
     date: "2026-02-05",
-    readTime: "10 хв",
-    image: "📈",
+    image: "/images/analitics.png",
   },
   {
     slug: "integratsiya-crm-z-inshymy-servisamy",
     title: "Інтеграція CRM з іншими сервісами: повний гайд",
-    excerpt: "Як інтегрувати вашу CRM з email-маркетингом, соціальними мережами, месенджерами та іншими інструментами.",
+    excerpt: "Як підключити сайт, email, месенджери та телефонію до CRM, щоб не втрачати звернення і прискорити продажі.",
     category: "Інтеграції",
-    author: "Олена Шевченко",
+    author: "Олександр Яремчук",
     date: "2026-02-01",
-    readTime: "12 хв",
-    image: "🔗",
+    image: "/images/contact_card.png",
   },
   {
     slug: "upravlinnya-komandoyu-v-crm",
     title: "Ефективне управління командою через CRM",
-    excerpt: "Практичні поради з організації роботи команди, розподілу задач та контролю виконання за допомогою CRM системи.",
+    excerpt: "Практичні підходи до керування відділом продажів у CRM: задачі, дисципліна, контроль етапів і прогноз результату.",
     category: "Менеджмент",
-    author: "Олександр Петренко",
+    author: "Олександр Яремчук",
     date: "2026-01-28",
-    readTime: "7 хв",
-    image: "👥",
+    image: "/images/create_task.png",
   },
   {
     slug: "mobilnyy-crm",
     title: "Мобільний CRM: працюйте звідусіль",
-    excerpt: "Переваги використання мобільних додатків CRM для польових продавців та менеджерів, які часто в дорозі.",
+    excerpt: "Як мобільний доступ до CRM допомагає менеджерам швидко реагувати на ліди і закривати угоди навіть у дорозі.",
     category: "Мобільність",
-    author: "Марія Коваленко",
+    author: "Олександр Яремчук",
     date: "2026-01-25",
-    readTime: "5 хв",
-    image: "📱",
+    image: "/images/hero.png",
   },
 ];
 
-const categories = ["Всі", "Гайди", "Продажі", "Аналітика", "Інтеграції", "Менеджмент", "Мобільність"];
+const categories = ["Всі", "CRM", "Продажі", "Аналітика", "Інтеграції", "Менеджмент", "Мобільність"];
 
 export default function BlogPage() {
   return (
@@ -94,7 +114,7 @@ export default function BlogPage() {
                 Блог
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                Статті та <span className="gradient-text">гайди</span>
+                Статті та <span className="gradient-text">практичні розбори</span>
               </h1>
               <p className="text-lg text-gray-400 leading-relaxed">
                 Корисні матеріали про CRM системи, управління клієнтами,
@@ -132,9 +152,15 @@ export default function BlogPage() {
                   key={post.slug}
                   className="group relative rounded-2xl glass-card overflow-hidden"
                 >
-                  {/* Image placeholder */}
-                  <div className="h-48 bg-gradient-to-br from-purple-900/30 to-pink-900/20 flex items-center justify-center text-6xl">
-                    {post.image}
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-900/30 to-pink-900/20">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/30 to-transparent" />
                   </div>
 
                   {/* Content */}
@@ -144,12 +170,6 @@ export default function BlogPage() {
                       <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-medium">
                         {post.category}
                       </span>
-                      <div className="flex items-center gap-3 text-xs text-gray-500">
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-3 h-3" />
-                          {post.readTime}
-                        </span>
-                      </div>
                     </div>
 
                     {/* Title */}
