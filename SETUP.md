@@ -3,22 +3,32 @@
 ## Швидкий старт
 
 1. **Встановіть залежності:**
+
 ```bash
 npm install
 ```
 
 2. **Налаштуйте environment variables:**
-Створіть файл `.env.local` на основі `.env.example`:
+   Створіть файл `.env.local` на основі `.env.example`:
+
 ```bash
 cp .env.example .env.local
 ```
 
 Відредагуйте `.env.local` та вкажіть ваш домен:
+
 ```env
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
+TELEGRAM_BOT_TOKEN=123456:your_bot_token
+TELEGRAM_CHAT_ID=123456789
 ```
 
+`TELEGRAM_BOT_TOKEN` — токен вашого Telegram-бота.
+
+`TELEGRAM_CHAT_ID` — ID чату, куди мають приходити повідомлення із сайту.
+
 3. **Запустіть сервер розробки:**
+
 ```bash
 npm run dev
 ```
@@ -49,13 +59,15 @@ npm run dev
 ### Адаптивність
 
 Сайт повністю адаптивний з breakpoints:
+
 - **Mobile**: < 640px
-- **Tablet**: 640px - 1024px  
+- **Tablet**: 640px - 1024px
 - **Desktop**: > 1024px
 
 ### Анімації
 
 Використовується **Framer Motion** для:
+
 - Плавних появи компонентів
 - Scroll-triggered анімацій
 - Інтерактивних ефектів
@@ -66,6 +78,7 @@ npm run dev
 ### Зміна кольорів
 
 Редагуйте `app/globals.css`:
+
 ```css
 :root {
   --primary: #ec4899;
@@ -77,6 +90,7 @@ npm run dev
 ### Зміна контенту
 
 Всі тексти знаходяться у відповідних компонентах:
+
 - `components/Hero.tsx` - головний заголовок
 - `components/Features.tsx` - список можливостей
 - `components/Pricing.tsx` - тарифи
@@ -86,9 +100,10 @@ npm run dev
 
 1. Додайте зображення в `public/`
 2. Використовуйте Next.js Image компонент:
+
 ```tsx
-import Image from 'next/image';
-<Image src="/your-image.jpg" alt="Description" width={800} height={600} />
+import Image from "next/image";
+<Image src="/your-image.jpg" alt="Description" width={800} height={600} />;
 ```
 
 ## Production Deployment
@@ -122,18 +137,20 @@ npm start
 ### Google Analytics
 
 Додайте в `app/layout.tsx`:
+
 ```tsx
-import Script from 'next/script';
+import Script from "next/script";
 
 <Script
   src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
   strategy="afterInteractive"
-/>
+/>;
 ```
 
 ### Meta Pixel
 
 Додайте в `app/layout.tsx`:
+
 ```tsx
 <Script id="fb-pixel" strategy="afterInteractive">
   {`
