@@ -21,11 +21,40 @@ cp .env.example .env.local
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
 TELEGRAM_BOT_TOKEN=123456:your_bot_token
 TELEGRAM_CHAT_ID=123456789
+TELEGRAM_WEBHOOK_SECRET=your_random_secret
+KV_REST_API_URL=https://<your-kv-endpoint>.upstash.io
+KV_REST_API_TOKEN=<your-kv-token>
 ```
 
 `TELEGRAM_BOT_TOKEN` — токен вашого Telegram-бота.
 
 `TELEGRAM_CHAT_ID` — ID чату, куди мають приходити повідомлення із сайту.
+
+`TELEGRAM_WEBHOOK_SECRET` — довільний секрет для захисту Telegram webhook (рекомендовано).
+
+`KV_REST_API_URL` і `KV_REST_API_TOKEN` — REST-доступ до Vercel KV/Upstash для збереження зв'язку `requestId -> chatId` між рестартами та деплоями.
+
+### Двосторонній чат через Telegram
+
+Після деплою у Vercel додайте `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `TELEGRAM_WEBHOOK_SECRET`, `KV_REST_API_URL`, `KV_REST_API_TOKEN` у Environment Variables та зробіть redeploy.
+
+Потім підключіть webhook до API вашого сайту:
+
+```bash
+curl -X POST "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook" \
+  -d "url=https://your-domain.com/api/telegram/webhook" \
+  -d "secret_token=<TELEGRAM_WEBHOOK_SECRET>"
+```
+
+Логіка відповіді:
+
+- Користувач надсилає форму на сайті.
+- Користувач натискає «Продовжити в Telegram» (бот отримує `start` з ID звернення).
+- Менеджер відповідає з адмін-чату командою:
+
+```text
+/reply req_xxxxx ваш текст відповіді
+```
 
 3. **Запустіть сервер розробки:**
 

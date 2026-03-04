@@ -132,15 +132,6 @@ export default function FloatingTelegramButton() {
               >
                 {isSending ? "Надсилаємо..." : "Надіслати"}
               </button>
-
-              <a
-                href={TELEGRAM_BOT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-cyan-200/90 underline underline-offset-2 hover:text-cyan-100"
-              >
-                Відкрити Telegram
-              </a>
             </div>
 
             {statusText ? (

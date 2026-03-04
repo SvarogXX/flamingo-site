@@ -116,6 +116,7 @@ export async function POST(request: NextRequest) {
       name ? `<b>Ім'я:</b> ${escapeHtml(name)}` : "<b>Ім'я:</b> —",
       `<b>Текст:</b> ${escapeHtml(message)}`,
       source ? `<b>Сторінка:</b> ${escapeHtml(source)}` : "",
+      `<b>Відповідь:</b> <code>/reply ${requestId} ваш текст</code>`,
       `<b>Час:</b> ${new Date().toLocaleString("uk-UA")}`,
     ]
       .filter(Boolean)
