@@ -23,7 +23,7 @@ export default function Partners() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-gray-500 text-sm tracking-wider mb-10"
+          className="text-center text-gray-400 text-sm tracking-wider mb-10"
         >
           НАШІ ПАРТНЕРИ
         </motion.p>
@@ -37,7 +37,7 @@ export default function Partners() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex items-center gap-2 text-gray-500 hover:text-gray-300 transition-colors cursor-pointer group"
+              className="flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors cursor-pointer group"
             >
               <span className="text-2xl group-hover:scale-110 transition-transform">{partner.logo}</span>
               <span className="font-medium">{partner.name}</span>

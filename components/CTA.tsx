@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Heart, Target, Users, Zap, Github, Mail } from "lucide-react";
 import Link from "next/link";
+import MagneticButton from "./MagneticButton";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -125,7 +126,7 @@ export default function CTA() {
               className="relative group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
-              <div className="relative backdrop-blur-xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl px-8 py-10 border border-white/10 hover:border-white/20 transition-colors duration-300 text-center">
+              <div className="relative glass-panel rounded-2xl px-8 py-10 hover:border-white/20 transition-colors duration-300 text-center">
                 <p className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </p>
@@ -160,7 +161,7 @@ export default function CTA() {
                   className="group relative"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
-                  <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 group-hover:border-white/40 transition-colors duration-300">
+                  <div className="relative glass-panel rounded-2xl p-8 group-hover:border-white/40 transition-colors duration-300">
                     <div className="flex items-start gap-4 mb-4">
                       <div className="p-3 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex-shrink-0 group-hover:from-blue-500/50 group-hover:to-purple-500/50 transition-colors duration-300">
                         <Icon className="w-6 h-6 text-white" />
@@ -231,7 +232,7 @@ export default function CTA() {
               {/* Контактна карточка */}
               <div className="group relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-0 group-hover:opacity-40 transition-opacity duration-300" />
-                <div className="relative backdrop-blur-xl bg-gradient-to-br from-purple-900/40 to-pink-900/30 rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-colors">
+                <div className="relative glass-panel rounded-2xl p-8 hover:border-white/40 transition-colors">
                   <h4 className="font-bold text-white mb-4 flex items-center gap-2">
                     <Heart className="w-5 h-5 text-red-400" />
                     Хочете допомогти?
@@ -260,22 +261,23 @@ export default function CTA() {
                 </div>
               </div>
 
-              {/* CTA Кнопка */}
-              <motion.button
-                whileHover={{ scale: 1.05, y: -4 }}
-                whileTap={{ scale: 0.96 }}
-                className="group w-full"
-              >
-                <Link
-                  href="https://crm.flamingo-crm.com.ua/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 text-white font-bold rounded-xl shadow-xl shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-all duration-300"
+              <MagneticButton>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="group w-full"
                 >
-                  <span>Спробувати Flamingo CRM</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </motion.button>
+                  <Link
+                    href="https://crm.flamingo-crm.com.ua/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 text-white font-bold rounded-xl shadow-xl shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-all duration-300"
+                  >
+                    <span>Спробувати Flamingo CRM</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </motion.button>
+              </MagneticButton>
             </motion.div>
           </div>
         </motion.div>

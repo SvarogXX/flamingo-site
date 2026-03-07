@@ -74,7 +74,7 @@ export default function Footer() {
                 Flamingo CRM
               </span>
             </Link>
-            <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">
               Платформа для управління бізнесом. Безкоштовно. Для України.
             </p>
             <motion.div 
@@ -88,7 +88,7 @@ export default function Footer() {
                 href="mailto:support@flamingo-crm.com.ua"
                 variants={itemVariants}
                 whileHover={{ x: 4 }}
-                className="flex items-center gap-2 text-gray-500 hover:text-purple-400 transition-colors"
+                className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 <span>support@flamingo-crm.com.ua</span>
@@ -97,14 +97,14 @@ export default function Footer() {
                 href="tel:+380501234567"
                 variants={itemVariants}
                 whileHover={{ x: 4 }}
-                className="flex items-center gap-2 text-gray-500 hover:text-purple-400 transition-colors"
+                className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 <span>+38 (050) 123-45-67</span>
               </motion.a>
               <motion.div 
                 variants={itemVariants}
-                className="flex items-center gap-2 text-gray-500"
+                className="flex items-center gap-2 text-gray-400"
               >
                 <MapPin className="w-4 h-4" />
                 <span>Вінниця, Україна</span>
@@ -129,7 +129,7 @@ export default function Footer() {
                       href={link.href} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
+                      className="text-gray-400 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
                     >
                       {link.name}
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
@@ -137,7 +137,7 @@ export default function Footer() {
                   ) : (
                     <Link 
                       href={link.href}
-                      className="text-gray-500 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
+                      className="text-gray-400 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
                     >
                       {link.name}
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
@@ -165,7 +165,7 @@ export default function Footer() {
                       href={link.href} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
+                      className="text-gray-400 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
                     >
                       {link.name}
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
@@ -173,7 +173,7 @@ export default function Footer() {
                   ) : (
                     <Link 
                       href={link.href}
-                      className="text-gray-500 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
+                      className="text-gray-400 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
                     >
                       {link.name}
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
@@ -201,7 +201,7 @@ export default function Footer() {
                       href={link.href} 
                       target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                       rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                      className="text-gray-500 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
+                      className="text-gray-400 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
                     >
                       {link.name}
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
@@ -209,7 +209,7 @@ export default function Footer() {
                   ) : (
                     <Link 
                       href={link.href}
-                      className="text-gray-500 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
+                      className="text-gray-400 hover:text-purple-400 transition-colors text-sm group flex items-center gap-1 w-fit"
                     >
                       {link.name}
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />

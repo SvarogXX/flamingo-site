@@ -83,7 +83,7 @@ export default function FloatingTelegramButton() {
           initial={{ opacity: 0, y: 12, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 8, scale: 0.98 }}
-          className="mb-3 w-[280px] rounded-2xl border border-cyan-300/30 bg-[#0a1320]/95 p-4 shadow-2xl shadow-black/45 backdrop-blur-md sm:w-[320px]"
+          className="mb-3 w-[280px] glass-panel border-cyan-300/30 bg-[#0a1320]/95 p-4 shadow-2xl shadow-black/45 sm:w-[320px]"
         >
           <div className="mb-3 flex items-center justify-between">
             <p className="text-sm font-semibold text-cyan-100">Напишіть нам</p>
@@ -102,7 +102,7 @@ export default function FloatingTelegramButton() {
               placeholder="Ваше ім'я (необов'язково)"
               value={name}
               onChange={(event) => setName(event.target.value)}
-              className="w-full rounded-lg border border-white/10 bg-[#101a28] px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 outline-none focus:border-cyan-400/60"
+              className="w-full rounded-lg border border-white/10 bg-[#101a28] px-3 py-2 text-sm text-gray-100 placeholder:text-gray-400 outline-none focus:border-cyan-400/60"
             />
 
             <input
@@ -121,7 +121,7 @@ export default function FloatingTelegramButton() {
               onChange={(event) => setMessage(event.target.value)}
               rows={4}
               required
-              className="w-full resize-none rounded-lg border border-white/10 bg-[#101a28] px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 outline-none focus:border-cyan-400/60"
+              className="w-full resize-none rounded-lg border border-white/10 bg-[#101a28] px-3 py-2 text-sm text-gray-100 placeholder:text-gray-400 outline-none focus:border-cyan-400/60"
             />
 
             <div className="flex items-center gap-2">
@@ -177,7 +177,7 @@ export default function FloatingTelegramButton() {
         whileTap={{ scale: 0.96 }}
         className={`group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#229ED9] shadow-xl shadow-black/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 sm:h-16 sm:w-16 ${!reducedMotion ? "hero-card-float" : ""}`}
       >
-        <span className="pointer-events-none absolute left-[calc(100%+10px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full border border-cyan-300/30 bg-[#081824]/90 px-3 py-1.5 text-xs font-medium text-cyan-100 opacity-0 shadow-lg shadow-black/35 backdrop-blur-sm transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
+        <span className="pointer-events-none absolute left-[calc(100%+10px)] top-1/2 -translate-y-1/2 whitespace-nowrap glass-panel rounded-full border-cyan-300/30 bg-[#081824]/90 px-3 py-1.5 text-xs font-medium text-cyan-100 opacity-0 shadow-lg shadow-black/35 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
           Напишіть нам
         </span>
 

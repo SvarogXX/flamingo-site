@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Heart, ArrowRight, Zap, Shield, Instagram } from "lucide-react";
 
 interface DonationMethod {
@@ -187,7 +188,7 @@ export default function UkraineSupport() {
           variants={containerVariants}
           className="max-w-4xl mx-auto mb-12"
         >
-          <motion.section variants={itemVariants} className="mb-10 p-8 rounded-2xl bg-gradient-to-br from-white/6 to-white/2 border border-white/10 backdrop-blur-lg">
+          <motion.section variants={itemVariants} className="mb-10 p-8 glass-panel shadow-none">
             <motion.h2 
               variants={itemVariants}
               className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight"
@@ -209,7 +210,7 @@ export default function UkraineSupport() {
             </motion.p>
           </motion.section>
 
-          <motion.section variants={itemVariants} className="mb-10 p-8 rounded-2xl bg-gradient-to-br from-red-900/10 to-pink-900/5 border border-red-500/20 backdrop-blur-lg">
+          <motion.section variants={itemVariants} className="mb-10 p-8 glass-panel bg-gradient-to-br from-red-900/10 to-pink-900/5 border-red-500/20 shadow-none">
             <motion.h3 variants={itemVariants} className="text-2xl font-bold text-white mb-4">Наша основна мета</motion.h3>
             <motion.p variants={itemVariants} className="text-gray-300 text-base leading-relaxed mb-4">
               Наше основне завдання сьогодні — допомогти побратимам з <span className="font-semibold text-white">1-го батальйону безпілотних систем «Хижаки висот» 59-ї окремої штурмової бригади імені Якова Гандзюка</span> (Сили безпілотних систем ЗСУ).
@@ -224,7 +225,7 @@ export default function UkraineSupport() {
             </motion.p>
           </motion.section>
 
-          <motion.section variants={itemVariants} className="mb-10 p-8 rounded-2xl bg-gradient-to-br from-purple-900/10 to-blue-900/5 border border-purple-500/20 backdrop-blur-lg">
+          <motion.section variants={itemVariants} className="mb-10 p-8 glass-panel bg-gradient-to-br from-purple-900/10 to-blue-900/5 border-purple-500/20 shadow-none">
             <motion.h3 variants={itemVariants} className="text-2xl font-bold text-white mb-6">Як це працює просто і прозоро?</motion.h3>
             
             <motion.ol variants={itemVariants} className="text-gray-300 text-base leading-relaxed space-y-4">
@@ -250,7 +251,7 @@ export default function UkraineSupport() {
             </motion.ol>
           </motion.section>
 
-          <motion.section variants={itemVariants} className="p-8 rounded-2xl bg-gradient-to-br from-yellow-900/10 to-orange-900/5 border border-yellow-500/20 backdrop-blur-lg">
+          <motion.section variants={itemVariants} className="p-8 glass-panel bg-gradient-to-br from-yellow-900/10 to-orange-900/5 border-yellow-500/20 shadow-none">
             
             <motion.p variants={itemVariants} className="text-gray-300 text-base leading-relaxed mb-4">
               <span className="text-xl font-bold text-white">Дякуємо, що ви з нами.</span>
@@ -306,7 +307,7 @@ export default function UkraineSupport() {
               />
 
               {/* Content Container */}
-              <div className="relative z-10 p-8 backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300">
+              <div className="relative z-10 p-8 glass-panel group-hover:border-white/20 transition-all duration-300 shadow-none">
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <motion.span 
@@ -331,7 +332,7 @@ export default function UkraineSupport() {
 
                 {/* Card Number Box with Premium Effect */}
                 <motion.div
-                  className={`mb-6 p-4 bg-gradient-to-r ${method.color} /5 border border-white/10 rounded-lg group/card cursor-pointer hover:bg-white/10 transition-all backdrop-blur-sm`}
+                  className={`mb-6 p-4 glass-panel bg-gradient-to-r ${method.color} /5 border-white/10 rounded-lg group/card cursor-pointer hover:bg-white/10 transition-all shadow-none`}
                   onClick={() => copyToClipboard(method.card)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -362,16 +363,18 @@ export default function UkraineSupport() {
                   >
                     <p className="text-xs text-gray-400 mb-2 uppercase tracking-widest font-semibold">QR Код</p>
                     <div className="w-full aspect-square rounded-lg bg-white/10 border border-white/20 overflow-hidden flex items-center justify-center">
-                      <img 
+                      <Image 
                         src={method.qrCode} 
                         alt={`${method.bank} QR код`}
+                        width={200}
+                        height={200}
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                           e.currentTarget.nextElementSibling?.classList.remove('hidden');
                         }}
                       />
-                      <div className="hidden text-xs text-gray-500 text-center p-2">QR код недоступний</div>
+                      <div className="hidden text-xs text-gray-400 text-center p-2">QR код недоступний</div>
                     </div>
                   </motion.div>
 
@@ -450,7 +453,7 @@ export default function UkraineSupport() {
                 />
 
                 {/* Card */}
-                <div className="relative p-6 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 group-hover:border-white/30 transition-all backdrop-blur-xl">
+                <div className="relative p-6 glass-panel rounded-xl group-hover:border-white/30 transition-all shadow-none border-white/10">
                   <motion.div
                     className={`inline-flex p-3 bg-gradient-to-r ${stat.color} text-white rounded-lg mb-4 shadow-lg`}
                     whileHover={{ rotate: 360, scale: 1.1 }}
@@ -465,7 +468,7 @@ export default function UkraineSupport() {
                   >
                     {stat.value}
                   </motion.p>
-                  <p className="text-xs text-gray-500 mb-3 font-medium">{stat.description}</p>
+                  <p className="text-xs text-gray-400 mb-3 font-medium">{stat.description}</p>
                   <p className="text-sm text-gray-400 leading-relaxed">{stat.details}</p>
                 </div>
               </motion.div>
@@ -479,7 +482,7 @@ export default function UkraineSupport() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="text-center p-8 rounded-2xl bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-purple-600/20 border border-purple-500/30 backdrop-blur-lg shadow-2xl shadow-purple-500/20 relative overflow-hidden"
+          className="text-center p-8 glass-panel bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-purple-600/20 border-purple-500/30 shadow-2xl shadow-purple-500/20 relative overflow-hidden"
         >
           {/* Animated Background */}
           <motion.div
@@ -546,7 +549,7 @@ export default function UkraineSupport() {
             transition={{ duration: 0.3 }}
             className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50"
           >
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg shadow-lg border border-white/20 backdrop-blur-md">
+            <div className="glass-panel bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg border-white/20 shadow-lg">
               <div className="flex items-center gap-2">
                 <Heart className="w-5 h-5" />
                 <span className="font-medium">{toastMessage}</span>

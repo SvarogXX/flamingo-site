@@ -2,8 +2,10 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useReducedMotion, useTransform, useMotionValue } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight, Sparkles, Zap, Layers } from "lucide-react";
 import Audience from "./Audience";
+import MagneticButton from "./MagneticButton";
 
 type BlockableEvent = {
   preventDefault: () => void;
@@ -275,17 +277,19 @@ export default function Hero() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               ) : (
-                <motion.a
-                  href="https://crm.flamingo-crm.com.ua/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 px-10 py-4 bg-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/40 transition-all duration-300 hover:bg-purple-500 hover:shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/40"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <span>Спробувати безкоштовно</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </motion.a>
+                <MagneticButton className="inline-flex">
+                  <motion.a
+                    href="https://crm.flamingo-crm.com.ua/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 px-10 py-4 bg-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/40 transition-all duration-300 hover:bg-purple-500 hover:shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/40"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span>Спробувати безкоштовно</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </motion.a>
+                </MagneticButton>
               )}
             </motion.div>
 
@@ -308,9 +312,9 @@ export default function Hero() {
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="relative inline-block backdrop-blur-xl bg-gradient-to-br from-purple-900/40 to-pink-900/30 text-white rounded-2xl
+                className="relative inline-block glass-panel bg-gradient-to-br from-purple-900/40 to-pink-900/30 text-white
                   px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold
-                  border border-white/20 hover:border-white/40
+                  hover:border-white/40
                   transition-all duration-300 group/btn
                   hover:from-purple-800/50 hover:to-pink-800/40
                   shadow-lg hover:shadow-xl shadow-purple-500/10 hover:shadow-purple-500/20"
@@ -386,15 +390,15 @@ export default function Hero() {
                 className="relative h-[85vh] min-h-[500px] max-h-[800px] sm:h-[80vh] sm:max-h-[750px] lg:h-[200px] overflow-hidden rounded-b-xl bg-white/[0.02]"
               >
                 {heroImageError ? (
-                  <div className="w-full h-full flex items-center justify-center text-gray-500">Додайте hero.png у public/images/</div>
+                  <div className="w-full h-full flex items-center justify-center text-gray-400">Додайте hero.png у public/images/</div>
                 ) : reducedMotion ? (
-                  <img
+                  <Image
                     src="/images/hero.png"
                     alt="Інтерфейс Flamingo CRM — головний екран системи управління клієнтами та базою даних"
                     width={1200}
                     height={630}
-                    fetchPriority="high"
-                    decoding="async"
+                    priority
+                    sizes="100vw"
                     className="w-full h-auto block"
                     onError={() => setHeroImageError(true)}
                   />
@@ -403,13 +407,13 @@ export default function Hero() {
                     className="w-full will-change-transform"
                     style={{ y: imageScrollY }}
                   >
-                    <img
+                    <Image
                       src="/images/hero.png"
                       alt="Інтерфейс Flamingo CRM — головний екран системи управління клієнтами та базою даних"
                       width={1200}
                       height={630}
-                      fetchPriority="high"
-                      decoding="async"
+                      priority
+                      sizes="100vw"
                       className="w-full h-auto block"
                       onError={() => setHeroImageError(true)}
                     />
@@ -449,7 +453,7 @@ export default function Hero() {
                 <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-2">
                   Чому <span className="gradient-text">Flamingo CRM</span>?
                 </h2>
-                <p className="text-gray-500 text-sm text-center max-w-xl mx-auto mb-8">
+                <p className="text-gray-400 text-sm text-center max-w-xl mx-auto mb-8">
                   Простий старт. Інтуїтивний та ергономічний інтерфейс. Один інструмент для всього.
                 </p>
 

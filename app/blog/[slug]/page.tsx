@@ -602,7 +602,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <span>До блогу</span>
             </Link>
 
-            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl sm:p-8 lg:p-10">
+            <div className="glass-panel rounded-3xl p-6 sm:p-8 lg:p-10">
               <div className="mb-6 flex flex-wrap items-center gap-3">
                 <span className="inline-flex items-center gap-2 rounded-full border border-purple-400/30 bg-purple-500/15 px-4 py-1.5 text-sm font-medium text-purple-200">
                   <Sparkles className="h-4 w-4" />
@@ -656,7 +656,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent" />
               </div>
 
-              <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-black/30 backdrop-blur-lg sm:p-10">
+              <div className="glass-panel rounded-3xl p-6 shadow-2xl shadow-black/30 sm:p-10">
                 <div
                   className="mx-auto max-w-[760px]
                     text-gray-400
@@ -697,7 +697,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
             <aside className="lg:col-span-4">
               <div className="sticky top-28 space-y-6">
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-lg">
+                <div className="glass-panel p-6">
                   <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">Автор матеріалу</h3>
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-base font-semibold text-white">
@@ -710,7 +710,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-lg">
+                <div className="glass-panel p-6">
                   <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">Навігація по статті</h3>
                   <nav className="space-y-2">
                     {toc.map((item) => (

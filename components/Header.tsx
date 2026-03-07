@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import MagneticButton from "./MagneticButton";
 
 const navLinks = [
   { name: "Можливості", href: "/features" },
@@ -94,16 +95,18 @@ export default function Header() {
             >
               Увійти
             </motion.a>
-            <motion.a
-              href="https://crm.flamingo-crm.com.ua/"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-purple-500/40 hover:shadow-purple-500/50 hover:shadow-xl transition-all"
-            >
-              Почати
-            </motion.a>
+            <MagneticButton className="inline-flex">
+              <motion.a
+                href="https://crm.flamingo-crm.com.ua/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-purple-500/40 hover:shadow-purple-500/50 hover:shadow-xl transition-all"
+              >
+                Почати
+              </motion.a>
+            </MagneticButton>
           </div>
 
           {/* Mobile Menu Button */}

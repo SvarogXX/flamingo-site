@@ -29,7 +29,7 @@ export default function FloatingDonateButton() {
 
         window.location.hash = targetId;
       }}
-      className={`fixed bottom-8 right-4 sm:bottom-12 sm:right-8 z-40 w-32 sm:w-36 rounded-2xl border border-white/10 hover:border-white/30 bg-gradient-to-br from-purple-950/80 to-[#0c0c10] p-4 shadow-xl shadow-black/40 backdrop-blur-md cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 ${!reducedMotion ? "hero-card-float" : ""}`}
+      className={`fixed bottom-8 right-4 sm:bottom-12 sm:right-8 z-40 w-32 sm:w-36 glass-panel hover:border-white/30 bg-gradient-to-br from-purple-950/80 to-[#0c0c10] p-4 shadow-xl shadow-black/40 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 ${!reducedMotion ? "hero-card-float" : ""}`}
     >
       <div className="text-center">
         <div className="text-2xl sm:text-3xl font-bold text-green-500 mb-0.5">Free</div>

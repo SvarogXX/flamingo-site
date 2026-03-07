@@ -94,7 +94,7 @@ export default function Audience() {
           <h3 className="text-2xl sm:text-3xl font-bold text-white text-center mb-2">
             Проста та потужна система для управління клієнтами та базою даних
           </h3>
-          <p className="text-gray-500 text-sm text-center max-w-2xl mx-auto mb-6">
+          <p className="text-gray-400 text-sm text-center max-w-2xl mx-auto mb-6">
             Підходить практично будь-якому бізнесу — від малого до середнього.
           </p>
 

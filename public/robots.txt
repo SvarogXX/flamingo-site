@@ -6,7 +6,7 @@ Disallow: /.next/
 Disallow: /node_modules/
 
 # Sitemap location
-Sitemap: https://flamingo-crm.com/sitemap.xml
+Sitemap: https://flamingo-crm.com.ua/sitemap.xml
 
 # Crawl delay and request rate
 Crawl-delay: 1

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowRight, TrendingUp, Users, Clock, Shield, MessageCircle, Sliders } from "lucide-react";
 
 const BenefitItem = ({ icon: Icon, color, title, description }: { icon: any; color: string; title: string; description: string }) => (
@@ -127,7 +128,7 @@ export default function Benefits() {
             transition={{ duration: 0.6 }}
             className="group"
           >
-            <div className="relative rounded-2xl overflow-hidden border border-purple-500/20 bg-gradient-to-br from-[#12121a] to-[#0a0a12] backdrop-blur-xl p-8 lg:p-10 shadow-2xl shadow-purple-500/20 group-hover:shadow-purple-500/40 transition-all">
+            <div className="relative glass-panel overflow-hidden p-8 lg:p-10 shadow-2xl shadow-purple-500/20 group-hover:shadow-purple-500/40 transition-all">
               {/* Gradient Border Hover Effect */}
               <div className="absolute inset-0 rounded-2xl p-px bg-gradient-to-r from-purple-600 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-px rounded-2xl bg-[#080810]" />
@@ -136,13 +137,13 @@ export default function Benefits() {
               <div className="relative z-10">
                 {/* Зображення статистики / дашборду */}
                 <div className="rounded-xl border border-white/10 overflow-hidden mb-8">
-                  <img
+                  <Image
                     src="/images/statistic.png"
                     alt="Скріншот дашборду та звітів Flamingo CRM — статистика продажів, аналітика та метрики бізнесу"
                     width={800}
                     height={450}
-                    loading="lazy"
-                    decoding="async"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="w-full h-auto object-contain"
                   />
                 </div>
@@ -157,7 +158,7 @@ export default function Benefits() {
                   </motion.div>
                   <div>
                     <h3 className="text-white font-bold text-lg">Результати в цифрах</h3>
-                    <p className="text-gray-500 text-sm">Перший місяць використання</p>
+                    <p className="text-gray-400 text-sm">Перший місяць використання</p>
                   </div>
                 </div>
 

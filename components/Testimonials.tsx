@@ -179,7 +179,7 @@ export default function Testimonials() {
                 />
 
                 {/* Content */}
-                <div className="relative z-10 p-6 lg:p-8 backdrop-blur-xl">
+                <div className="relative z-10 p-6 lg:p-8 glass-panel border-none bg-transparent shadow-none">
                   <motion.div 
                     className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center mb-4 shadow-lg"
                     whileHover={{ scale: 1.1, rotate: 10 }}
@@ -201,7 +201,7 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center p-8 rounded-2xl bg-gradient-to-r from-purple-600/10 to-pink-600/10 border border-purple-500/20 backdrop-blur-xl"
+          className="text-center p-8 glass-panel bg-gradient-to-r from-purple-600/10 to-pink-600/10 border-none relative overflow-hidden"
         >
           <p className="text-gray-300 text-base max-w-2xl mx-auto">
             <span className="text-white font-semibold">Це не обіцянки —</span> це чинні результати, досягнуті середніми користувачами Flamingo CRM у 2025–2026 роках. Результати залежать від якості даних та послідовності в роботі з системою.

@@ -2,61 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://flamingo-crm.com/</loc>
+    <loc>https://flamingo-crm.com.ua/</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://flamingo-crm.com/og-image.jpg</image:loc>
+      <image:loc>https://flamingo-crm.com.ua/og-image.jpg</image:loc>
       <image:title>Flamingo CRM - CRM система для бізнесу</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://flamingo-crm.com/features</loc>
+    <loc>https://flamingo-crm.com.ua/features</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flamingo-crm.com/pricing</loc>
+    <loc>https://flamingo-crm.com.ua/pricing</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flamingo-crm.com/about</loc>
+    <loc>https://flamingo-crm.com.ua/about</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flamingo-crm.com/contact</loc>
+    <loc>https://flamingo-crm.com.ua/contact</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flamingo-crm.com/faq</loc>
+    <loc>https://flamingo-crm.com.ua/faq</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flamingo-crm.com/for-whom</loc>
+    <loc>https://flamingo-crm.com.ua/for-whom</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flamingo-crm.com/testimonials</loc>
+    <loc>https://flamingo-crm.com.ua/testimonials</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flamingo-crm.com/blog</loc>
+    <loc>https://flamingo-crm.com.ua/blog</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flamingo-crm.com.ua/ukrainesupport</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 </urlset>

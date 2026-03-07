@@ -41,7 +41,7 @@ export default function Features() {
                 <motion.div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${f.bgColor} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500`} />
 
                 {/* Content Container */}
-                <div className="relative z-10 p-6 backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-300 h-full flex flex-col">
+                <div className="relative z-10 p-6 glass-panel rounded-2xl group-hover:border-white/20 transition-all duration-300 h-full flex flex-col">
                   <motion.div className={`w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br ${f.bgColor} mb-4 shadow-lg group-hover:scale-110 transition-transform`} whileHover={{ scale: 1.15, rotate: 10 }} transition={{ type: "spring", stiffness: 400 }}>
                     <Icon className="w-6 h-6 text-white" />
                   </motion.div>

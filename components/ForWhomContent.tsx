@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShoppingCart, Scissors, Wrench, Code, Home, FileText, ShieldCheck, Dumbbell, ArrowUp, ArrowLeft } from "lucide-react";
 
@@ -251,9 +252,12 @@ export default function ForWhomContent() {
                   className={`${isEven ? "order-2" : "order-1 lg:pr-20"} p-4 sm:p-8 flex items-center justify-center`}
                 >
                   <div className="relative w-full max-w-xl rounded-2xl overflow-hidden border border-white/6 shadow-[0_30px_80px_-20px_rgba(147,51,234,0.16)]">
-                    <img 
+                    <Image
                       src={a.image} 
                       alt={`${a.title} — скріншот інтерфейсу Flamingo CRM`} 
+                      width={800}
+                      height={450}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="w-full h-auto block" 
                     />
                     <div className="absolute bottom-4 left-4 bg-gradient-to-r from-black/40 to-transparent px-3 py-1 rounded-md text-sm text-gray-200">Прев'ю інтерфейсу</div>

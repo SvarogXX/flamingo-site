@@ -22,7 +22,7 @@ export default function FeaturedIcons() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-gray-500 text-sm mb-10"
+          className="text-center text-gray-400 text-sm mb-10"
         >
           Відкрийте Наші Ключові Можливості
         </motion.p>

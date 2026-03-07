@@ -99,11 +99,11 @@ export default function Pricing() {
               )}
               <div className="mb-6">
                 <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-gray-500 text-sm">{plan.description}</p>
+                <p className="text-gray-400 text-sm">{plan.description}</p>
               </div>
               <div className="mb-8">
                 <span className="text-4xl font-bold text-white">{plan.currency}{plan.price}</span>
-                <span className="text-gray-500">/{plan.period}</span>
+                <span className="text-gray-400">/{plan.period}</span>
               </div>
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature, i) => (

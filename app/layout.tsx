@@ -4,6 +4,7 @@ import "./globals.css";
 import SideNav from "@/components/SideNav";
 import FloatingDonateButton from "@/components/FloatingDonateButton";
 import FloatingTelegramButton from "@/components/FloatingTelegramButton";
+import PageTransitionEffect from "@/components/PageTransitionEffect";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -89,22 +90,23 @@ export default function RootLayout({
 }>) {
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "SoftwareApplication",
     "name": "Flamingo CRM",
     "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://flamingo-crm.com.ua',
-    "logo": process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/logo.png` : 'https://flamingo-crm.com.ua/logo.png',
-    "description": "Flamingo CRM — безкоштовна українська CRM для малого та середнього бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
-    "foundingDate": "2024",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Support",
-      "email": "support@flamingo-crm.com.ua"
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "image": process.env.NEXT_PUBLIC_SITE_URL ? `${process.env.NEXT_PUBLIC_SITE_URL}/logo.png` : 'https://flamingo-crm.com.ua/logo.png',
+    "description": "Безкоштовна українська CRM для малого та середнього бізнесу. Автоматизація продажів, клієнти, угоди. Замість підписки — донат на ЗСУ.",
+    "author": {
+      "@type": "Organization",
+      "name": "Flamingo CRM Team",
+      "url": "https://flamingo-crm.com.ua"
     },
     "offers": {
       "@type": "Offer",
-      "priceCurrency": "UAH",
       "price": "0",
-      "description": "Безкоштовна CRM система"
+      "priceCurrency": "UAH",
+      "description": "Безкоштовно за умови донату на ЗСУ"
     }
   };
 
@@ -130,7 +132,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} font-sans antialiased bg-[#0a0a0f] text-white`}>
-        {children}
+        <PageTransitionEffect>
+          {children}
+        </PageTransitionEffect>
         <SideNav />
         <FloatingTelegramButton />
         <FloatingDonateButton />
