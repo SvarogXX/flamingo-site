@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Блог Flamingo CRM — практичні розбори про CRM, продажі та автоматизацію",
@@ -97,6 +97,9 @@ const blogPosts = [
 const categories = ["Всі", "CRM", "Продажі", "Аналітика", "Інтеграції", "Менеджмент", "Мобільність"];
 
 export default function BlogPage() {
+  const featuredPost = blogPosts[0];
+  const regularPosts = blogPosts.slice(1);
+
   return (
     <>
       <Header />
@@ -143,56 +146,117 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* Blog posts grid */}
-        <section className="py-20 lg:py-28">
+        {/* Featured Post */}
+        <section className="py-12 lg:py-16">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article className="group relative rounded-3xl glass-card overflow-hidden grid grid-cols-1 lg:grid-cols-2 bg-gradient-to-br from-white/5 to-white/[0.02]">
+              {/* Image */}
+              <div className="relative h-64 sm:h-80 lg:h-full w-full overflow-hidden bg-gradient-to-br from-purple-900/30 to-pink-900/20">
+                <Image
+                  src={featuredPost.image}
+                  alt={featuredPost.title}
+                  fill
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/60 lg:from-[#0a0a0f]/20 lg:bg-gradient-to-r lg:to-transparent to-transparent" />
+              </div>
+
+              {/* Content */}
+              <div className="p-8 sm:p-10 lg:p-14 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="px-4 py-1.5 rounded-full bg-purple-500/20 text-purple-300 text-sm font-semibold tracking-wide">
+                    {featuredPost.category}
+                  </span>
+                  <span className="px-3 py-1 rounded-full border border-purple-500/30 text-purple-200 text-xs font-medium uppercase tracking-wider bg-purple-500/10">
+                    Новинка
+                  </span>
+                </div>
+
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 group-hover:text-purple-300 transition-colors leading-tight">
+                  <Link href={`/blog/${featuredPost.slug}`}>
+                    {featuredPost.title}
+                  </Link>
+                </h2>
+
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+                  {featuredPost.excerpt}
+                </p>
+
+                <div className="flex flex-wrap items-center justify-between pt-6 border-t border-white/10 gap-4">
+                  <div className="flex items-center flex-wrap gap-4 sm:gap-6 text-sm text-gray-400">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{new Date(featuredPost.date).toLocaleDateString("uk-UA")}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      <span>7 хв читання</span>
+                    </div>
+                  </div>
+                  <Link
+                    href={`/blog/${featuredPost.slug}`}
+                    className="flex items-center gap-2 text-white font-semibold bg-white/10 hover:bg-white/15 border border-white/20 px-6 py-3 rounded-xl transition-all hover:scale-105"
+                  >
+                    Читати повну статтю
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        {/* Regular Blog posts grid */}
+        <section className="py-12 lg:py-16 bg-[#0c0c12]">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-2xl font-bold text-white mb-10">Всі статті</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
+              {regularPosts.map((post) => (
                 <article
                   key={post.slug}
-                  className="group relative rounded-2xl glass-card overflow-hidden"
+                  className="group relative rounded-3xl glass-card overflow-hidden flex flex-col border border-white/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/30 bg-white/[0.02] hover:bg-white/[0.04]"
                 >
                   {/* Image */}
-                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-900/30 to-pink-900/20">
+                  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-purple-900/10 to-pink-900/10">
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
-                      className="object-cover object-center"
+                      className="object-cover object-center transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/30 to-transparent" />
                   </div>
 
                   {/* Content */}
-                  <div className="p-6 lg:p-8">
-                    {/* Category & meta */}
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-medium">
+                  <div className="p-6 lg:p-8 flex flex-col flex-grow">
+                    {/* Category */}
+                    <div className="mb-4">
+                      <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-semibold tracking-wide">
                         {post.category}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
+                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors line-clamp-2 leading-tight">
                       <Link href={`/blog/${post.slug}`}>
                         {post.title}
                       </Link>
                     </h2>
 
                     {/* Excerpt */}
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
                       {post.excerpt}
                     </p>
 
                     {/* Footer */}
-                    <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                      <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <div className="flex items-center justify-between pt-5 border-t border-white/10 mt-auto">
+                      <div className="flex items-center gap-2 text-sm text-gray-500">
                         <Calendar className="w-4 h-4" />
                         <span>{new Date(post.date).toLocaleDateString("uk-UA")}</span>
                       </div>
                       <Link
                         href={`/blog/${post.slug}`}
-                        className="flex items-center gap-1 text-purple-400 text-sm font-medium hover:text-purple-300 transition-colors"
+                        className="flex items-center gap-1 text-purple-400 text-sm font-semibold hover:text-purple-300 transition-colors"
                       >
                         Читати
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

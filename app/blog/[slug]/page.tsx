@@ -4,6 +4,8 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowLeft, User, Sparkles } from "lucide-react";
+import ArticleProgress from "@/components/ArticleProgress";
+import ShareButtons from "@/components/ShareButtons";
 
 // This would typically come from a CMS or database
 const blogPosts: Record<string, {
@@ -541,7 +543,7 @@ function renderArticleContent(markdown: string): { html: string; toc: TocItem[] 
       }
 
       const item = line.replace(/^-\s+/, "").trim();
-      htmlParts.push(`<li class="rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-[1.05rem] font-extralight text-gray-400 leading-8">${formatInlineMarkdown(item)}</li>`);
+      htmlParts.push(`<li class="rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-[1.05rem] font-light text-gray-300 leading-8">${formatInlineMarkdown(item)}</li>`);
       continue;
     }
 
@@ -580,10 +582,15 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   const { html, toc } = renderArticleContent(post.content);
+  
+  // Calculate read time (approx 200 words per minute)
+  const wordCount = post.content.trim().split(/\s+/).length;
+  const readTimeMin = Math.ceil(wordCount / 200);
 
   return (
     <>
       <Header />
+      <ArticleProgress />
       <main className="min-h-screen bg-[#0a0a0f]">
         <section className="relative overflow-hidden pt-28 pb-10 sm:pt-32 lg:pt-36">
           <div className="absolute inset-0 pointer-events-none">
@@ -635,8 +642,18 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
                 <div className="inline-flex items-center gap-2">
                   <Clock className="h-4 w-4" />
-                  <span>Оновлено для актуальної практики 2026</span>
+                  <span>{readTimeMin} хв читання</span>
                 </div>
+                
+                {/* Desktop Share Buttons */}
+                <div className="hidden sm:block ml-auto border-l border-white/10 pl-6">
+                  <ShareButtons url={`https://flamingo-crm.com.ua/blog/${slug}`} title={post.title} />
+                </div>
+              </div>
+              
+              {/* Mobile Share Buttons */}
+              <div className="mt-8 block sm:hidden pt-6 border-t border-white/10">
+                <ShareButtons url={`https://flamingo-crm.com.ua/blog/${slug}`} title={post.title} />
               </div>
             </div>
           </div>
@@ -658,15 +675,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
               <div className="glass-panel rounded-3xl p-6 shadow-2xl shadow-black/30 sm:p-10">
                 <div
-                  className="mx-auto max-w-[760px]
-                    text-gray-400
-                    [&>h2]:mb-8 [&>h2]:mt-16 [&>h2]:border-b [&>h2]:border-white/10 [&>h2]:pb-4 [&>h2]:text-[1.95rem] [&>h2]:font-semibold [&>h2]:leading-tight [&>h2]:text-white
-                    [&>h3]:mb-6 [&>h3]:mt-11 [&>h3]:text-[1.45rem] [&>h3]:font-semibold [&>h3]:leading-snug [&>h3]:text-purple-100
-                    [&>p]:mb-10 [&>p]:text-[1.14rem] [&>p]:font-extralight [&>p]:leading-9 [&>p]:tracking-[0.003em] [&>p]:text-gray-400
-                    [&>p.lead-paragraph]:mb-11 [&>p.lead-paragraph]:text-[1.28rem] [&>p.lead-paragraph]:font-light [&>p.lead-paragraph]:leading-10 [&>p.lead-paragraph]:text-gray-300
-                    [&>ul]:my-8
-                    [&_a]:font-medium [&_a]:text-purple-300 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-purple-200
-                    [&_strong]:font-light [&_strong]:text-gray-200"
+                  className="mx-auto max-w-[760px] text-gray-300 [&>h2]:mb-8 [&>h2]:mt-16 [&>h2]:border-b [&>h2]:border-white/10 [&>h2]:pb-4 [&>h2]:text-[1.95rem] [&>h2]:font-bold [&>h2]:leading-tight [&>h2]:text-white [&>h3]:mb-6 [&>h3]:mt-11 [&>h3]:text-[1.45rem] [&>h3]:font-bold [&>h3]:leading-snug [&>h3]:text-purple-100 [&>p]:mb-10 [&>p]:text-[1.14rem] [&>p]:font-light [&>p]:leading-9 [&>p]:tracking-[0.003em] [&>p]:text-gray-300 [&>p.lead-paragraph]:mb-11 [&>p.lead-paragraph]:text-[1.28rem] [&>p.lead-paragraph]:font-normal [&>p.lead-paragraph]:leading-10 [&>p.lead-paragraph]:text-gray-200 [&>ul]:my-8 [&_a]:font-medium [&_a]:text-purple-300 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-purple-200 [&_strong]:font-semibold [&_strong]:text-white"
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
               </div>
