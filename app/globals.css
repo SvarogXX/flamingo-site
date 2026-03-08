@@ -207,3 +207,24 @@ img {
     animation: none !important;
   }
 }
+
+/* Режим читання в статтях блогу: м’якший фон і контрастніший текст */
+[data-reading-mode="true"] .article-content {
+  background-color: rgba(30, 27, 45, 0.6) !important;
+}
+
+[data-reading-mode="true"] .article-content p {
+  color: rgb(203, 213, 225) !important; /* slate-300 */
+}
+
+[data-reading-mode="true"] .article-content p.lead-paragraph {
+  color: rgb(226, 232, 240) !important; /* slate-200 */
+}
+
+[data-reading-mode="true"] .article-content li {
+  color: rgb(203, 213, 225) !important;
+}
+
+[data-reading-mode="true"] .article-content strong {
+  color: rgb(241, 245, 249) !important; /* slate-100 */
+}

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowLeft, User, Sparkles } from "lucide-react";
 import ArticleProgress from "@/components/ArticleProgress";
 import ShareButtons from "@/components/ShareButtons";
+import BlogArticleSection from "@/components/BlogArticleSection";
 
 // This would typically come from a CMS or database
 const blogPosts: Record<string, {
@@ -31,7 +32,7 @@ const blogPosts: Record<string, {
 
 Коли власник малого бізнесу вперше замислюється про CRM, зазвичай це не через моду. Це відбувається в момент, коли заявок стає більше, менеджери починають вести клієнтів у різних таблицях, а керівник щовечора намагається зрозуміти, скільки угод реально «живі», а скільки вже давно втрачені. На цьому етапі рішення потрібне не «найкрутіше», а те, яке повертає відчуття контролю.
 
-Саме тому попит на <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">CRM-системи</a> зростає: бізнесу потрібен практичний інструмент, який можна запустити швидко, без складного онбордингу і без відчуття, що команда працює «на систему», а не система — на команду.
+Саме тому попит на <a href="https://flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">CRM-системи</a> зростає: бізнесу потрібен практичний інструмент, який можна запустити швидко, без складного онбордингу і без відчуття, що команда працює «на систему», а не система — на команду.
 
 У цьому матеріалі я поділюся підходом, який працює в реальному малому бізнесі: як обрати CRM спокійно, без хаосу, щоб уже в перші тижні побачити результат у продажах.
 
@@ -51,7 +52,7 @@ const blogPosts: Record<string, {
 
 Автоматизація корисна тоді, коли вона забирає рутину, а не створює нову. Не потрібно одразу будувати десятки сценаріїв. Достатньо трьох базових: нагадування про наступний контакт, автоматична постановка задачі після зміни етапу та сигнал керівнику, якщо угода «зависла». Уже цього вистачає, щоб команда перестала втрачати ліди на рівному місці.
 
-Як виглядає така логіка на практиці, можна подивитися на головній сторінці про <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">автоматизацію продажів у CRM</a>.
+Як виглядає така логіка на практиці, можна подивитися на головній сторінці про автоматизацію продажів у CRM.
 
 ### 4) Інтеграції з вашими каналами
 
@@ -59,7 +60,7 @@ CRM має стати місцем, куди стікаються всі зве�
 
 ### 5) Прозора модель вартості
 
-Ціна CRM — це не лише тариф на сайті. Реальна вартість складається з часу команди, швидкості запуску, підтримки та того, скільки грошей ви втрачаєте, поки процес не працює. Тому дивіться на економіку в цілому. Для багатьох малих компаній саме <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">CRM без абонплати</a> виявляється найспокійнішим і передбачуваним варіантом.
+Ціна CRM — це не лише тариф на сайті. Реальна вартість складається з часу команди, швидкості запуску, підтримки та того, скільки грошей ви втрачаєте, поки процес не працює. Тому дивіться на економіку в цілому. Для багатьох малих компаній саме CRM без абонплати виявляється найспокійнішим і передбачуваним варіантом.
 
 ### 6) Аналітика, яка допомагає приймати рішення
 
@@ -90,7 +91,7 @@ CRM має стати місцем, куди стікаються всі зве�
 
 Якщо обирати CRM не емоційно, а через ваші щоденні задачі, рішення стає набагато простішим. Подивіться, чи система допомагає команді працювати швидше, а вам — бачити реальну картину по продажах. Якщо так, ви на правильному шляху.
 
-**Хочете подивитися, як це виглядає в живому продукті?** Перейдіть на <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головну сторінку CRM для малого бізнесу</a> та оцініть ключові сценарії для вашої команди.
+**Хочете подивитися, як це виглядає в живому продукті?** Перейдіть на <a href="https://flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головну сторінку CRM для малого бізнесу</a> та оцініть ключові сценарії для вашої команди.
     `,
     category: "CRM для малого бізнесу",
     seoKeywords: [
@@ -160,7 +161,7 @@ CRM має стати місцем, куди стікаються всі зве�
 
 У практиці малого бізнесу автоматизація дає три помітні ефекти: швидша реакція на запити, менше пропущених контактів і більше передбачуваності у щомісячному плані продажів. Навіть базові сценарії відчутно розвантажують команду вже в перші тижні.
 
-Якщо хочете подивитися, як це реалізовано в продукті, відкрийте <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головну сторінку CRM для автоматизації продажів</a>.
+Якщо хочете подивитися, як це реалізовано в продукті, відкрийте <a href="https://flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головну сторінку CRM для автоматизації продажів</a>.
 
 ## Як почати?
 
@@ -226,7 +227,7 @@ CRM має стати місцем, куди стікаються всі зве�
 
 Аналітика в CRM — це не про красиві графіки, а про швидкі, точні рішення. Почніть з базових метрик, зробіть їх частиною щотижневого менеджменту й поступово будуйте систему, у якій кожне рішення має цифру під собою.
 
-Щоб побачити приклади такої логіки в дії, перейдіть на <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головну сторінку CRM</a>.
+Щоб побачити приклади такої логіки в дії, перейдіть на <a href="https://flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головну сторінку CRM</a>.
     `,
     category: "Аналітика в CRM",
     seoKeywords: [
@@ -256,13 +257,15 @@ CRM має стати місцем, куди стікаються всі зве�
 
 Рішенням стає **інтеграція CRM з іншими сервісами**. Правильно налаштована екосистема перетворює CRM на "єдиний мозок" компанії. У цій статті ми розберемо, як покроково об'єднати ваші інструменти комунікації та маркетингу з CRM-системою, щоб збільшити продажі і зменшити відсоток втрачених можливостей.
 
-## Зміст
+
 Коли всі інструменти працюють в ізольованому форматі (siloed data), виникає кілька болючих для бізнесу симптомів:
 - **Людський фактор:** менеджер забув перенести заявку з сайту в таблицю.
 - **Втрата часу:** постійне перемикання між вікном Telegram, поштовим клієнтом і таблицею Excel знижує продуктивність на 20-30%.
 - **Відсутність аналітики:** керівник не розуміє реальну вартість залучення клієнта (CAC), бо не знає, відки прийшов лід.
 
-Після успішної інтеграції усі дотики з клієнтом — від першого кліку по рекламі до підписання договору — фіксуються в єдиній [картці клієнта](https://crm.flamingo-crm.com.ua/). Це називається омніканальністю (Omnichannel).
+Після успішної інтеграції усі дотики з клієнтом — від першого кліку по рекламі до підписання договору — фіксуються в єдиній <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">картці клієнта</a>. Це називається омніканальністю (Omnichannel).
+
+![Картка клієнта в CRM](/images/contact_card_2.png)
 
 ## Інтеграція CRM із сайтом (Web-to-Lead)
 
@@ -338,7 +341,7 @@ CRM має стати місцем, куди стікаються всі зве�
 
 Інтегратори часто жартують: "CRM без інтеграцій — це просто дуже дорогий записник". І вони мають рацію. Коли ваш сайт, Email-маркетинг, месенджери та телефонія синхронізовані в одній екосистемі, ваші співробітники перестають виконувати роль різноробочих з копіювання даних, і нарешті починають ПРОДАВАТИ.
 
-**Готові впровадити ефективну CRM-систему для вашого бізнесу?** Зверніть увагу на сучасні українські веб-продукти. Наприклад, ви можете переглянути можливості <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">Flamingo CRM</a>, де базові інтеграції налаштовуються інтуїтивно зрозуміло, щоб ваша команда могла почати працювати вже завтра.
+**Готові впровадити ефективну CRM-систему для вашого бізнесу?** Зверніть увагу на сучасні українські веб-продукти. Наприклад, ви можете переглянути можливості <a href="https://flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">Flamingo CRM</a>, де базові інтеграції налаштовуються інтуїтивно зрозуміло, щоб ваша команда могла почати працювати вже завтра.
 `,
     category: "Інтеграції CRM",
     seoKeywords: [
@@ -395,7 +398,7 @@ CRM має стати місцем, куди стікаються всі зве�
 
 Управління командою через CRM працює тоді, коли система відображає реальні процеси, а не «ідеальну картинку». Почніть з прозорих задач, контролю етапів і короткого ритму зустрічей — і команда стане помітно стабільнішою в результаті.
 
-Більше прикладів — на <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головній сторінці CRM для відділу продажів</a>.
+Більше прикладів — на <a href="https://flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головній сторінці CRM для відділу продажів</a>.
     `,
     category: "Менеджмент у CRM",
     seoKeywords: [
@@ -450,7 +453,7 @@ CRM має стати місцем, куди стікаються всі зве�
 
 Мобільний CRM — це не «додаткова зручність», а фактор швидкості продажів. Чим ближче система до реального ритму роботи команди, тим вища конверсія і стабільніший результат.
 
-Подивитися, як це працює в єдиній системі, можна на <a href="https://crm.flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головній сторінці CRM</a>.
+Подивитися, як це працює в єдиній системі, можна на <a href="https://flamingo-crm.com.ua/" target="_blank" rel="noopener noreferrer">головній сторінці CRM</a>.
     `,
     category: "Мобільний CRM",
     seoKeywords: [
@@ -518,7 +521,7 @@ interface TocItem {
 function slugifyHeading(value: string): string {
   return value
     .toLowerCase()
-  .replace(/[^\p{L}\p{N}\s-]/gu, "")
+    .replace(/[^\p{L}\p{N}\s-]/gu, "")
     .trim()
     .replace(/\s+/g, "-");
 }
@@ -598,7 +601,18 @@ function renderArticleContent(markdown: string): { html: string; toc: TocItem[] 
       }
 
       const item = line.replace(/^-\s+/, "").trim();
-      htmlParts.push(`<li class="rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-[1.05rem] font-light text-gray-300 leading-8">${formatInlineMarkdown(item)}</li>`);
+      htmlParts.push(`<li class="rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-[1.05rem] font-light text-slate-500 leading-8">${formatInlineMarkdown(item)}</li>`);
+      continue;
+    }
+
+    // Markdown image: ![alt](src)
+    const imgMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)\s*$/);
+    if (imgMatch) {
+      flushParagraph();
+      closeList();
+      const [, alt, src] = imgMatch;
+      htmlParts.push(`<figure class="my-10"><img src="${src}" alt="${alt.replace(/"/g, "&quot;")}" class="w-full rounded-2xl border border-white/10 shadow-xl object-cover" /></figure>`);
+      shouldUseLeadParagraph = false;
       continue;
     }
 
@@ -637,7 +651,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   const { html, toc } = renderArticleContent(post.content);
-  
+
   // Calculate read time (approx 200 words per minute)
   const wordCount = post.content.trim().split(/\s+/).length;
   const readTimeMin = Math.ceil(wordCount / 200);
@@ -658,7 +672,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <Link
               href="/blog"
-              className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 transition-all hover:border-purple-400/40 hover:text-white"
+              className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-400 transition-all hover:border-purple-400/40 hover:text-slate-100"
             >
               <ArrowLeft className="h-4 w-4" />
               <span>До блогу</span>
@@ -676,11 +690,11 @@ export default async function BlogPostPage({ params }: PageProps) {
                 {post.title}
               </h1>
 
-              <p className="mt-6 max-w-4xl text-base leading-relaxed text-gray-300 sm:text-lg">
+              <p className="mt-6 max-w-4xl text-base leading-relaxed text-slate-400 sm:text-lg">
                 {post.excerpt}
               </p>
 
-              <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-gray-400">
+              <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-500">
                 <div className="inline-flex items-center gap-2">
                   <User className="h-4 w-4" />
                   <span>{post.author}</span>
@@ -699,13 +713,13 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <Clock className="h-4 w-4" />
                   <span>{readTimeMin} хв читання</span>
                 </div>
-                
+
                 {/* Desktop Share Buttons */}
                 <div className="hidden sm:block ml-auto border-l border-white/10 pl-6">
                   <ShareButtons url={`https://flamingo-crm.com.ua/blog/${slug}`} title={post.title} />
                 </div>
               </div>
-              
+
               {/* Mobile Share Buttons */}
               <div className="mt-8 block sm:hidden pt-6 border-t border-white/10">
                 <ShareButtons url={`https://flamingo-crm.com.ua/blog/${slug}`} title={post.title} />
@@ -715,96 +729,100 @@ export default async function BlogPostPage({ params }: PageProps) {
         </section>
 
         <section className="pb-20 pt-6 lg:pb-28 lg:pt-10">
-          <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8">
-            <article className="lg:col-span-8">
-              <div className="relative mb-8 h-72 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-purple-900/35 via-purple-900/15 to-pink-900/20 shadow-2xl shadow-purple-900/30 sm:h-[26rem] lg:h-[30rem]">
-                <Image
-                  src={post.image}
-                  alt={post.imageAlt}
-                  fill
-                  priority={slug === "yak-obrati-crm-systemu"}
-                  className="object-cover object-center opacity-95"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent" />
-              </div>
+          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <BlogArticleSection>
+              <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
+                <article className="lg:col-span-8">
+                  <div className="relative mb-8 h-72 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-purple-900/35 via-purple-900/15 to-pink-900/20 shadow-2xl shadow-purple-900/30 sm:h-[26rem] lg:h-[30rem]">
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt}
+                      fill
+                      priority={slug === "yak-obrati-crm-systemu"}
+                      className="object-cover object-center opacity-95"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent" />
+                  </div>
 
-              <div className="glass-panel rounded-3xl p-6 shadow-2xl shadow-black/30 sm:p-10">
-                <div
-                  className="mx-auto max-w-[760px] text-gray-300 [&>h2]:mb-8 [&>h2]:mt-16 [&>h2]:border-b [&>h2]:border-white/10 [&>h2]:pb-4 [&>h2]:text-[1.95rem] [&>h2]:font-bold [&>h2]:leading-tight [&>h2]:text-white [&>h3]:mb-6 [&>h3]:mt-11 [&>h3]:text-[1.45rem] [&>h3]:font-bold [&>h3]:leading-snug [&>h3]:text-purple-100 [&>p]:mb-10 [&>p]:text-[1.14rem] [&>p]:font-light [&>p]:leading-9 [&>p]:tracking-[0.003em] [&>p]:text-gray-300 [&>p.lead-paragraph]:mb-11 [&>p.lead-paragraph]:text-[1.28rem] [&>p.lead-paragraph]:font-normal [&>p.lead-paragraph]:leading-10 [&>p.lead-paragraph]:text-gray-200 [&>ul]:my-8 [&_a]:font-medium [&_a]:text-purple-300 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-purple-200 [&_strong]:font-semibold [&_strong]:text-white"
-                  dangerouslySetInnerHTML={{ __html: html }}
-                />
-              </div>
+                  <div className="glass-panel rounded-3xl p-6 shadow-2xl shadow-black/30 sm:p-10">
+                    <div
+                      className="article-content mx-auto max-w-[760px] rounded-2xl bg-white/[0.02] px-6 py-8 sm:px-8 sm:py-10 text-slate-400 [&>h2]:mb-8 [&>h2]:mt-16 [&>h2]:border-b [&>h2]:border-white/10 [&>h2]:pb-4 [&>h2]:text-[1.95rem] [&>h2]:font-bold [&>h2]:leading-tight [&>h2]:text-white [&>h3]:mb-6 [&>h3]:mt-11 [&>h3]:text-[1.45rem] [&>h3]:font-bold [&>h3]:leading-snug [&>h3]:text-purple-200 [&>p]:mb-10 [&>p]:text-[1.14rem] [&>p]:font-light [&>p]:leading-relaxed [&>p]:tracking-[0.01em] [&>p]:text-slate-500 [&>p.lead-paragraph]:mb-11 [&>p.lead-paragraph]:text-[1.28rem] [&>p.lead-paragraph]:font-normal [&>p.lead-paragraph]:leading-10 [&>p.lead-paragraph]:text-slate-400 [&>ul]:my-8 [&_a]:font-medium [&_a]:text-purple-300 [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-purple-200 [&_strong]:font-semibold [&_strong]:text-purple-100"
+                      dangerouslySetInnerHTML={{ __html: html }}
+                    />
+                  </div>
 
-              <div className="mt-8 rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-600/20 to-pink-600/10 p-6 sm:p-8">
-                <h3 className="text-xl font-semibold text-white">Сподобалась стаття?</h3>
-                <p className="mt-3 text-gray-300">
-                  Перейдіть на головну та подивіться, як ці підходи реалізовані у Flamingo CRM на практиці.
-                </p>
-                <div className="mt-5 flex flex-wrap gap-3">
-                  <Link
-                    href="https://crm.flamingo-crm.com.ua/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 font-semibold text-white transition-all hover:from-purple-500 hover:to-pink-400"
-                  >
-                    Перейти на головну
-                  </Link>
-                  <Link
-                    href="/blog"
-                    className="rounded-xl border border-white/15 px-6 py-3 font-medium text-gray-200 transition-colors hover:text-white"
-                  >
-                    Читати ще статті
-                  </Link>
-                </div>
-              </div>
-            </article>
-
-            <aside className="lg:col-span-4">
-              <div className="sticky top-28 space-y-6">
-                <div className="glass-panel p-6">
-                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">Автор матеріалу</h3>
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-base font-semibold text-white">
-                      {post.author.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="font-semibold text-white">{post.author}</p>
-                      <p className="text-sm text-gray-400">{post.authorRole}</p>
+                  <div className="mt-8 rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-600/20 to-pink-600/10 p-6 sm:p-8">
+                    <h3 className="text-xl font-semibold text-white">Сподобалась стаття?</h3>
+                    <p className="mt-3 text-slate-400">
+                      Перейдіть на головну та подивіться, як ці підходи реалізовані у Flamingo CRM на практиці.
+                    </p>
+                    <div className="mt-5 flex flex-wrap gap-3">
+                      <Link
+                        href="https://flamingo-crm.com.ua/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 px-6 py-3 font-semibold text-white transition-all hover:from-purple-500 hover:to-pink-400"
+                      >
+                        Перейти на головну
+                      </Link>
+                      <Link
+                        href="/blog"
+                        className="rounded-xl border border-white/15 px-6 py-3 font-medium text-slate-200 transition-colors hover:text-white"
+                      >
+                        Читати ще статті
+                      </Link>
                     </div>
                   </div>
-                </div>
+                </article>
 
-                <div className="glass-panel p-6">
-                  <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">Навігація по статті</h3>
-                  <nav className="space-y-2">
-                    {toc.map((item) => (
-                      <a
-                        key={item.id}
-                        href={`#${item.id}`}
-                        className={`block rounded-lg px-3 py-2 text-sm transition-colors hover:bg-white/5 hover:text-purple-200 ${item.level === 3 ? "pl-6 text-gray-400" : "text-gray-200"}`}
+                <aside className="lg:col-span-4">
+                  <div className="sticky top-28 space-y-6">
+                    <div className="glass-panel p-6">
+                      <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">Автор матеріалу</h3>
+                      <div className="flex items-center gap-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-base font-semibold text-white">
+                          {post.author.charAt(0)}
+                        </div>
+                        <div>
+                          <p className="font-semibold text-white">{post.author}</p>
+                          <p className="text-sm text-slate-500">{post.authorRole}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="glass-panel p-6">
+                      <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">Навігація по статті</h3>
+                      <nav className="space-y-2">
+                        {toc.map((item) => (
+                          <a
+                            key={item.id}
+                            href={`#${item.id}`}
+                            className={`block rounded-lg px-3 py-2 text-sm transition-colors hover:bg-white/5 hover:text-purple-200 ${item.level === 3 ? "pl-6 text-slate-500" : "text-slate-300"}`}
+                          >
+                            {item.title}
+                          </a>
+                        ))}
+                      </nav>
+                    </div>
+
+                    <div className="rounded-2xl border border-purple-400/20 bg-gradient-to-b from-purple-500/15 to-transparent p-6">
+                      <h3 className="text-lg font-semibold text-white">Застосуйте ідеї відразу</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                        Відкрийте головну сторінку, щоб переглянути сценарії автоматизації, структуру воронки та приклади для малого бізнесу.
+                      </p>
+                      <Link
+                        href="https://flamingo-crm.com.ua/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-block text-sm font-semibold text-purple-300 transition-colors hover:text-purple-200"
                       >
-                        {item.title}
-                      </a>
-                    ))}
-                  </nav>
-                </div>
-
-                <div className="rounded-2xl border border-purple-400/20 bg-gradient-to-b from-purple-500/15 to-transparent p-6">
-                  <h3 className="text-lg font-semibold text-white">Застосуйте ідеї відразу</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-gray-300">
-                    Відкрийте головну сторінку, щоб переглянути сценарії автоматизації, структуру воронки та приклади для малого бізнесу.
-                  </p>
-                  <Link
-                    href="https://crm.flamingo-crm.com.ua/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block text-sm font-semibold text-purple-300 transition-colors hover:text-purple-200"
-                  >
-                    Переглянути CRM →
-                  </Link>
-                </div>
+                        Переглянути CRM →
+                      </Link>
+                    </div>
+                  </div>
+                </aside>
               </div>
-            </aside>
+            </BlogArticleSection>
           </div>
         </section>
       </main>
