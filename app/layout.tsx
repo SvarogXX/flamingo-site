@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Flamingo CRM",
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/hero.png',
         width: 1200,
         height: 630,
         alt: 'Flamingo CRM - Безкоштовна CRM система для управління клієнтами',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Flamingo CRM - Безкоштовна українська CRM-система для бізнесу| Донат на ЗСУ замість підписки",
     description: "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
-    images: ['/og-image.jpg'],
+    images: ['/images/hero.png'],
     creator: "@FlamingoCRM",
   },
   robots: {

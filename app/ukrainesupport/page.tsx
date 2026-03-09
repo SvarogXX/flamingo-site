@@ -6,8 +6,33 @@ import UkraineSupport from "@/components/UkraineSupport";
 
 export const metadata: Metadata = {
   title: "Підтримка ЗСУ | Flamingo CRM - Донат замість підписки",
-  description: "Оберіть тариф CRM: Starter 9$/міс, Growth 29$/міс, Enterprise 99$/міс. Безкоштовний пробний період 14 днів. Тарифи CRM для бізнесу.",
+  description: "Підтримайте ЗСУ разом із Flamingo CRM: донат замість підписки та прозора підтримка України.",
   keywords: ["тарифи CRM", "безкоштовний пробний період CRM", "ціни CRM", "CRM для бізнесу"],
+  alternates: {
+    canonical: "/ukrainesupport",
+  },
+  openGraph: {
+    title: "Підтримка ЗСУ | Flamingo CRM - Донат замість підписки",
+    description: "Підтримайте ЗСУ разом із Flamingo CRM: донат замість підписки та прозора підтримка України.",
+    url: "/ukrainesupport",
+    siteName: "Flamingo CRM",
+    images: [
+      {
+        url: "/images/ukraine.png",
+        width: 1200,
+        height: 630,
+        alt: "Підтримка ЗСУ разом із Flamingo CRM",
+      },
+    ],
+    locale: "uk_UA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Підтримка ЗСУ | Flamingo CRM - Донат замість підписки",
+    description: "Підтримайте ЗСУ разом із Flamingo CRM: донат замість підписки та прозора підтримка України.",
+    images: ["/images/ukraine.png"],
+  },
 };
 
 export default function UkraineSupportPage() {
