@@ -4,6 +4,7 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, ArrowRight, Clock } from "lucide-react";
+import BlogPostsGrid, { BlogPost } from "../../components/BlogPostsGrid";
 
 export const metadata: Metadata = {
   title: "Блог Flamingo CRM — практичні розбори про CRM, продажі та автоматизацію",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 // This would typically come from a CMS or database
-const blogPosts = [
+const blogPosts: BlogPost[] = [
   {
     slug: "yak-obrati-crm-systemu",
     title: "Як обрати CRM для малого бізнесу у 2026: чекліст із 15 критеріїв",
@@ -54,7 +55,7 @@ const blogPosts = [
     excerpt: "Дізнайтеся, як автоматизація може збільшити ефективність вашого відділу продажів та скоротити час на рутинні задачі.",
     category: "Продажі",
     author: "Олександр Яремчук",
-    date: "2026-02-08",    image: "/images/automatozation.png",
+    date: "2026-02-08", image: "/images/automatozation.png",
   },
   {
     slug: "analityka-v-crm",
@@ -72,7 +73,7 @@ const blogPosts = [
     category: "Інтеграції",
     author: "Олександр Яремчук",
     date: "2026-02-01",
-    image: "/images/contact_card.png",
+    image: "/images/blog/integration.jpg",
   },
   {
     slug: "upravlinnya-komandoyu-v-crm",
@@ -81,7 +82,7 @@ const blogPosts = [
     category: "Менеджмент",
     author: "Олександр Яремчук",
     date: "2026-01-28",
-    image: "/images/create_task.png",
+    image: "/images/blog/team.png",
   },
   {
     slug: "mobilnyy-crm",
@@ -90,13 +91,151 @@ const blogPosts = [
     category: "Мобільність",
     author: "Олександр Яремчук",
     date: "2026-01-25",
-    image: "/images/hero.png",
+    image: "/images/blog/Mobile.png",
+  },
+  {
+    slug: "voronka-prodazhiv-v-crm",
+    title: "Воронка продажів в CRM: як налаштувати та аналізувати етапи",
+    excerpt: "Практичний гайд: як побудувати воронку продажів у CRM-системі, налаштувати етапи під свій бізнес і відстежувати конверсію.",
+    category: "Воронка продажів",
+    author: "Олександр Яремчук",
+    date: "2026-03-01",
+    image: "/images/blog/voronka.jpg",
+  },
+  {
+    slug: "vprovadzhennya-crm-z-nulya",
+    title: "Впровадження CRM з нуля: покроковий план на перший місяць",
+    excerpt: "Як запустити CRM у малому бізнесі без хаосу: підготовка, налаштування, навчання команди та перші результати за 4 тижні.",
+    category: "Впровадження CRM",
+    author: "Олександр Яремчук",
+    date: "2026-02-25",
+    image: "/images/blog/input.png",
+  },
+  {
+    slug: "baza-kliyentiv-upravlinnya",
+    title: "База клієнтів: як зберігати та використовувати дані в CRM",
+    excerpt: "Як побудувати та підтримувати базу клієнтів у CRM: якість даних, пошук, сегментація та повторні продажі.",
+    category: "Управління клієнтами",
+    author: "Олександр Яремчук",
+    date: "2026-02-20",
+    image: "/images/contact_card.png",
+  },
+  {
+    slug: "kpi-viddilu-prodazhiv",
+    title: "KPI відділу продажів: що відстежувати в CRM для росту",
+    excerpt: "Які KPI реально допомагають керувати відділом продажів і як їх відстежувати в CRM без Excel та ручних звітів.",
+    category: "Продуктивність продажів",
+    author: "Олександр Яремчук",
+    date: "2026-02-15",
+    image: "/images/analitics.png",
+  },
+  {
+    slug: "chomu-vtrachayutsya-lidy",
+    title: "Чому малий бізнес втрачає ліди: 5 причин та рішення в CRM",
+    excerpt: "Типові причини втрати заявок у малого бізнесу та як CRM допомагає їх усунути: швидкість відповіді, дисципліна, нагадування.",
+    category: "Управління клієнтами",
+    author: "Олександр Яремчук",
+    date: "2026-02-10",
+    image: "/images/automatozation.png",
+  },
+  {
+    slug: "yak-pidvishchiti-konversiyu-v-prodazhah",
+    title: "Як підвищити конверсію в продажах за допомогою CRM",
+    excerpt: "Практичні способи збільшити конверсію за допомогою CRM: швидкість відповіді, воронка, нагадування. Поради для малого бізнесу.",
+    category: "Продажі",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/conv.jpg",
+  },
+  {
+    slug: "upravlinnya-zavdannyamy-v-crm",
+    title: "Управління завданнями в CRM: задачі та дедлайни",
+    excerpt: "Як керувати задачами та дедлайнами в CRM. Призначення, нагадування, контроль. Поради для відділу продажів.",
+    category: "Менеджмент",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/task.png",
+  },
+  {
+    slug: "zvitnist-dashbordy-v-crm",
+    title: "Звітність та дашборди в CRM для керівника",
+    excerpt: "Як будувати звіти та дашборди в CRM. KPI, конверсія, прогноз. Поради для керівників відділу продажів.",
+    category: "Аналітика",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/dashboard.png",
+  },
+  {
+    slug: "vybir-crm-sistemu-porivnyannya",
+    title: "Вибір CRM-системи: порівняння та критерії",
+    excerpt: "Як вибрати CRM для бізнесу: критерії порівняння, типові помилки. Практичний гайд для малого бізнесу.",
+    category: "CRM",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/change.png",
+  },
+  {
+    slug: "avtomatyzatsiya-obrobky-lidiv",
+    title: "Автоматизація обробки лідів: від заявки до угоди",
+    excerpt: "Як автоматизувати обробку лідів: від заявки до угоди. Сповіщення, призначення, нагадування.",
+    category: "Продажі",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/avtomatyzatsiya-obrobky-lidiv.png",
+  },
+  {
+    slug: "crm-dlya-agenstv",
+    title: "CRM для агентств та сервісних компаній",
+    excerpt: "Як використовувати CRM в агентстві та сервісній компанії. Клієнти, проєкти, задачі.",
+    category: "CRM",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/crm-dlya-agenstv.png",
+  },
+  {
+    slug: "bezpeka-danikh-v-crm",
+    title: "Безпека даних у CRM: доступ та конфіденційність",
+    excerpt: "Як захистити дані клієнтів у CRM. Права доступу, ролі, конфіденційність. Поради для бізнесу.",
+    category: "CRM",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/bezpeka-danikh-v-crm.png",
+  },
+  {
+    slug: "crm-email-marketing",
+    title: "CRM та email-маркетинг: інтеграція для продажів",
+    excerpt: "Як поєднати CRM з email-маркетингом. Розсилки, сегменти, історія листів.",
+    category: "Інтеграції",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/crm-email-marketing.png",
+  },
+  {
+    slug: "shvidka-reaktsiya-na-zayavku",
+    title: "Швидка реакція на заявку: чому важливо та як досягти",
+    excerpt: "Чому швидкість відповіді на заявку збільшує конверсію. Як організувати реакцію в CRM.",
+    category: "Продажі",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/shvidka-reaktsiya-na-zayavku.png",
+  },
+  {
+    slug: "crm-malogo-biznesu-oglyad",
+    title: "CRM для малого бізнесу: огляд можливостей та сценаріїв",
+    excerpt: "Які можливості CRM потрібні малому бізнесу. Воронка, клієнти, задачі, звіти. Огляд сценаріїв.",
+    category: "CRM",
+    author: "Flamingo CRM Team",
+    date: "2026-03-08",
+    image: "/images/blog/crm-malogo-biznesu-oglyad.png",
   },
 ];
 
-const categories = ["Всі", "CRM", "Продажі", "Аналітика", "Інтеграції", "Менеджмент", "Мобільність"];
+const categories = ["Всі", "CRM", "Продажі", "Аналітика", "Інтеграції", "Менеджмент", "Мобільність", "Воронка продажів", "Впровадження CRM", "Управління клієнтами", "Продуктивність продажів"];
 
 export default function BlogPage() {
+  const INITIAL_REGULAR_POSTS_COUNT = 6;
+  const LOAD_MORE_STEP = 3;
+
   const featuredPost = blogPosts[0];
   const regularPosts = blogPosts.slice(1);
 
@@ -211,68 +350,11 @@ export default function BlogPage() {
         <section className="py-12 lg:py-16 bg-[#0c0c12]">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-2xl font-bold text-white mb-10">Всі статті</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regularPosts.map((post) => (
-                <article
-                  key={post.slug}
-                  className="group relative rounded-3xl glass-card overflow-hidden flex flex-col border border-white/5 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/30 bg-white/[0.02] hover:bg-white/[0.04]"
-                >
-                  {/* Image */}
-                  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-purple-900/10 to-pink-900/10">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover object-center transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 lg:p-8 flex flex-col flex-grow">
-                    {/* Category */}
-                    <div className="mb-4">
-                      <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-semibold tracking-wide">
-                        {post.category}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors line-clamp-2 leading-tight">
-                      <Link href={`/blog/${post.slug}`}>
-                        {post.title}
-                      </Link>
-                    </h2>
-
-                    {/* Excerpt */}
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
-                      {post.excerpt}
-                    </p>
-
-                    {/* Footer */}
-                    <div className="flex items-center justify-between pt-5 border-t border-white/10 mt-auto">
-                      <div className="flex items-center gap-2 text-sm text-gray-500">
-                        <Calendar className="w-4 h-4" />
-                        <span>{new Date(post.date).toLocaleDateString("uk-UA")}</span>
-                      </div>
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="flex items-center gap-1 text-purple-400 text-sm font-semibold hover:text-purple-300 transition-colors"
-                      >
-                        Читати
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            {/* Load more */}
-            <div className="text-center mt-16">
-              <button className="px-8 py-4 text-white font-semibold rounded-xl transition-all hover:text-purple-300">
-                Завантажити більше
-              </button>
-            </div>
+            <BlogPostsGrid
+              posts={regularPosts}
+              initialVisibleCount={INITIAL_REGULAR_POSTS_COUNT}
+              loadMoreStep={LOAD_MORE_STEP}
+            />
           </div>
         </section>
       </main>

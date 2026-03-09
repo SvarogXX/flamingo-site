@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Блог Flamingo CRM</title>
+    <link>https://flamingo-crm.com.ua/blog</link>
+    <description>Практичні статті про CRM для малого бізнесу: автоматизація продажів, аналітика, інтеграції та управління командою.</description>
+    <language>uk</language>
+    <lastBuildDate>Sun, 08 Mar 2026 12:00:00 +0200</lastBuildDate>
+    <atom:link href="https://flamingo-crm.com.ua/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Як підвищити конверсію в продажах за допомогою CRM</title>
+      <link>https://flamingo-crm.com.ua/blog/yak-pidvishchiti-konversiyu-v-prodazhah</link>
+      <description>Практичні способи збільшити конверсію за допомогою CRM: швидкість відповіді, воронка, нагадування. Поради для малого бізнесу.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Управління завданнями в CRM: задачі та дедлайни</title>
+      <link>https://flamingo-crm.com.ua/blog/upravlinnya-zavdannyamy-v-crm</link>
+      <description>Як керувати задачами та дедлайнами в CRM. Призначення, нагадування, контроль. Поради для відділу продажів.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Звітність та дашборди в CRM для керівника</title>
+      <link>https://flamingo-crm.com.ua/blog/zvitnist-dashbordy-v-crm</link>
+      <description>Як будувати звіти та дашборди в CRM. KPI, конверсія, прогноз. Поради для керівників відділу продажів.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Вибір CRM-системи: порівняння та критерії</title>
+      <link>https://flamingo-crm.com.ua/blog/vybir-crm-sistemu-porivnyannya</link>
+      <description>Як вибрати CRM для бізнесу: критерії порівняння, типові помилки. Практичний гайд для малого бізнесу.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Автоматизація обробки лідів: від заявки до угоди</title>
+      <link>https://flamingo-crm.com.ua/blog/avtomatyzatsiya-obrobky-lidiv</link>
+      <description>Як автоматизувати обробку лідів: від заявки до угоди. Сповіщення, призначення, нагадування.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>CRM для агентств та сервісних компаній</title>
+      <link>https://flamingo-crm.com.ua/blog/crm-dlya-agenstv</link>
+      <description>Як використовувати CRM в агентстві та сервісній компанії. Клієнти, проєкти, задачі.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Безпека даних у CRM: доступ та конфіденційність</title>
+      <link>https://flamingo-crm.com.ua/blog/bezpeka-danikh-v-crm</link>
+      <description>Як захистити дані клієнтів у CRM. Права доступу, ролі, конфіденційність. Поради для бізнесу.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>CRM та email-маркетинг: інтеграція для продажів</title>
+      <link>https://flamingo-crm.com.ua/blog/crm-email-marketing</link>
+      <description>Як поєднати CRM з email-маркетингом. Розсилки, сегменти, історія листів.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Швидка реакція на заявку: чому важливо та як досягти</title>
+      <link>https://flamingo-crm.com.ua/blog/shvidka-reaktsiya-na-zayavku</link>
+      <description>Чому швидкість відповіді на заявку збільшує конверсію. Як організувати реакцію в CRM.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>CRM для малого бізнесу: огляд можливостей та сценаріїв</title>
+      <link>https://flamingo-crm.com.ua/blog/crm-malogo-biznesu-oglyad</link>
+      <description>Які можливості CRM потрібні малому бізнесу. Воронка, клієнти, задачі, звіти. Огляд сценаріїв.</description>
+      <pubDate>Sun, 08 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Як обрати CRM для малого бізнесу у 2026: чекліст із 15 критеріїв</title>
+      <link>https://flamingo-crm.com.ua/blog/yak-obrati-crm-systemu</link>
+      <description>Практичний гайд для власників малого бізнесу: як вибрати CRM без переплат, швидко запустити процеси та не втрачати ліди.</description>
+      <pubDate>Tue, 03 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Воронка продажів в CRM: як налаштувати та аналізувати етапи</title>
+      <link>https://flamingo-crm.com.ua/blog/voronka-prodazhiv-v-crm</link>
+      <description>Практичний гайд: як побудувати воронку продажів у CRM-системі, налаштувати етапи під свій бізнес і відстежувати конверсію.</description>
+      <pubDate>Sun, 01 Mar 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Впровадження CRM з нуля: покроковий план на перший місяць</title>
+      <link>https://flamingo-crm.com.ua/blog/vprovadzhennya-crm-z-nulya</link>
+      <description>Як запустити CRM у малому бізнесі без хаосу: підготовка, налаштування, навчання команди та перші результати за 4 тижні.</description>
+      <pubDate>Tue, 25 Feb 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>10 способів автоматизувати продажі з CRM</title>
+      <link>https://flamingo-crm.com.ua/blog/avtomatyzatsiya-prodazhiv</link>
+      <description>Дізнайтеся, як автоматизація може збільшити ефективність вашого відділу продажів та скоротити час на рутинні задачі.</description>
+      <pubDate>Sat, 08 Feb 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>KPI відділу продажів: що відстежувати в CRM для росту</title>
+      <link>https://flamingo-crm.com.ua/blog/kpi-viddilu-prodazhiv</link>
+      <description>Які KPI реально допомагають керувати відділом продажів і як їх відстежувати в CRM без Excel та ручних звітів.</description>
+      <pubDate>Sun, 15 Feb 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Чому малий бізнес втрачає ліди: 5 причин та рішення в CRM</title>
+      <link>https://flamingo-crm.com.ua/blog/chomu-vtrachayutsya-lidy</link>
+      <description>Типові причини втрати заявок у малого бізнесу та як CRM допомагає їх усунути: швидкість відповіді, дисципліна, нагадування.</description>
+      <pubDate>Tue, 10 Feb 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>База клієнтів: як зберігати та використовувати дані в CRM</title>
+      <link>https://flamingo-crm.com.ua/blog/baza-kliyentiv-upravlinnya</link>
+      <description>Як побудувати та підтримувати базу клієнтів у CRM: якість даних, пошук, сегментація та повторні продажі.</description>
+      <pubDate>Thu, 20 Feb 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Аналітика в CRM: як приймати рішення на основі даних</title>
+      <link>https://flamingo-crm.com.ua/blog/analityka-v-crm</link>
+      <description>Практичний розбір метрик CRM: які показники реально допомагають керувати продажами і збільшувати прибуток.</description>
+      <pubDate>Thu, 05 Feb 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Інтеграція CRM з іншими сервісами: повний гайд</title>
+      <link>https://flamingo-crm.com.ua/blog/integratsiya-crm-z-inshymy-servisamy</link>
+      <description>Як підключити сайт, email, месенджери та телефонію до CRM, щоб не втрачати звернення і прискорити продажі.</description>
+      <pubDate>Sun, 01 Feb 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Ефективне управління командою через CRM</title>
+      <link>https://flamingo-crm.com.ua/blog/upravlinnya-komandoyu-v-crm</link>
+      <description>Практичні підходи до керування відділом продажів у CRM: задачі, дисципліна, контроль етапів і прогноз результату.</description>
+      <pubDate>Tue, 28 Jan 2026 12:00:00 +0200</pubDate>
+    </item>
+    <item>
+      <title>Мобільний CRM: працюйте звідусіль</title>
+      <link>https://flamingo-crm.com.ua/blog/mobilnyy-crm</link>
+      <description>Як мобільний доступ до CRM допомагає менеджерам швидко реагувати на ліди і закривати угоди навіть у дорозі.</description>
+      <pubDate>Sat, 25 Jan 2026 12:00:00 +0200</pubDate>
+    </item>
+  </channel>
+</rss>

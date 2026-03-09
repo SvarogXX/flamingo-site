@@ -94,13 +94,13 @@ export default function Footer() {
                 <span>support@flamingo-crm.com.ua</span>
               </motion.a>
               <motion.a 
-                href="tel:+380501234567"
+                href="tel:+380936318351"
                 variants={itemVariants}
                 whileHover={{ x: 4 }}
                 className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>+38 (050) 123-45-67</span>
+                <span>+38 (093) 631-83-51</span>
               </motion.a>
               <motion.div 
                 variants={itemVariants}

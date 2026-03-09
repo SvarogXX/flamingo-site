@@ -10,6 +10,21 @@ const blogPosts = [
   { slug: "integratsiya-crm-z-inshymy-servisamy", date: "2026-02-01" },
   { slug: "upravlinnya-komandoyu-v-crm", date: "2026-01-28" },
   { slug: "mobilnyy-crm", date: "2026-01-25" },
+  { slug: "voronka-prodazhiv-v-crm", date: "2026-03-01" },
+  { slug: "vprovadzhennya-crm-z-nulya", date: "2026-02-25" },
+  { slug: "baza-kliyentiv-upravlinnya", date: "2026-02-20" },
+  { slug: "kpi-viddilu-prodazhiv", date: "2026-02-15" },
+  { slug: "chomu-vtrachayutsya-lidy", date: "2026-02-10" },
+  { slug: "yak-pidvishchiti-konversiyu-v-prodazhah", date: "2026-03-08" },
+  { slug: "upravlinnya-zavdannyamy-v-crm", date: "2026-03-08" },
+  { slug: "zvitnist-dashbordy-v-crm", date: "2026-03-08" },
+  { slug: "vybir-crm-sistemu-porivnyannya", date: "2026-03-08" },
+  { slug: "avtomatyzatsiya-obrobky-lidiv", date: "2026-03-08" },
+  { slug: "crm-dlya-agenstv", date: "2026-03-08" },
+  { slug: "bezpeka-danikh-v-crm", date: "2026-03-08" },
+  { slug: "crm-email-marketing", date: "2026-03-08" },
+  { slug: "shvidka-reaktsiya-na-zayavku", date: "2026-03-08" },
+  { slug: "crm-malogo-biznesu-oglyad", date: "2026-03-08" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
