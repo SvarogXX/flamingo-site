@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
@@ -1230,9 +1231,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const post = blogPosts[slug];
 
   if (!post) {
-    return {
-      title: "Стаття не знайдена | Flamingo CRM",
-    };
+    notFound();
   }
 
   return {
@@ -1382,20 +1381,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const post = blogPosts[slug];
 
   if (!post) {
-    return (
-      <>
-        <Header />
-        <main className="min-h-screen bg-[#0a0a0f] flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Стаття не знайдена</h1>
-            <Link href="/blog" className="text-purple-400 hover:text-purple-300">
-              Повернутися до блогу
-            </Link>
-          </div>
-        </main>
-        <Footer />
-      </>
-    );
+    notFound();
   }
 
   const { html, toc } = renderArticleContent(post.content);
