@@ -6,7 +6,7 @@ import { Users, Database, BarChart3, Plug, ArrowRight } from "lucide-react";
 import Features from "@/components/Features";
 
 export const metadata: Metadata = {
-  title: "Функціонал CRM | Flamingo CRM - Управління та аналітика",
+  title: "Функціонал CRM | Flamingo - Управління та аналітика",
   description: "Детальний опис можливостей CRM: управління клієнтами, база даних клієнтів, звіти, інтеграції. Онлайн CRM для бізнесу.",
   keywords: ["CRM система для бізнесу", "управління клієнтами", "база даних клієнтів", "онлайн CRM", "функціонал CRM"],
 };

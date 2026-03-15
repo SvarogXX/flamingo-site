@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import UkraineSupport from "@/components/UkraineSupport";
 
 export const metadata: Metadata = {
-  title: "Підтримка ЗСУ | Flamingo CRM - Донат замість підписки",
+  title: "Підтримка ЗСУ | Flamingo - Донат за бізнес",
   description: "Підтримайте ЗСУ разом із Flamingo CRM: донат замість підписки та прозора підтримка України.",
   keywords: ["тарифи CRM", "безкоштовний пробний період CRM", "ціни CRM", "CRM для бізнесу"],
   alternates: {
