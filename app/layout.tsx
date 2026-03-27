@@ -13,7 +13,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Flamingo CRM | Безкоштовна CRM для бізнесу",
-  description: "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
+  description: "Flamingo CRM — управління клієнтами, воронка продажів та аналітика. Інтеграція з Telegram. Дешевше Pipedrive. Донат на ЗСУ замість підписки.",
   keywords: "CRM система для бізнесу, управління клієнтами, база даних клієнтів, автоматизація, онлайн CRM, донат на ЗСУ, тарифи CRM",
   authors: [{ name: "CRM Team" }],
   creator: "CRM System",

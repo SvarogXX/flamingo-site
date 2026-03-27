@@ -6,7 +6,7 @@ import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Про нас | Flamingo CRM - Історія та місія",
-  description: "Дізнайтесь про Flamingo CRM: нашу історію, місію та команду, нерухомість створює найкращу CRM для українського бізнесу.",
+  description: "Flamingo CRM - українська платформа для управління клієнтами. Історія, місія та команда, яка розбудовує найкращу CRM для малого бізнесу під час війни.",
   keywords: ["про Flamingo CRM", "історія CRM", "команда Flamingo", "CRM для України"],
   openGraph: {
     title: "Про нас | Flamingo CRM",

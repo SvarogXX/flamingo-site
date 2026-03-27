@@ -7,6 +7,8 @@ import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 const footerLinks = {
   product: [
     { name: "Можливості", href: "/features" },
+    { name: "Для кого", href: "/for-whom" },
+    { name: "Тарифи", href: "/pricing" },
     { name: "Про допомогу", href: "#ukraine-support" },
     { name: "Інтеграції", href: "https://crm.flamingo-crm.com.ua/" },
   ],
