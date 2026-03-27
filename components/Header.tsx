@@ -10,7 +10,6 @@ import MagneticButton from "./MagneticButton";
 const navLinks = [
   { name: "Можливості", href: "/features" },
   { name: "Для кого", href: "/for-whom" },
-  { name: "Тарифи", href: "/pricing" },
   { name: "Допомога ЗСУ", href: "/ukrainesupport" },
   { name: "Про нас", href: "/about" },
   { name: "Результати", href: "/testimonials" },

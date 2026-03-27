@@ -5,14 +5,17 @@
 ---
 
 ### ✏️ ЗМІНА 1: app/layout.tsx - Оновити Homepage Description
+
 **Адреса:** [app/layout.tsx](app/layout.tsx)
 
 **Поточний текст (рядок ~16):**
+
 ```typescript
 description: "Flamingo CRM — безкоштовна українська CRM для малого бізнесу. Автоматизація продажів, клієнти, угоди. Донат на ЗСУ замість підписки.",
 ```
 
 **Новий текст:**
+
 ```typescript
 description: "Flamingo CRM — безкоштовна управління клієнтами та автоматизація продажів для малого бізнесу України. Донат на ЗСУ замість платежів.",
 ```
@@ -22,14 +25,17 @@ description: "Flamingo CRM — безкоштовна управління кл�
 ---
 
 ### ✏️ ЗМІНА 2: app/about/page.tsx - КРИТИЧНА ВИПРАВКА (описка!)
+
 **Адреса:** [app/about/page.tsx](app/about/page.tsx)
 
 **Поточний текст (рядок ~6):**
+
 ```typescript
 description: "Дізнайтесь про Flamingo CRM: нашу історію, місію та команду, нерухомість створює найкращу CRM для українського бізнесу.",
 ```
 
 **Новий текст:**
+
 ```typescript
 description: "Про Flamingo CRM: Історія українського проекту для малого бізнесу, команда розробників, місія допомогти без платежів. Створено под час війни.",
 ```
@@ -39,14 +45,17 @@ description: "Про Flamingo CRM: Історія українського пр�
 ---
 
 ### ✏️ ЗМІНА 3: app/features/page.tsx - Розширити Description
+
 **Адреса:** [app/features/page.tsx](app/features/page.tsx)
 
 **Поточний текст (рядок ~8):**
+
 ```typescript
 description: "Детальний опис можливостей CRM: управління клієнтами, база даних клієнтів, звіти, інтеграції. Онлайн CRM для бізнесу.",
 ```
 
 **Новий текст:**
+
 ```typescript
 description: "Функції CRM Flamingo: управління клієнтами, воронка продажів, звіти та аналітика, інтеграції з email і Telegram. Автоматизація для малого бізнесу.",
 ```
@@ -56,14 +65,17 @@ description: "Функції CRM Flamingo: управління клієнтам
 ---
 
 ### ✏️ ЗМІНА 4: app/for-whom/page.tsx - Оптимізувати Description
+
 **Адреса:** [app/for-whom/page.tsx](app/for-whom/page.tsx)
 
 **Поточний текст (рядок ~8):**
+
 ```typescript
 description: "CRM для різних галузей: магазини, салони, IT-компанії, автосервіси, агентства нерухомості. Гнучка система під ваш бізнес.",
 ```
 
 **Новий текст:**
+
 ```typescript
 description: "CRM система для малого бізнесу: салони краси, магазини, IT-компанії, автосервіси, агенцій нерухомості. Налаштування під вашу галузь.",
 ```
@@ -72,40 +84,32 @@ description: "CRM система для малого бізнесу: салон�
 
 ---
 
-### ✏️ ЗМІНА 5: app/pricing/page.tsx - Посилити Description
+### ✏️ ЗМІНА 5: app/pricing/page.tsx - Переорієнтована на Донат
+
 **Адреса:** [app/pricing/page.tsx](app/pricing/page.tsx)
 
 **Поточний текст (рядок ~7):**
+
 ```typescript
 description: "Оберіть тариф CRM: Starter 9$/міс, Growth 29$/міс, Enterprise 99$/міс. Безкоштовний пробний період 14 днів. Тарифи CRM для бізнесу.",
 ```
 
 **Новий текст:**
+
 ```typescript
-description: "Тарифи Flamingo CRM: Starter від 9$/міс, Growth 29$/міс, Enterprise 99$/міс + 14 днів безкоштовно. Дешевше від Pipedrive в 3–5 разів!",
+description: "Flamingo CRM — безкоштовна на 100%. За кожне запрошення користувача розробник донатить для ЗСУ. Приєднайтесь до українського проекту.",
 ```
 
-**Чому:** Додана конкурентна порівняння (high-intent keywords)
+**Чому:** Перезаписана на модель донатів замість тарифів
 
 ---
 
-### ✏️ ЗМІНА 6: components/Header.tsx - Додати /pricing до Nav
+### ✏️ ЗМІНА 6: components/Header.tsx - Видалити /pricing з Nav
+
 **Адреса:** [components/Header.tsx](components/Header.tsx)
 
 **Поточний текст (рядок ~24-32):**
-```typescript
-const navLinks = [
-  { name: "Можливості", href: "/features" },
-  { name: "Для кого", href: "/for-whom" },
-  { name: "Допомога ЗСУ", href: "/ukrainesupport" },
-  { name: "Про нас", href: "/about" },
-  { name: "Результати", href: "/testimonials" },
-  { name: "Блог", href: "/blog" },
-  { name: "Контакти", href: "/contact" },
-];
-```
 
-**Новий текст:**
 ```typescript
 const navLinks = [
   { name: "Можливості", href: "/features" },
@@ -119,29 +123,30 @@ const navLinks = [
 ];
 ```
 
-**Чому:** /pricing мав бути видимо в навігації
+**Новий текст:**
+
+```typescript
+const navLinks = [
+  { name: "Можливості", href: "/features" },
+  { name: "Для кого", href: "/for-whom" },
+  { name: "Допомога ЗСУ", href: "/ukrainesupport" },
+  { name: "Про нас", href: "/about" },
+  { name: "Результати", href: "/testimonials" },
+  { name: "Блог", href: "/blog" },
+  { name: "Контакти", href: "/contact" },
+];
+```
+
+**Чому:** /pricing видалено, фокус на Dopomoga ZSU
 
 ---
 
-### ✏️ ЗМІНА 7: components/Footer.tsx - Додати /for-whom та /pricing
+### ✏️ ЗМІНА 7: components/Footer.tsx - Видалити /pricing
+
 **Адреса:** [components/Footer.tsx](components/Footer.tsx)
 
 **Поточний текст (рядки 17-27):**
-```typescript
-const footerLinks = {
-  product: [
-    { name: "Можливості", href: "/features" },
-    { name: "Про допомогу", href: "#ukraine-support" },
-    { name: "Інтеграції", href: "https://crm.flamingo-crm.com.ua/" },
-  ],
-  company: [
-    { name: "Про нас", href: "/about" },
-    { name: "Блог", href: "/blog" },
-    { name: "Контакти", href: "/contact" },
-  ],
-```
 
-**Новий текст:**
 ```typescript
 const footerLinks = {
   product: [
@@ -158,6 +163,24 @@ const footerLinks = {
   ],
 ```
 
+**Новий текст:**
+
+```typescript
+const footerLinks = {
+  product: [
+    { name: "Можливості", href: "/features" },
+    { name: "Для кого", href: "/for-whom" },
+    { name: "Про допомогу", href: "#ukraine-support" },
+    { name: "Інтеграції", href: "https://crm.flamingo-crm.com.ua/" },
+  ],
+  company: [
+    { name: "Про нас", href: "/about" },
+    { name: "Блог", href: "/blog" },
+    { name: "Контакти", href: "/contact" },
+  ],
+  ],
+```
+
 **Чому:** /pricing та /for-whom потрібні в передтєк місцях
 
 ---
@@ -165,11 +188,13 @@ const footerLinks = {
 ## ФАЗА 2: ВНУТРІШНІ ПОСИЛАННЯ (ТИЖДЕНЬ 3-4)
 
 ### ✏️ ЗМІНА 8: components/Hero.tsx - Додати CTA на /pricing
+
 **Адреса:** [components/Hero.tsx](components/Hero.tsx)
 
 Знайти рядок де є основна CTA кнопка (~271-281):
 
 **Поточне:**
+
 ```typescript
 <motion.a
   href="https://crm.flamingo-crm.com.ua/"
@@ -182,6 +207,7 @@ const footerLinks = {
 ```
 
 **Додати зовсім іншу кнопку перед або після:**
+
 ```typescript
 <Link
   href="/pricing"
@@ -196,44 +222,50 @@ const footerLinks = {
 ---
 
 ### ✏️ ЗМІНА 9: content/blog/avtomatyzatsiya-obrobky-lidiv.mdx - Додати посилання
+
 **Адреса:** [content/blog/avtomatyzatsiya-obrobky-lidiv.mdx](content/blog/avtomatyzatsiya-obrobky-lidiv.mdx)
 
 В третьому параграфі (після "Вступ"):
 
 **Поточно:**
+
 ```mdx
-У статті розберемо, як це налаштувати, використовуючи [Flamingo CRM](https://flamingo-crm.com.ua/), 
-та посилання на [швидку реакцію на заявку](/blog/shvidka-reaktsiya-na-zayavku) і 
+У статті розберемо, як це налаштувати, використовуючи [Flamingo CRM](https://flamingo-crm.com.ua/),
+та посилання на [швидку реакцію на заявку](/blog/shvidka-reaktsiya-na-zayavku) і
 [причини втрати лідів](/blog/chomu-vtrachayutsya-lidy).
 ```
 
 **Розширити:**
+
 ```mdx
-У статті розберемо, як це налаштувати, використовуючи [Flamingo CRM](https://flamingo-crm.com.ua/). 
-Навчітеся налаштовувати [управління клієнтами](/features) та [воронку продажів](/features), 
+У статті розберемо, як це налаштувати, використовуючи [Flamingo CRM](https://flamingo-crm.com.ua/).
+Навчітеся налаштовувати [управління клієнтами](/features) та [воронку продажів](/features),
 подивіться як це працює для [різних галузей](/for-whom) та [оберіть тариф](/pricing).
 
-Також прочитайте про [швидку реакцію на заявку](/blog/shvidka-reaktsiya-na-zayavku) і 
+Також прочитайте про [швидку реакцію на заявку](/blog/shvidka-reaktsiya-na-zayavku) і
 [причини втрати лідів](/blog/chomu-vtrachayutsya-lidy).
 ```
 
 ---
 
 ### ✏️ ЗМІНА 10: content/blog/vybir-crm-sistemu-porivnyannya.mdx - Додати посилання
+
 **Адреса:** [content/blog/vybir-crm-sistemu-porivnyannya.mdx](content/blog/vybir-crm-sistemu-porivnyannya.mdx)
 
 В другому параграфі після "Вступ":
 
 **Поточно:**
+
 ```mdx
-У статті — критерії порівняння CRM та посилання на корисні матеріали: 
-[впровадження CRM з нуля](/blog/vprovadzhennya-crm-z-nulya) та 
+У статті — критерії порівняння CRM та посилання на корисні матеріали:
+[впровадження CRM з нуля](/blog/vprovadzhennya-crm-z-nulya) та
 [інтеграція CRM з іншими сервісами](/blog/integratsiya-crm-z-inshymy-servisamy).
 ```
 
 **Розширити:**
+
 ```mdx
-У статті — критерії порівняння CRM та посилання на корисні матеріали: 
+У статті — критерії порівняння CRM та посилання на корисні матеріали:
 [впровадження CRM з нуля](/blog/vprovadzhennya-crm-z-nulya),
 [інтеграція CRM з іншими сервісами](/blog/integratsiya-crm-z-inshymy-servisamy),
 [функціонал Flamingo CRM](/features) та [порівняння тарифів](/pricing).
@@ -244,20 +276,23 @@ const footerLinks = {
 ---
 
 ### ✏️ ЗМІНА 11: content/blog/crm-dlya-agenstv.mdx - Додати посилання
+
 **Адреса:** [content/blog/crm-dlya-agenstv.mdx](content/blog/crm-dlya-agenstv.mdx)
 
 В висновку додати:
 
 **Знайти:**
+
 ```mdx
 ## Висновок
 ```
 
 **Після висновку додати:**
+
 ```mdx
 ---
 
-**Дізнатися як CRM підходить саме для вашої галузі** можна на [сторінці "Для кого"](/for-whom). 
+**Дізнатися як CRM підходить саме для вашої галузі** можна на [сторінці "Для кого"](/for-whom).
 [Розглянути тарифи Flamingo CRM](/pricing) та обрати оптимальний план для вашого агентства.
 
 **Почніть безкоштовно** — перший місяць повністю безплатно!
@@ -268,6 +303,7 @@ const footerLinks = {
 ## ФАЗА 3: СТРУКТУРОВАНІ ДАНІ (ТИЖДЕНЬ 2-3)
 
 ### ✏️ ЗМІНА 12: app/faq/page.tsx - Додати FAQ Schema
+
 **Адреса:** [app/faq/page.tsx](app/faq/page.tsx)
 
 **В метаді додати структуровані дані перед експортом компоненти:**
@@ -275,7 +311,8 @@ const footerLinks = {
 ```typescript
 export const metadata: Metadata = {
   title: "Часті питання | Flamingo CRM - Питання та відповіді",
-  description: "Відповіді на часті питання про Flamingo CRM. Реєстрація, функціонал, інтеграції, донати на підтримку ЗСУ.",
+  description:
+    "Відповіді на часті питання про Flamingo CRM. Реєстрація, функціонал, інтеграції, донати на підтримку ЗСУ.",
   keywords: ["FAQ CRM", "питання про CRM", "Flamingo CRM", "підтримка CRM"],
   openGraph: {
     title: "Часті питання | Flamingo CRM",
@@ -343,6 +380,7 @@ export default function FAQPage() {
 ---
 
 ### ✏️ ЗМІНА 13: app/pricing/page.tsx - Додати Product Schema
+
 **Адреса:** [app/pricing/page.tsx](app/pricing/page.tsx)
 
 В компоненту Pricing додати Schema:
@@ -403,9 +441,11 @@ export default function PricingPage() {
 ## ФАЗА 4: НОВІ БЛОГ СТАТТІ (МІСЯЦЬ 1-2)
 
 ### 📝 Статаят #1 - КРИТИЧНА (для "автоматизація продажів")
+
 **創建:** `content/blog/avtomatyzaciya-prodazhiv-voronka-crm.mdx`
 
 **Потрібна структура:**
+
 ```mdx
 ---
 title: "Автоматизація продажів: як налаштувати воронку в CRM"
@@ -415,7 +455,14 @@ author: "Flamingo CRM Team"
 metaTitle: "Автоматизація продажів у CRM: воронка та етапи угод | Flamingo"
 metaDescription: "Як налаштувати воронку продажів та автоматизацію: етапи угод, правила, конверсія. Практичний гайд для малого бізнесу від Flamingo CRM."
 focusKeyword: "автоматизація продажів"
-keywords: ["автоматизація продажів", "воронка продажів", "CRM система", "етапи угод", "конверсія продажів"]
+keywords:
+  [
+    "автоматизація продажів",
+    "воронка продажів",
+    "CRM система",
+    "етапи угод",
+    "конверсія продажів",
+  ]
 ogDescription: "Налаштуйте воронку продажів у CRM за 5 кроків. Видимість угод на кожному етапі, автоматичні нагадування, конверсія +30%."
 featuredImage: "/images/blog/avtomatyzaciya-prodazhiv.png"
 ---
@@ -423,11 +470,13 @@ featuredImage: "/images/blog/avtomatyzaciya-prodazhiv.png"
 [КОНТЕНТ - 1500-2000 слів]
 
 ### Посилання в статті:
+
 - [управління клієнтами](/features) в контексті "воронка"
 - [для різних типів бізнесу](/for-whom)
 - [обрати тариф для масштабування](/pricing)
 
 ### Висновок додати:
+
 Дізнатися більше про [функціонал CRM](/features) та як це працює для [салонів, магазинів та IT-компаній](/for-whom).
 ```
 
@@ -436,6 +485,7 @@ featuredImage: "/images/blog/avtomatyzaciya-prodazhiv.png"
 ---
 
 ### 📝 Статаят #2 - CRM для малого бізнесу
+
 **Створити:** `content/blog/crm-malogo-biznesu-gaid.mdx`
 
 ```mdx
@@ -446,13 +496,20 @@ date: "2026-04-03"
 metaTitle: "CRM для малого бізнесу: гайд з нуля | Flamingo CRM"
 metaDescription: "CRM для малого бізнесу: чому потрібна, як обрати, як запустити за тиждень. Ваша перша система управління клієнтами без кода."
 focusKeyword: "CRM для малого бізнесу"
-keywords: ["CRM для малого бізнесу", "CRM для стартапів", "система управління клієнтами", "CRM без кода"]
+keywords:
+  [
+    "CRM для малого бізнесу",
+    "CRM для стартапів",
+    "система управління клієнтами",
+    "CRM без кода",
+  ]
 ogDescription: "Малому бізнесу потрібна CRM. Як вона допомагає, як вибрати, як запустити. Flamingo CRM: простий, безкоштовний, для України."
 ---
 
 [КОНТЕНТ - 1500-2000 слів]
 
 ### Посилання:
+
 - [основні функції CRM](/features)
 - [тарифи та розцінки](/pricing)
 ```
@@ -460,6 +517,7 @@ ogDescription: "Малому бізнесу потрібна CRM. Як вона 
 ---
 
 ### 📝 Статаят #3 - Сегментація клієнтів
+
 **Створити:** `content/blog/segmentaciya-kliyentiv-u-crm.mdx`
 
 ```mdx
@@ -470,12 +528,20 @@ date: "2026-04-10"
 metaTitle: "Як сегментувати клієнтів у CRM: приклади | Flamingo CRM"
 metaDescription: "Сегментація клієнтів у CRM: за типом, доходом, поведінкою. Приклади для магазинів, салонів, IT. Збільште конверсію на 30%."
 focusKeyword: "сегментація клієнтів"
-keywords: ["сегментація клієнтів", "управління клієнтами", "CRM аналітика", "конверсія", "таргетування клієнтів"]
+keywords:
+  [
+    "сегментація клієнтів",
+    "управління клієнтами",
+    "CRM аналітика",
+    "конверсія",
+    "таргетування клієнтів",
+  ]
 ---
 
 [КОНТЕНТ - 1500-2000 слів]
 
 ### Посилання:
+
 - [для різних типів бізнесу](/for-whom)
 - [функціонал управління](/features)
 ```
@@ -485,6 +551,7 @@ keywords: ["сегментація клієнтів", "управління кл
 ## 📋 ЧЕКЛИСТ РЕАЛІЗАЦІЇ
 
 ### ✅ ФАЗА 1 - МЕТАДАНІ (1-2 тижні)
+
 - [ ] Виправити /about (видалити "нерухомість")
 - [ ] Оновити meta descriptions на всіх 5 сторінках
 - [ ] Додати /pricing до Header
@@ -492,22 +559,26 @@ keywords: ["сегментація клієнтів", "управління кл
 - [ ] Перевірити GSC за 3-4 дні (повинні бути нові покази)
 
 ### ✅ ФАЗА 2 - ВНУТРІШНІ ПОСИЛАННЯ (週 3-4)
+
 - [ ] Додати посилання в blog статтях
 - [ ] Додати CTA на /pricing у Hero
 - [ ] Перевірити внутрішню сітку посилань
 
 ### ✅ ФАЗА 3 - SCHEMA (дні 1-7)
+
 - [ ] Додати FAQ Schema на /faq
 - [ ] Додати Product Schema на /pricing
 - [ ] Перевірити через Google Rich Result Tester
 
 ### ✅ ФАЗА 4 - НОВИЙ КОНТЕНТ (тиждні 1-4)
+
 - [ ] Написати статя про "Автоматизація продажів"
 - [ ] Написати статя про "CRM для малого бізнесу"
 - [ ] Написати статя про "Сегментація клієнтів"
 - [ ] Оптимізувати для SEO та посилання
 
 ### 📊 МОНІТОРИНГ (щомісячно)
+
 - [ ] Перевірити GSC: покази за ключовими словами
 - [ ] Аналітика: органічний трафік
 - [ ] Рейтинги за "автоматизація продажів" (потреба спуститись з 21.56)

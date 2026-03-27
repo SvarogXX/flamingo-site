@@ -5,7 +5,7 @@ import ForWhomContent from "@/components/ForWhomContent";
 
 export const metadata: Metadata = {
   title: "Для кого CRM | Flamingo - Рішення для малого бізнесу",
-  description: "CRM для стартапів, агентств, e-commerce та консалтингу. Рішення для малого бізнесу без дорогих підписок. Дешевше Pipedrive в 3-5 разів.",
+  description: "CRM для стартапів, агентств, e-commerce та консалтингу. Рішення для малого бізнесу. Безкоштовно для всіх. За кожного користувача — донат для ЗСУ.",
   keywords: ["CRM для магазину", "CRM для салону красі", "CRM для IT", "CRM для автосервісу", "CRM для нерухомості"],
   openGraph: {
     title: "Для кого CRM | Flamingo CRM",
